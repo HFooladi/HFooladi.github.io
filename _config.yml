@@ -1,8 +1,7 @@
 # Site settings
 title: Hosein Fooladi blog
-name:  Hosein Fooladi
 email: 
-description: "System Biology and Deep Learning Researcher"
+description: "Ssytem Biology and Deep Learning Researcher"
 baseurl: ""
 url: "http://hfooladi.github.io"
 twitter_username: HoseinFooladi7
@@ -17,24 +16,3 @@ kramdown:
   input: GFM
   auto_ids: true
   syntax_highlighter: rouge
-
-# Site settings
-#
-# This file contains configuration flags to customize your site
-#
-
-# Name of your site (displayed in the header)
-#name: Hosein Fooladi
-#title: Hosein Fooladi blog
-#email: 
-
-# Short bio or description (displayed in the header)
-#description: "System Biology and Deep Learning Researcher"
-#baseurl: ""
-#url: "http://HFooladi.github.io"
-#google_analytics: 
-#show_downloads: true
-#theme: jekyll-theme-slate
-
-#gems:
-#  - jekyll-mentions
