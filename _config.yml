@@ -1,5 +1,17 @@
-title: Hosein Fooladi
-description: 
+# Site settings
+#
+# This file contains configuration flags to customize your site
+#
+
+# Name of your site (displayed in the header)
+name: Hosein Fooladi
+title: Hosein Fooladi blog
+email: 
+
+# Short bio or description (displayed in the header)
+description: "System Biology and Deep Learning Researcher"
+baseurl: ""
+url: "http://HFooladi.github.io"
 google_analytics: 
 show_downloads: true
 theme: jekyll-theme-slate
