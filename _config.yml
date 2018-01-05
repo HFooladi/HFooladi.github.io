@@ -1,5 +1,6 @@
 # Site settings
 title: Hosein Fooladi blog
+name:  Hosein Fooladi
 email: 
 description: "System Biology and Deep Learning Researcher"
 baseurl: ""
