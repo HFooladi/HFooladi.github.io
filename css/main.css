@@ -9,7 +9,7 @@
 html, body { height: 100%; }
 
 body {
-  font-family:Lato, sans-serif;
+  font-family:'CMS', 'Droid Sans', Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.75;
   font-weight: 300;
