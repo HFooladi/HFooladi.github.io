@@ -22,5 +22,14 @@ First, I am going to learn the abstract features (latent space) of this high dim
 order to understand what features are very important for drug properties prediction (biological pathways, biological process,...).
 In addition, I am very curious about applying the generative model for new compound generation. De-novo drug and molecule design 
 can be considered as another branch of drug discovery. In this task, the goal is generating new compounds with desired properties 
-based on the training database. I think it is possible to use geometric deep learning approach and apply deep learning on graph (compound) directly 
-and generate new molecules.
+based on the training database. I think it is possible to use geometric deep learning approach and apply deep learning on graph (compound) directly and generate new molecules.
+
+
+### Conversational Agent
+I am working as a Chief science officer at Shenakht Pajouh. Our mission is to understand intelligence and after that approaching toward developing Artificial General Intelligence (AGI). We are an interdisciplinary team, viewing intelligence from different perspectives of computer science, psychology, philosophy of mind and neuroscience. 
+
+We think language is one of the important aspects of intelligence and developing an agent with the capability of understanding language and managing a realistic conversation in open domain with a human is a big step forward toward AGI. Today, there are lots of research on the developing agent which is able to have the realistic conversation in a closed domain are like restaurant reservation and hotel booking; but they are not able to generalize their knowledge to talk about another topic or domain. 
+
+As a result, we are working in the field of conversational AI and our goal is developing a mental health assistant which can act in the open domain. There are lots of difficulty like understanding context, having consistent personality through conversation, and evaluation of dialogue. Despite this difficulties and challenges, We believe we are able to become one step closer to understanding intelligence.
+
+As a result, conversational AI is another research area the I am interested in. Specifically, the intersection of NLP and RL seems a reasonable approach to achieve this goal. 
