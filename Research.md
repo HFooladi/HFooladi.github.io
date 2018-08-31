@@ -4,7 +4,7 @@ title: Research
 permalink: /research/
 ---
 
-### Deep Learning In Drug Discovery
+## Deep Learning In Drug Discovery
 Deep learning algorithms have achieved state of the art performance in a lot of different tasks. 
 Convolutional Neural Network (CNN) can be used to achieve great performance in image classification, object detection, and semantic segmentation tasks. Recurrent Neural Networks (RNNs) and its descendants like LSTMs and GRUs are the 
 first things that come to mind in order to tackle problems like neural language translation
@@ -25,7 +25,7 @@ can be considered as another branch of drug discovery. In this task, the goal is
 based on the training database. I think it is possible to use geometric deep learning approach and apply deep learning on graph (compound) directly and generate new molecules.
 
 
-### Conversational Agent
+## Conversational Agent
 I am working as a Chief science officer at Shenakht Pajouh. Our mission is to understand intelligence and after that approaching toward developing Artificial General Intelligence (AGI). We are an interdisciplinary team, viewing intelligence from different perspectives of computer science, psychology, philosophy of mind and neuroscience. 
 
 We think language is one of the important aspects of intelligence and developing an agent with the capability of understanding language and managing a realistic conversation in open domain with a human is a big step forward toward AGI. Today, there are lots of research on the developing agent which is able to have the realistic conversation in a closed domain are like restaurant reservation and hotel booking; but they are not able to generalize their knowledge to talk about another topic or domain. 
