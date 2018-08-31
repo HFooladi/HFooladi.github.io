@@ -1,3 +1,9 @@
+---
+layout: page
+title: Research
+permalink: /research/
+---
+
 ## Deep Learning In Drug Discovery
 Deep learning algorithms have achieved state of the art performance in a lot of different tasks. 
 Convolutional Neural Network (CNN) can be used to achieve great performance in image classification, object detection, and semantic segmentation tasks. Recurrent Neural Networks (RNNs) and its descendants like LSTMs and GRUs are the 
