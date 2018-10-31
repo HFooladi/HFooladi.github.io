@@ -6,3 +6,8 @@ excerpt: "A review of recent papers and works on applying deep learning algorith
 date:   2018-10-31 5:00:00
 mathjax: false
 ---
+
+
+<div class="imgcap">
+<img src="/assets/Review_DL_Drug/AI_Drug.jpg">
+</div>
