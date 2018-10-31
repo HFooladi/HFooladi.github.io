@@ -9,5 +9,5 @@ mathjax: false
 
 
 <div class="imgcap">
-<img src="/assets/Review_DL_Drug/AI_Drug.JPG" height="512">
+<img src="/assets/Review_DL_Drug/AI_Drug.JPG" height="300">
 </div>
