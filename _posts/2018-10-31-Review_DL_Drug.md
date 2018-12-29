@@ -20,9 +20,11 @@ I can divide the application of deep learning in drug discovery into three diffe
 <img src="/assets/Review_DL_Drug/AI_Drug.JPG" height="300">
 </div>
 
-In the subsequent essay, I am trying to elaborate more on each category and discuss some relevant papers.
+In the following, I am trying to elaborate more on each category and discuss some relevant papers.
 
 ## Drug properties prediction
+
+Machine learning problems broadly are classified into three subgroups: supervised learning, unsupervised learning, and reinforcement learning. Drug properties prediction can be considered as a supervised learning problem. The input to the algorithms is a drug (compound) and the output is drug property (e.g., drug toxicity or solubility). 
 
 <div class="imgcap">
 <img src="/assets/Review_DL_Drug/Representation.JPG" height="300">
