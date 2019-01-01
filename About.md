@@ -3,7 +3,7 @@ layout: page
 title: About
 permalink: /about/
 ---
-I am **Hosein Fooladi**, System Biology and also Deep Learning Researcher. I recently obtained my MSc in Biomedical engineering from 
+I am **Hosein Fooladi**, System Biology and also Deep Learning Researcher. I have obtained my MSc in Biomedical engineering from 
 Sharif University of Technology (ranked 1 in Iran) and BSc in Mechanical engineering from Amirkabir University of Technology
 (top 3 in Iran) that enable me to enrich my knowledge in diverse areas such as nonlinear dynamical system analysis, 
 computational and system biology, computational neuroscience,machine learning (including deep learning) for genomics data and biomedical image analysis.  
