@@ -11,9 +11,9 @@ I have been actively involved in different projects including cell fate specific
 (in collaboration with Royan Institute, Tehran, Iran) and the application of deep learning in disease modeling and drug discovery
 (in collaboration with the Cambridge Systems Biology Centre, University of Cambridge).
 
-### Non-Academic
+#### Non-Academic
 
-I love watching anime and reading manga. My favorites animes are Death Note, Attack On Titans and Tokyo Ghoul. I have started writing notes about underlying anime philosophies.
-I like sports a lot. I am a professional Squash and Football player. Moreover, I am a fan of Formula 1.
-In addition, I am enjoying reading philosophical and psychological books. you can refer to [my goodreads](https://www.goodreads.com/user/show/75993307-hosein-fooladi) to find out more about my favorites topics.
-Moreover, I like playing games. I prefer the games in the style of [Limbo](https://playdead.com/games/limbo/) and [Inside](https://playdead.com/games/inside/)
+- I love watching anime and reading manga. My favorites animes are Death Note, Attack On Titans and Tokyo Ghoul. I have started writing notes about underlying anime philosophies.
+- I like sports a lot. I am a professional Squash and Football player. Moreover, I am a fan of Formula 1.
+- In addition, I am enjoying reading philosophical and psychological books. you can refer to [my goodreads](https://www.goodreads.com/user/show/75993307-hosein-fooladi) to find out more about my favorites topics.
+- Moreover, I like playing games. I prefer the games in the style of [Limbo](https://playdead.com/games/limbo/) and [Inside](https://playdead.com/games/inside/)
