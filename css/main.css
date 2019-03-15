@@ -9,6 +9,19 @@ body{font-family:'CMS', 'Droid Sans', Helvetica, Arial, sans-serif;font-size:18p
 
 html, body { height: 100%; }
 
+@media print {
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+  body {
+    text-align: justify;
+    font-family: 'CMS', 'Droid Sans', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+  }
+  #footer {display: none;}
+}
+/*
 body {
   text-align: justify;
   font-family: 'CMS', 'Droid Sans', Helvetica, Arial, sans-serif;
@@ -17,7 +30,7 @@ body {
   font-weight: 400;
   background-color: #333333;
 }
-
+*/
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 400; }
 
 a         { color: #2a7ae2; text-decoration: none; }
