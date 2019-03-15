@@ -9,10 +9,10 @@
 html, body { height: 100%; }
 
 body {
-  font-family: Lato, Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: CMS, "Droid Sans", Helvetica, Arial, sans-serif;
+  font-size: 18px;
   line-height: 1.75;
-  font-weight: 300;
+  font-weight: 400;
   background-color: #fdfdfd;
 }
 
