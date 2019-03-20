@@ -23,6 +23,8 @@ under certain conditions. Moreover, we have tested different boundary conditions
 is initiated from the boundary and gradually spreads towards the center.
 This model provides a basis for in-silico modeling of self-organization.
 
+[bioRxiv](https://www.biorxiv.org/content/10.1101/241604v1), [github](https://github.com/HFooladi/Self_Organization), Accepted and will appear very soon in Bioinformatics
+
 
 ### Recognizing Arrow Of Time In The Short Stories
 
@@ -34,9 +36,10 @@ this paper, we have collected and curated a novel dataset for tackling this chal
 have shown that a pre-trained BERT architecture achieves reasonable accuracy on the task, and
 outperforms RNN-based architectures.
 
+[github](https://github.com/ShenakhtPajouh/transposition-data). Accepted at WiNLP 2019 workshop
 
-### Optimum Design, Manufacturing and Experiment of a Passive Walking Biped: 
-Effects of Structural Parameters on Efficiency, Stability and Robustness on Uneven Trains
+
+### Optimum Design, Manufacturing and Experiment of a Passive Walking Biped: Effects of Structural Parameters on Efficiency, Stability and Robustness on Uneven Trains
 
 S.M.Hadi Sadati, M. Borgheinejad, **H. Fooladi**, M. Naraghi, and A.R. Ohadi
 
@@ -48,6 +51,7 @@ walking performance. After doing simulations in MSC.ADAMS software, an optimum d
 At the end based on experimental results, it was shown beside optimization of structural parameters, 
 the impact condition is very important to achieve optimal walking.
 
+[researchgate](https://www.researchgate.net/publication/258746206_Optimum_Design_Manufacturing_and_Experiment_of_a_Passive_Walking_Biped_Effects_of_Structural_Parameters_on_Efficiency_Stability_and_Robustness_on_Uneven_Trains), [Applied Mechanics and Materials](https://www.scientific.net/AMM.307.107)
 
 
 
