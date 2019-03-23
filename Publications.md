@@ -23,7 +23,7 @@ under certain conditions. Moreover, we have tested different boundary conditions
 is initiated from the boundary and gradually spreads towards the center.
 This model provides a basis for in-silico modeling of self-organization.
 
-[bioRxiv](https://www.biorxiv.org/content/10.1101/241604v1), [github](https://github.com/HFooladi/Self_Organization), Accepted and will appear very soon in Bioinformatics
+[https://doi.org/10.1093/bioinformatics/btz201](https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/btz201/5418791?redirectedFrom=fulltext), [bioRxiv](https://www.biorxiv.org/content/10.1101/241604v1), [github](https://github.com/HFooladi/Self_Organization)
 
 
 ### Recognizing Arrow Of Time In The Short Stories
