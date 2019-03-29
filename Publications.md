@@ -36,7 +36,7 @@ this paper, we have collected and curated a novel dataset for tackling this chal
 have shown that a pre-trained BERT architecture achieves reasonable accuracy on the task, and
 outperforms RNN-based architectures.
 
-[github](https://github.com/ShenakhtPajouh/transposition-data). Accepted at WiNLP 2019 workshop
+[github](https://github.com/ShenakhtPajouh/transposition-data). [arXiv](https://arxiv.org/abs/1903.10548v1), Accepted at WiNLP 2019 workshop
 
 
 ### Optimum Design, Manufacturing and Experiment of a Passive Walking Biped: Effects of Structural Parameters on Efficiency, Stability and Robustness on Uneven Trains
