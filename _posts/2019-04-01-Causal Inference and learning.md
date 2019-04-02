@@ -58,4 +58,4 @@ The summary of something we have discussed so far:
 - Given the observational distribution and causal graph, we are equipped with sufficient knowledge to answer to the interventional query.
 - SCM + observational distribution --> counterfactuals
 
-Next, Jonas turns the topic and introduces the concept of d-separation in graphs. 
+Next, Jonas turns the topic and introduces the concept of d-separation in graphs. So far, we have just considered causal reasoning, i.e., having access to the structural causal model, we can answer questions about observation, intervention, and counterfactual. However, what will happen if we don't know the causal graph and we have to construct it from scratch? That is the topic of causal learning or structure learning. In this setting, we have data, whether from observation or intervention, and the goal is to recover the causal graph and refine if after each observation. It is not possible always to recover causal graph, but by holding certain assumptions, it is possible to recover it within some certainty.
