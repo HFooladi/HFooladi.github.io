@@ -77,4 +77,12 @@ its parents, and
 
 $$ p(x) = p(x_1, x_2, ..., x_n) = \prod_{j=1}^{n} {p(x_j\mid PA(x_j))} $$
 
+Generally, when we have access to only observational data, we should take two steps to recover the causal graph.
+
+- The first step is to learn independence and conditional independence between variables from observational data. When we are dealing with high-dimensional data, it can be a time-consuming and difficult task.
+
+- Second, By inferring independence between variables and considering faithfulness assumption, we are able to recover causal graph up to some certainty.
+
+The bad news is that even be holding Markov property, and faithfulness assumption, we are not able to recover causal graph completely. There can be different structures that satisfy independence and conditional independence properties. The class of structures which satisfy the same independence and conditional independence properties are called *Markov equivalence*. 
+
 
