@@ -65,5 +65,12 @@ One method to approximately recover causal graph is independence-based methods. 
 - Markov property
 - Faithfullness
 
-you can use an inline formula $$\forall x \in R$$ like this one
+**Markov property**: Given a DAG G and a joint distribution \[P_X\], this distribution is said to satisfy
+- (i) the global Markov property with respect to the DAG G if:
+
+\[A; B d-sep. by C  \mapsto A \perp B \middle| C\]   for all disjoint sets A; B; C,
+
+- (ii) the local Markov property with respect to the DAG G if each variable is
+independent of its non-descendants given its parents, and
+
 
