@@ -68,8 +68,13 @@ One method to approximately recover causal graph is independence-based methods. 
 **Markov property**: Given a DAG $$G$$ and a joint distribution $$P_X$$, this distribution is said to satisfy
 - (i) the global Markov property with respect to the DAG G if:
 
+    $$ A; B\ d-sep.\ by\ C \rightarrow A \perp B \mid C $$
 
 - (ii) the local Markov property with respect to the DAG G if each variable is independent of its non-descendants given 
 its parents, and
+
+- (iii) the Markov factorization property with respect to the DAG G if
+
+$$ p(x) = p(x_1, x_2, ..., x_n) = \prod_{j=1}^{n} {p(x_j\mid PA(x_j))} $$
 
 
