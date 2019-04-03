@@ -64,3 +64,6 @@ One method to approximately recover causal graph is independence-based methods. 
 
 - Markov property
 - Faithfullness
+
+you can use an inline formula $$\forall x \in R$$ like this one
+
