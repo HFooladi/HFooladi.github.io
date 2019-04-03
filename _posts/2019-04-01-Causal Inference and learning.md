@@ -5,7 +5,7 @@ title:  "Causal Inference and learning"
 excerpt: "I have started to learn more about the topic of causal inference and causal learning. Therefore, I have decided to put together here every resource 
 I am using during my journey towards understanding this topic."
 date:   2019-04-01 5:00:00
-mathjax: false
+mathjax: true
 ---
 
 I have started to learn more about the topic of causal inference and causal learning. Therefore, I have decided to put together here every resource I am using during my journey towards understanding this topic. My interests in this topic span around philosophical notion and argument about causality to the recent trends and attempt in the machine learning community for reconciling causal graph with deep learning.
@@ -59,3 +59,8 @@ The summary of something we have discussed so far:
 - SCM + observational distribution --> counterfactuals
 
 Next, Jonas turns the topic and introduces the concept of d-separation in graphs. So far, we have just considered causal reasoning, i.e., having access to the structural causal model, we can answer questions about observation, intervention, and counterfactual. However, what will happen if we don't know the causal graph and we have to construct it from scratch? That is the topic of causal learning or structure learning. In this setting, we have data, whether from observation or intervention, and the goal is to recover the causal graph and refine if after each observation. It is not possible always to recover causal graph, but by holding certain assumptions, it is possible to recover it within some certainty.
+
+One method to approximately recover causal graph is independence-based methods. It is not possible to use this method without holding certain assumptions. Two assumptions that must be satisfied are:
+
+- Markov property
+- Faithfullness
