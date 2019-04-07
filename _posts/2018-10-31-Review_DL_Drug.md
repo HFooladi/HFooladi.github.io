@@ -50,7 +50,7 @@ It has been used extensively in the literature [Eli Fernández-de Gortari et al.
 Another way to represent a molecule is encoding a structure as a text. It is the way of converting graph structure data to textual content and using the text in the machine learning pipeline. One of the standards and most popular representation is simplified molecular-input line-entry system (SMILES). After conversion, we can use powerful algorithms from natural language processing (NLP) literature to process the drug and for example, predict the properties and side effects [Sunyoung Kwon](https://arxiv.org/abs/1704.08432). 
 
 <div class="Generation of SMILES (Wikipedia)">
-<img src="/assets/Review_DL_Drug/SMILES.PNG" height="300">
+<img src="/assets/Review_DL_Drug/SMILES.png" height="300">
 </div>
 
 #### Graph structure data
