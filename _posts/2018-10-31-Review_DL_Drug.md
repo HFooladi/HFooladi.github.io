@@ -39,7 +39,7 @@ Therefor, there are three ways to represent a drug (compound):
 
 One way to represent a drug in input pipeline of machine learning framework is the molecular fingerprint. The most prevalent type of fingerprint is a series of binary digits (bits) that represent the presence or absence of particular substructures in the molecule. Thus, a drug is described as a vector (array) of zeros and ones. 
 
-<div class="Binary Fingerprint">
+<div class="imgcap">
 <img src="/assets/Review_DL_Drug/Binary_Fingerprint.PNG" height="300" class="center">
 </div>
 
@@ -49,7 +49,7 @@ It has been used extensively in the literature [[Eli Fernández-de Gortari et al
 
 Another way to represent a molecule is encoding a structure as a text. It is the way of converting graph structure data to textual content and using the text in the machine learning pipeline. One of the standards and most popular representation is simplified molecular-input line-entry system (SMILES). After conversion, we can use powerful algorithms from natural language processing (NLP) literature to process the drug and for example, predict the properties and side effects [[Sunyoung Kwon]](https://arxiv.org/abs/1704.08432). 
 
-<div class="Generation of SMILES (Wikipedia)">
+<div class="imgcap">
 <img src="/assets/Review_DL_Drug/SMILES.png" height="500" class="center">
 </div>
 
