@@ -78,3 +78,18 @@ Although it has become a great trend to propose deep learning algorithms for in-
 
 So, that's it for DTI prediction. At first, maybe it seems a difficult and challenging task, but the papers I have read are using very simple techniques and strategies to tackle this problem.
 
+## De Novo Drug Design
+
+So far, we have just observed discriminative algorithms; i.e., given a drug, the algorithm can predict the side effect and other associated properties, or given compound-protein pairs, it will forecast whether they can bind or not. However, what if we are interested in designing a compound that has certain properties? e.g., we want to design a compound that can bind to a particular protein, modify some pathways, and does not interact with other pathways, and also have some physical property like the specific range of solubility. We can not tackle this problem with the toolkits we introduced in the previous sections. This problem is best realized in the realm of generative models. Generative models, form autoregressive algorithm, Variational autoencoders (VAEs), and generative adversarial networks (GANs), have become pervasive and widespread in the machine learning community. However, the attempts to utilize them in the task of De Novo drug design is not very old.
+
+The problem is, generating a compound, given certain desirable properties. As it seems obvious, it is harder than the two other problems we discussed in the last sections. The space of possible chemical molecules is extraordinarily large and searching in this space to find a proper drug is very time-consuming and near impossible tasks. I am seeing recent trends in applying generative models for designing chemical molecules. Although there are some promising results in the literature, this field is in infancy, and it requires more mature methods. Here I am going to review some of the best papers I have read in this area.
+
+Good amount of works, generate the SMILES code of compounds. i.e., the output of the algorithm is SMILES code (text) and it should be converted in the chemical space. [Rafael Gomez-Bombarelli et. al.](http://pubs.acs.org/doi/full/10.1021/acscentsci.7b00572) proposed a method for automatic chemical design using a data-driven continuous representation of molecules.
+
+<div class="imgcap">
+<img src="/assets/Review_DL_Drug/Drug_Design_Hernandez.PNG" alt="alternate text" height="300" class="center">
+</div>
+
+They have used VAEs for generating the molecules. The input representation is SMILES code, and obviously, the output will be SMILES code too. The nice trick is using Gaussian process in the latent space (which is a continuous space) to reach to the point with desired properties. Then, converting this point in the latent space to the SMILES code using the decoder. The paper is well-written and definitely a recommended reading. However, The problem is that there is not a one-one correspondence between SMILES code and molecules. i.e., not all the produced code can be converted back to original (chemical) space, and as a result, the generated SMILES code often don't correspond to the valid molecules.
+
+[Matt J. Kusner et. al.](https://arxiv.org/pdf/1703.01925.pdf) proposed Grammar VAE to specifically address this issue (producing SMILES code that does not correspond to valid molecules). Instead of feeding SMILES string directly to the network and generating SMILES code, they are converting the SMILES code to the parse tree (by utilizing SMILES context-free grammar). Using the grammar, They are able to generate more syntactically valid molecules.  
