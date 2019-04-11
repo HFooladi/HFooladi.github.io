@@ -56,3 +56,25 @@ Another way to represent a molecule is encoding a structure as a text. It is the
 ### Graph structure data
 
 Prevalence of deep learning on graph structure data, such as graph convolution network [[Thomas Kipf]](https://tkipf.github.io/graph-convolutional-networks/), has made it possible to use graph data directly as an input to the deep learning pipeline. e.g., the compound can be considered as the graph, where vertices are atoms, and chemical bond between atoms are edges. 
+
+## Drug-Target Interaction Prediction
+
+Proteins play a central role in living creatures; i.e., proteins are the key players for most of the functions within and outside the cells of living creatures. e.g., There are some proteins that are responsible for apoptosis, cellular differentiation, and other critical functions. Another important fact is, the function of a protein is directly dependent on its three-dimensional structure. i.e., changing the structure of the protein can significantly alter the functionality of the proteins, and it is one of the important facts for drug discovery. Lots of the drugs (small molecules) are designed to bind to the proteins, change their structure, and consequently alter the functionality. In addition, it is crucial to note that changing one protein function can have a dramatic effect on cellular function. Proteins directly interact with each other (e.g., you can see protein-protein networks), and also some proteins act as a transcription factor, which means they can repress or activates the expression of other genes in the cells. Therefore, altering one protein function can have a dramatic effect on the cells and can modify a different cellular pathway.
+
+As a result, one important problem in computational drug discovery is predicting whether a particular drug can bind to particular proteins or not. This is the concept which is called drug-target interaction (DTI) prediction and has received significant attention within recent years. 
+
+[Qingyuan Feng et.al.](https://arxiv.org/abs/1807.09741) proposed a deep learning-based framework for drug-target interaction prediction. Most of the deep learning frameworks for DTI prediction take both compound and protein information as the input, but the difference is what representations they are using to feed to the neural networks. As I mentioned in the previous section, a compound can be represented in numerous ways (binary fingerprint, SMILES code, features extracted from graph convolution networks), and proteins as well can have different representation. Depending on the input representation, various architectures can be used to handle the DTI prediction. e.g., If we are going to use a text-based representation for both compounds and proteins (SMILES code for compound and Amino acid or other sequence-based descriptors for proteins), the RNNs based architectures are the first thing that comes to mind.
+
+[Matthew Ragoza et.al.](https://pubs.acs.org/doi/10.1021/acs.jcim.6b00740) proposed a method for Protein−Ligand Scoring with Convolutional Neural Network. Instead of text based representation, they have utilized the three-dimensional (3D) representation of a
+protein−ligand. Consequently, They have decided to use convolutional neural networks that can act on this 3D structures and extract meaningfull and approporiate features for predicting Protein−Ligand binding affinity.
+
+Although it has become a great trend to propose deep learning algorithms for in-silico DTI prediction and they have achieved to impressive results in some cases, the papers are very similar and the only innovation I found within them is the choice of input representation and subsequently, the architecture to act on the input. So, I can summarize this task as the followings:
+
+- Finding the database that contains information about compounds and targets and whether they are interacting with each other or not.
+- Most often, in DTI prediction, the networks take a pair of compound and proteins as the input.
+- You should choose the representation you find appropriate for compounds and proteins. I reviewed some of them, but there are other representations.
+- Based on the representation you chose, you should consider suitable neural network architecture to handle the input. As a rule of thumb, you can use RNNs based architectures (GRU, LSTM, ...) in case of text-based representation for inputs and Convolutional neural networks in case of image or 3D structure.
+- The problem can be considered as the binary classification (whether a compound bind to the target) or regression (prediction the strength of affinity between compound and proteins).
+
+So, that's it for DTI prediction. At first, maybe it seems a difficult and challenging task, but the papers I have read are using very simple techniques and strategies to tackle this problem.
+
