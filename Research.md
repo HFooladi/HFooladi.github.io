@@ -10,8 +10,8 @@ Convolutional Neural Network (CNN) can be used to achieve great performance in i
 first things that come to mind in order to tackle problems like neural language translation
 , speech recognition and even they can be used to generate new texts and music.
 
-The key aspect of deep learning is representation learning; extracting the relevant information in order to achieve graet performance in a particular task. 
-But, what is relevant information? it can be defined as an abstarct feature(layer) that has the most useful information in doing a 
+The key aspect of deep learning is representation learning; extracting the relevant information in order to achieve great performance in a particular task. 
+But, what is relevant information? it can be defined as an abstract feature(layer) that has the most useful information in doing a 
 particular task (minimizing training loss) and also can be generalized well to reach significant performance on the unseen(test) data. 
 
 One of the areas that deep learning can be very beneficial is healthcare. Biological data and especially gene expression data are noisy and extracting meaningful information is challenging. 
