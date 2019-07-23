@@ -7,6 +7,8 @@ date:   2019-05-01 5:00:00
 mathjax: true
 ---
 
+I have published this post at Medium too. You can find Medium version [here](https://towardsdatascience.com/tensorflow-control-flow-tf-cond-903e020e722a)
+
 ### Introduction
 
 Tensorflow is one of the most popular deep learning frameworks and has played a key role in advancing deep learning. 
