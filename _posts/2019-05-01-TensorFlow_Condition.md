@@ -2,7 +2,7 @@
 layout: post
 comments: true
 title:  "TensorFlow Control Flow: tf.cond()"
-excerpt: A deeper look at how control flow operations work in the TensorFlow"
+excerpt: A deeper look at how control flow operations work in the TensorFlow
 date:   2019-05-01 5:00:00
 mathjax: true
 ---
@@ -39,3 +39,46 @@ First, let’s consider the switch. If you visit the Tensorflow website, you can
 Forwards data to the output port determined by pred. If pred is true, the data input is forwarded to output_true. 
 Otherwise, the data goes to output_false.
 '''
+
+As I mentioned before, Switch receives two inputs. One of them is a predicate, which is boolean tensor (true or false), and another one is the data that should be passed. 
+Predicate determines whether the data should be passed by output_true branch or output_false branch. 
+But, one weird stuff here is the concept of the dead tensor. No matter whether the predicate is true or false; 
+always there are two outputs: one of them is data and the other one is the dead tensor. If pred is true, the dead tensor is sent along output_false(and vice versa).
+
+There is not a clear reference that explains why and how dead tensors are useful, 
+but it seems they are useful for distributed processing, and their existence is an implementation detail. 
+e.g., you can find [here](https://stackoverflow.com/questions/46680462/tensorflow-node-which-is-dead?source=post_page---------------------------) one somehow convincing answer:
+
+'''
+First of all, dead tensors are an implementation detail of TensorFlow’s control flow constructs: tf.cond() and tf.while_loop(). 
+These constructs enable TensorFlow to determine whether or not to execute a subgraph based on a data-dependent value.
+'''
+
+Let’s see an example to make things more clear. I have taken inspiration from this post for providing this example.
+
+```
+import tensorflow as tf
+from tensorflow.python.ops import control_flow_ops
+x_0, x_1 = control_flow_ops.switch(tf.constant(1.0), False)
+x_2, x_3 = control_flow_ops.switch(tf.constant(2.0), True)
+print(x_0, x_1, x_2, x_3)
+with tf.Session() as sess:
+    print(sess.run(x_0))    # prints 1.0
+    print(sess.run(x_3))    # prints 2.0
+'''
+output:
+Tensor("Switch:0", shape=(), dtype=float32) Tensor("Switch:1", shape=(), dtype=float32) Tensor("Switch_1:0", shape=(), dtype=float32) Tensor("Switch_1:1", shape=(), dtype=float32)
+1.0
+2.0
+'''
+```
+
+
+
+
+
+
+
+
+
+
