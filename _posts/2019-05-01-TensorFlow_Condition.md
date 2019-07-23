@@ -73,12 +73,101 @@ Tensor("Switch:0", shape=(), dtype=float32) Tensor("Switch:1", shape=(), dtype=f
 '''
 ```
 
+So, let’s dive in to see what’s happening in this example. I have created the figure that illustrates what is going on.
+
+<div class="imgcap">
+<img src="/assets/TensorFlow_Condition/2_Switch.PNG" height="300" class="center">
+</div>
 
 
+I think it’s clear from the figure what is happening. e.g., in x_0, x_1 = control_flow_ops.switch(tf.constant(1.0), False) , the predicate is false; 
+therefore, tf.constant(1.0) is forwarded to the output_false branch and dead tensor to the output_true branch.
+
+One important thing to mention is that I have executed the x_0 and x_3 within tf.Session(), which contain the data (tensor). 
+If I try to run and execute the dead tensor, I will face with an error. 
+Whenever you try to execute and retrieve the dead tensor in the Session.run(), it will lead to an error. e.g., the following code raises a famous and frequently occurred error:
 
 
+```
+with tf.Session() as sess:
+    print(sess.run(x_1))
+'''
+output:
+InvalidArgumentError: Retval[0] does not have value
+'''
+```
+
+Now, I think it’s enough for Switch. let’s see how Merge operates.
+
+#### Merge
+
+Merge is another operator which is required for construction of tf.cond() graph.
+
+<div class="imgcap">
+<img src="/assets/TensorFlow_Condition/3_Merge.PNG" height="300" class="center">
+</div>
+
+Merge can receive more than one inputs, but only one of them must contain the data and others should be the dead tensors. 
+Otherwise, we will face with some random and unpredictable behavior. Let’s see how Merge works in the last example:
+
+```
+with tf.Session() as sess:
+    print(sess.run(control_flow_ops.merge([x_0, x_1])))       
+    print(sess.run(control_flow_ops.merge([x_1, x_0])))       
+    print(sess.run(control_flow_ops.merge([x_2, x_3])))   
+    print(sess.run(control_flow_ops.merge([x_3, x_2])))     
+    print(sess.run(control_flow_ops.merge([x_0, x_1, x_2])))
+'''
+output:
+Merge(output=1.0, value_index=0)
+Merge(output=1.0, value_index=1)
+Merge(output=2.0, value_index=1)
+Merge(output=2.0, value_index=0)
+Merge(output=1.0, value_index=0)
+Merge(output=2.0, value_index=2)
+'''
+```
+
+It behaves completely according to our expectation. 
+But, things get a little unexpected and bizarre, when you feed two tensors which have data into the Merge.
+
+```
+with tf.Session() as sess:
+    print(sess.run(control_flow_ops.merge([x_1, x_0, x_3]))) 
+    print(sess.run(control_flow_ops.merge([x_0, x_3])))
+    print(sess.run(control_flow_ops.merge([x_3, x_0])))
+'''
+output:
+Merge(output=1.0, value_index=1)
+Merge(output=1.0, value_index=0)
+Merge(output=2.0, value_index=0)
+'''
+```
 
 
+Sometimes, it returns the value of x_0and sometimes the value of x_3. So, be cautious about this behavior.
+Note: Dead tensors propagate through the computational graph until they reach to the Merge ops.
 
+### tf.cond()
+
+Now, I think we have a good grasp of how Switch and Merge operate. It is a good time to dive into the tf.cond(). 
+I am considering the simple case, where the input arguments are pred, true_fn, and false_fn.
+
+```
+tf.cond(pred, true_fn, false_fn)
+```
+
+I am going to consider a simple example to introduce this concept. consider the following condition:
+
+```
+tf.cond(x < y, lambda: tf.add(x, z), lambda: tf.square(y))
+```
+
+
+I have constructed the computational graph for this simple example, and you can find it in figure 4.
+
+<div class="imgcap">
+<img src="/assets/TensorFlow_Condition/4_tf_cond.PNG" height="300" class="center">
+</div>
 
 
