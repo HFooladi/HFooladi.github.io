@@ -167,7 +167,118 @@ tf.cond(x < y, lambda: tf.add(x, z), lambda: tf.square(y))
 I have constructed the computational graph for this simple example, and you can find it in figure 4.
 
 <div class="imgcap">
-<img src="/assets/TensorFlow_Condition/4_tf_cond.PNG" height="300" class="center">
+<img src="/assets/TensorFlow_Condition/4_tf_cond.PNG" height="400" class="center">
 </div>
 
+The first thing to mention is that there is a switch for each input. By input, I mean the arguments of true and false functions within the tf.cond(). In this example, there are three inputs (x, y, and z), 
+and as a result, there are three switches in the computational graph.
 
+For true_fn, the switch outputs are emitted from the true branch. 
+For false_fn, the switch outputs are emitted from the false branch. 
+Based on the condition result(whether x is smaller than y or not), the predicate can be true or false, and one of the branches (left or right) will be
+executed. It is important to note that, both tf.add() and tf.square() operations come after the switches. 
+As a result, in this example, only one of them will be executed and the other one remains untouched.
+
+In addition, I think this picture is a little wrong. I think dead tensors propagate through the add or square operation until they meet the Merge ops. 
+Merge ops remove the dead tensors and only provides one output.
+
+Hopefully, you have learned something about tf.cond() up to know, and you have become more comfortable for working with this API. 
+I am going to end this post by providing one controversial example and explain how something we have learned so far can help us to understand the inner working. 
+In the TensorFlow website, you can find the following statement:
+
+'''
+**WARNING:** Any Tensors or Operations created outside of true_fn and false_fn will be executed regardless of which branch is selected at runtime. 
+Although this behavior is consistent with the dataflow model of TensorFlow, it has frequently surprised users who expected a lazier semantics.
+'''
+
+So, I a going to provide an example to clarify what this warning says. I am providing two examples: in the first one all the operations are defined within the true_fn and false_fn, and in the second example, some operations are defined outside this functions. 
+I am going to construct and visualize the computational graph to illustrate why this behavior occurs.
+
+**Example 1:**
+
+```
+import tensorflow as tf
+x = tf.constant(3.0)
+y = tf.constant(2.0)
+def true_fn():
+    z = tf.multiply(x, y)
+    print_output = tf.Print(z, [z], "The value I want to print!!")
+    return tf.add(x, print_output)
+def false_fn():
+    return tf.square(y)
+result = tf.cond(x < y, true_fn, false_fn)
+with tf.Session() as sess:
+    print(sess.run(result))
+## output: 4.0
+'''
+if you keep everything the same and just changing x to x = tf.constant(1.0), the predicate becomes true and the output will be as the following:
+3.0
+The value I want to print!![2]
+'''
+```
+
+The important point here to focus on is that all the Tensors and operations have been created inside the functions. 
+So, there are three input arguments and consequently, there exist three switches in the graph. 
+Constructing a computational graph for this case will be easy.
+
+<div class="imgcap">
+<img src="/assets/TensorFlow_Condition/5_tf.cond_ex1.PNG" height="300" class="center">
+</div>
+
+if the predicate becomes true (x will be smaller than y), the true_fn (left branch) will be executed and the right one does not execute and 
+remain untouched (and Vice versa).
+
+Note: I have used tf.Print() function in order to print something in the computational graph and have access to the value of a tensor in the graph. Using tf.Print() is a little tricky and I am not going to explain here how it works. 
+There is an excellent blog post about this function [here](https://towardsdatascience.com/using-tf-print-in-tensorflow-aa26e1cff11e).
+
+**Note:** When the predicate is false (x > y), the false_fn (right branch) is executed, and as a result, tf.Print() receives only the dead tensors and does not print anything.
+
+
+**Example 2:**
+
+The example 1 was a little boring and the result was completely what we expected. Things get more interesting in this example.
+
+```
+x = tf.constant(3.0)
+y = tf.constant(2.0)
+z = tf.multiply(x, y)
+print_output = tf.Print(z, [z], "The value I want to print!!")
+def true_fn():
+    return tf.add(x, print_output)
+def false_fn():
+    return tf.square(y)
+result = tf.cond(x < y, true_fn, false_fn)
+with tf.Session() as sess:
+    print(sess.run(result))
+'''
+output:
+4.0
+The value I want to print!![6]
+'''
+```
+
+In this example, the predicate is false (x > y) and we expect that the false_fn executes and true_fn remains untouched. 
+However, we can see that output contains “The value I want to print!![6]” which belongs to the true_fn. 
+At first, maybe this behavior seems a little weird, but it is completely consistent with what we have seen and understood so far. 
+Some of the tensors (z and print_output) have defined outside the function and as a result, they will be put before the switch in the computational graph. 
+let’s draw the graph to make this point clear:
+
+<div class="imgcap">
+<img src="/assets/TensorFlow_Condition/6_tf.cond_ex2.PNG" height="300" class="center">
+</div>
+
+You can see in figure 6 that multiply and prints ops are outside (before) the switches. 
+So, no matter the predicate is true or false, these two operations will be executed in both cases.
+
+So, by understanding switch and merge and realizing how tf.cond() works, hopefully, you can see this behavior is consistent with the dataflow model of TensorFlow and there is nothing wrong about it.
+
+I m going to finish this post here. Thanks for reading the post up to the end. Please let me know if I have made a mistake or something is wrong. 
+Hopefully, I am going to cover tf.while_loop() in the subsequent post.
+
+### References
+
+- Inside [TensorFlow](https://youtu.be/IzKXEbpT9Lg): Control Flow
+- Tensorflow, node which is [dead](https://stackoverflow.com/questions/46680462/tensorflow-node-which-is-dead)
+- How to use the function merge and switch of [TensorFlow?](https://stackoverflow.com/questions/47107994/how-to-use-the-function-merge-and-switch-of-tensorflow)
+- [Official](https://www.tensorflow.org/api_docs/python/tf/cond) TensorFlow [documentation](https://www.tensorflow.org/api_docs/cc/class/tensorflow/ops/switch)
+- [Using](https://towardsdatascience.com/using-tf-print-in-tensorflow-aa26e1cff11e) tf.Print() in TensorFlow
