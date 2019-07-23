@@ -222,7 +222,7 @@ So, there are three input arguments and consequently, there exist three switches
 Constructing a computational graph for this case will be easy.
 
 <div class="imgcap">
-<img src="/assets/TensorFlow_Condition/5_tf.cond_ex1.PNG" height="300" class="center">
+<img src="/assets/TensorFlow_Condition/5_tf.cond_ex1.PNG" height="400" class="center">
 </div>
 
 if the predicate becomes true (x will be smaller than y), the true_fn (left branch) will be executed and the right one does not execute and 
@@ -264,7 +264,7 @@ Some of the tensors (z and print_output) have defined outside the function and a
 let’s draw the graph to make this point clear:
 
 <div class="imgcap">
-<img src="/assets/TensorFlow_Condition/6_tf.cond_ex2.PNG" height="300" class="center">
+<img src="/assets/TensorFlow_Condition/6_tf.cond_ex2.PNG" height="400" class="center">
 </div>
 
 You can see in figure 6 that multiply and prints ops are outside (before) the switches. 
