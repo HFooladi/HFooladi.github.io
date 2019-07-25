@@ -61,12 +61,15 @@ Let’s see an example to make things more clear. I have taken inspiration from 
 ```
 import tensorflow as tf
 from tensorflow.python.ops import control_flow_ops
+
 x_0, x_1 = control_flow_ops.switch(tf.constant(1.0), False)
 x_2, x_3 = control_flow_ops.switch(tf.constant(2.0), True)
 print(x_0, x_1, x_2, x_3)
+
 with tf.Session() as sess:
     print(sess.run(x_0))    # prints 1.0
     print(sess.run(x_3))    # prints 2.0
+	
 '''
 output:
 Tensor("Switch:0", shape=(), dtype=float32) Tensor("Switch:1", shape=(), dtype=float32) Tensor("Switch_1:0", shape=(), dtype=float32) Tensor("Switch_1:1", shape=(), dtype=float32)
@@ -77,9 +80,11 @@ Tensor("Switch:0", shape=(), dtype=float32) Tensor("Switch:1", shape=(), dtype=f
 
 So, let’s dive in to see what’s happening in this example. I have created the figure that illustrates what is going on.
 
+<a href="/assets/TensorFlow_Condition/2_Switch.PNG">
 <div class="imgcap">
 <img src="/assets/TensorFlow_Condition/2_Switch.PNG" height="300" class="center">
 </div>
+</a>
 
 
 I think it’s clear from the figure what is happening. e.g., in x_0, x_1 = control_flow_ops.switch(tf.constant(1.0), False) , the predicate is false; 
