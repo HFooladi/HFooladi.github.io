@@ -27,6 +27,7 @@ I am going to introduce how they work and provide some examples for becoming fam
 
 <div class="imgcap">
 <img src="/assets/TensorFlow_Condition/1_Switch_Merge.PNG" height="300" class="center">
+<div class="thecap" style="text-align:justify">Figure 1: Schematics of what are the inputs and outputs of Switch and Merge, and how they work.</div>
 </div>
 
 
@@ -82,6 +83,7 @@ So, let’s dive in to see what’s happening in this example. I have created th
 
 <div class="imgcap">
 <img src="/assets/TensorFlow_Condition/2_Switch.PNG" height="300" class="center">
+<div class="thecap" style="text-align:justify">Figure 2: Illustrating what is happening in the provided example.</div>
 </div>
 
 
@@ -110,6 +112,7 @@ Merge is another operator which is required for construction of tf.cond() graph.
 
 <div class="imgcap">
 <img src="/assets/TensorFlow_Condition/3_Merge.PNG" height="300" class="center">
+<div class="thecap" style="text-align:justify">Figure 3: Merge ops</div>
 </div>
 
 Merge can receive more than one inputs, but only one of them must contain the data and others should be the dead tensors. 
@@ -122,6 +125,7 @@ with tf.Session() as sess:
     print(sess.run(control_flow_ops.merge([x_2, x_3])))   
     print(sess.run(control_flow_ops.merge([x_3, x_2])))     
     print(sess.run(control_flow_ops.merge([x_0, x_1, x_2])))
+	
 '''
 output:
 Merge(output=1.0, value_index=0)
@@ -141,6 +145,7 @@ with tf.Session() as sess:
     print(sess.run(control_flow_ops.merge([x_1, x_0, x_3]))) 
     print(sess.run(control_flow_ops.merge([x_0, x_3])))
     print(sess.run(control_flow_ops.merge([x_3, x_0])))
+	
 '''
 output:
 Merge(output=1.0, value_index=1)
@@ -173,6 +178,7 @@ I have constructed the computational graph for this simple example, and you can 
 
 <div class="imgcap">
 <img src="/assets/TensorFlow_Condition/4_tf_cond.PNG" height="400" class="center">
+<div class="thecap" style="text-align:justify">Figure 4: computational graph to show how tf.cond() works.</div>
 </div>
 
 The first thing to mention is that there is a switch for each input. By input, I mean the arguments of true and false functions within the tf.cond(). In this example, there are three inputs (x, y, and z), 
@@ -205,13 +211,17 @@ I am going to construct and visualize the computational graph to illustrate why 
 import tensorflow as tf
 x = tf.constant(3.0)
 y = tf.constant(2.0)
+
 def true_fn():
     z = tf.multiply(x, y)
     print_output = tf.Print(z, [z], "The value I want to print!!")
     return tf.add(x, print_output)
+	
 def false_fn():
     return tf.square(y)
+	
 result = tf.cond(x < y, true_fn, false_fn)
+
 with tf.Session() as sess:
     print(sess.run(result))
 ## output: 4.0
@@ -228,6 +238,7 @@ Constructing a computational graph for this case will be easy.
 
 <div class="imgcap">
 <img src="/assets/TensorFlow_Condition/5_tf.cond_ex1.PNG" height="400" class="center">
+<div class="thecap" style="text-align:justify">Figure 5: Computational graph for Example 1.</div>
 </div>
 
 if the predicate becomes true (x will be smaller than y), the true_fn (left branch) will be executed and the right one does not execute and 
@@ -248,11 +259,15 @@ x = tf.constant(3.0)
 y = tf.constant(2.0)
 z = tf.multiply(x, y)
 print_output = tf.Print(z, [z], "The value I want to print!!")
+
 def true_fn():
     return tf.add(x, print_output)
+	
 def false_fn():
     return tf.square(y)
+	
 result = tf.cond(x < y, true_fn, false_fn)
+
 with tf.Session() as sess:
     print(sess.run(result))
 '''
@@ -270,6 +285,7 @@ let’s draw the graph to make this point clear:
 
 <div class="imgcap">
 <img src="/assets/TensorFlow_Condition/6_tf.cond_ex2.PNG" height="400" class="center">
+<div class="thecap" style="text-align:justify">Figure 6: Computational graph for Example 2.</div>
 </div>
 
 You can see in figure 6 that multiply and prints ops are outside (before) the switches. 
