@@ -83,7 +83,7 @@ So, let’s dive in to see what’s happening in this example. I have created th
 
 <div class="imgcap">
 <img src="/assets/TensorFlow_Condition/2_Switch.PNG" height="300" class="center">
-<div class="thecap" style="text-align:justify">Figure 2: Illustrating what is happening in the provided example.</div>
+<div class="thecap" style="text-align:center">Figure 2: Illustrating what is happening in the provided example.</div>
 </div>
 
 
@@ -112,7 +112,7 @@ Merge is another operator which is required for construction of tf.cond() graph.
 
 <div class="imgcap">
 <img src="/assets/TensorFlow_Condition/3_Merge.PNG" height="300" class="center">
-<div class="thecap" style="text-align:justify">Figure 3: Merge ops</div>
+<div class="thecap" style="text-align:center">Figure 3: Merge ops</div>
 </div>
 
 Merge can receive more than one inputs, but only one of them must contain the data and others should be the dead tensors. 
@@ -178,7 +178,7 @@ I have constructed the computational graph for this simple example, and you can 
 
 <div class="imgcap">
 <img src="/assets/TensorFlow_Condition/4_tf_cond.PNG" height="400" class="center">
-<div class="thecap" style="text-align:justify">Figure 4: computational graph to show how tf.cond() works.</div>
+<div class="thecap" style="text-align:center">Figure 4: computational graph to show how tf.cond() works.</div>
 </div>
 
 The first thing to mention is that there is a switch for each input. By input, I mean the arguments of true and false functions within the tf.cond(). In this example, there are three inputs (x, y, and z), 
@@ -238,7 +238,7 @@ Constructing a computational graph for this case will be easy.
 
 <div class="imgcap">
 <img src="/assets/TensorFlow_Condition/5_tf.cond_ex1.PNG" height="400" class="center">
-<div class="thecap" style="text-align:justify">Figure 5: Computational graph for Example 1.</div>
+<div class="thecap" style="text-align:center">Figure 5: Computational graph for Example 1.</div>
 </div>
 
 if the predicate becomes true (x will be smaller than y), the true_fn (left branch) will be executed and the right one does not execute and 
@@ -285,7 +285,7 @@ let’s draw the graph to make this point clear:
 
 <div class="imgcap">
 <img src="/assets/TensorFlow_Condition/6_tf.cond_ex2.PNG" height="400" class="center">
-<div class="thecap" style="text-align:justify">Figure 6: Computational graph for Example 2.</div>
+<div class="thecap" style="text-align:center">Figure 6: Computational graph for Example 2.</div>
 </div>
 
 You can see in figure 6 that multiply and prints ops are outside (before) the switches. 
