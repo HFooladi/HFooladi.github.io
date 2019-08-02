@@ -27,7 +27,7 @@ I am going to introduce how they work and provide some examples for becoming fam
 
 <div class="imgcap">
 <img src="/assets/TensorFlow_Condition/1_Switch_Merge.PNG" height="300" class="center">
-<div class="thecap" style="text-align:justify">Figure 1: Schematics of what are the inputs and outputs of Switch and Merge, and how they work.</div>
+<div class="thecap" style="text-align:center">Figure 1: Schematics of what are the inputs and outputs of Switch and Merge, and how they work.</div>
 </div>
 
 
