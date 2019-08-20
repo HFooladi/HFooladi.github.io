@@ -28,6 +28,7 @@ Machine learning problems broadly are classified into three subgroups: supervise
 
 <div class="imgcap">
 <img src="/assets/Review_DL_Drug/Representation.JPG" height="300" class="center">
+<div class="thecap" style="text-align:center">Figure 1: Three areas that deep learning can help and facilitate drug discovery.</div>
 </div>
 
 Therefor, there are three ways to represent a drug (compound):
@@ -41,6 +42,7 @@ One way to represent a drug in input pipeline of machine learning framework is t
 
 <div class="imgcap">
 <img src="/assets/Review_DL_Drug/Binary_Fingerprint.PNG" height="300" class="center">
+<div class="thecap" style="text-align:center">Figure 2: Different ways that a molecule can be represented.</div>
 </div>
 
 It has been used extensively in the literature [[Eli Fernández-de Gortari et al.]](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-017-0195-1#Sec11). But, it is apparent that encoding a molecule as a vector is not the reversible process; i.e., we can not fully reconstruct molecule from the fingerprint, which indicates that lots of information are lost during this operation.
@@ -51,6 +53,7 @@ Another way to represent a molecule is encoding a structure as a text. It is the
 
 <div class="imgcap">
 <img src="/assets/Review_DL_Drug/SMILES.png" height="500" class="center">
+<div class="thecap" style="text-align:center">Figure 3: How to represent a molecule in SMILES code.</div>
 </div>
 
 ### Graph structure data
@@ -88,7 +91,8 @@ Good amount of works, generate the SMILES code of compounds. i.e., the output of
 
 <div class="imgcap">
 <img src="/assets/Review_DL_Drug/Drug_Design_Hernandez.PNG" alt="alternate text" height="300" class="center">
-</div>
+<div class="thecap" style="text-align:center">Figure 4: Using variational autoencoder to generate compounds with desired properties. [Matt J. Kusner et. al.](https://arxiv.org/pdf/1703.01925.pdf)</div>
+</div> 
 
 They have used VAEs for generating the molecules. The input representation is SMILES code, and obviously, the output will be SMILES code too. The nice trick is using Gaussian process in the latent space (which is a continuous space) to reach to the point with desired properties. Then, converting this point in the latent space to the SMILES code using the decoder. The paper is well-written and definitely a recommended reading. However, The problem is that there is not a one-one correspondence between SMILES code and molecules. i.e., not all the produced code can be converted back to original (chemical) space, and as a result, the generated SMILES code often don't correspond to the valid molecules.
 
