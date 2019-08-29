@@ -17,13 +17,16 @@ layout: default
             {% endfor %}
           </span>
         </span>
-        
-         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-         {% if post.excerpt %}
-           {{ post.excerpt }}
-         {% endif %}
-        
       </li>
+        
+      <li>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <br>
+        {% if post.excerpt %}
+          {{ post.excerpt }}
+        {% endif %}       
+      </li>
+    
     {% endfor %}
   </ul>
 
