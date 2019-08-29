@@ -5,6 +5,7 @@ title:  "Causal Inference and learning"
 excerpt: "I have started to learn more about the topic of causal inference and causal learning. Therefore, I have decided to put together here every resource 
 I am using during my journey towards understanding this topic."
 date:   2019-04-01 5:00:00
+tags: causal-learning causality
 mathjax: true
 ---
 
