@@ -163,7 +163,7 @@ a:visited { color: #205caa; }
   display: block;
   font-size: 15px;
   color: #818181;
-  a.post-tag {
+  post-tag {
     border-radius: 5px;
     border: 1px solid #828282;
     color: #828282;
@@ -241,25 +241,7 @@ a:visited { color: #205caa; }
 .post-content ul,
 .post-content ol { padding-left: 20px; }
 
-.post-meta {
-  font-size: 10;
-  color: #828282;
   
-  a.post-tag {
-    border-radius: 5px;
-    border: 1px solid #828282;
-    color: #828282;
-    padding: 1px 5px;
-    margin-left: 5px;
-    &:hover {
-      border: 1px solid #e01f1f;
-      text-decoration: none;
-      color: #ffffff;
-      background: #e01f1f;
-    }
-  }
-}
-
 .post pre,
 .post code {
   font-family: "Courier New", Courier, monospace;
