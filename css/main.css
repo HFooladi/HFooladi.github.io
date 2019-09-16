@@ -10,7 +10,7 @@ html, body { height: 100%; }
 
 body {
     text-align: justify;
-    font-family: et-book, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
     font-size: 16px;
     line-height: 26px;
     font-weight: 300;
