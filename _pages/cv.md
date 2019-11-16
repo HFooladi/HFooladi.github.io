@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 {% include base_path %}
-Download PDF version of my CV from [here](https://hfooladi.github.io//files/CV_Hosein_Fooladi).
+Download PDF version of my CV from [here](https://hfooladi.github.io//files/CV_Hosein_Fooladi.pdf).
 
 Education
 ======
