@@ -96,7 +96,7 @@ If I try to run and execute the dead tensor, I will face with an error.
 Whenever you try to execute and retrieve the dead tensor in the Session.run(), it will lead to an error. e.g., the following code raises a famous and frequently occurred error:
 
 
-```
+```python
 with tf.Session() as sess:
     print(sess.run(x_1))
 '''
@@ -119,7 +119,7 @@ Merge is another operator which is required for construction of tf.cond() graph.
 Merge can receive more than one inputs, but only one of them must contain the data and others should be the dead tensors. 
 Otherwise, we will face with some random and unpredictable behavior. Let’s see how Merge works in the last example:
 
-```
+```python
 with tf.Session() as sess:
     print(sess.run(control_flow_ops.merge([x_0, x_1])))       
     print(sess.run(control_flow_ops.merge([x_1, x_0])))       
@@ -141,7 +141,7 @@ Merge(output=2.0, value_index=2)
 It behaves completely according to our expectation. 
 But, things get a little unexpected and bizarre, when you feed two tensors which have data into the Merge.
 
-```
+```python
 with tf.Session() as sess:
     print(sess.run(control_flow_ops.merge([x_1, x_0, x_3]))) 
     print(sess.run(control_flow_ops.merge([x_0, x_3])))
@@ -164,13 +164,13 @@ Note: Dead tensors propagate through the computational graph until they reach to
 Now, I think we have a good grasp of how Switch and Merge operate. It is a good time to dive into the tf.cond(). 
 I am considering the simple case, where the input arguments are pred, true_fn, and false_fn.
 
-```
+```python
 tf.cond(pred, true_fn, false_fn)
 ```
 
 I am going to consider a simple example to introduce this concept. consider the following condition:
 
-```
+```python
 tf.cond(x < y, lambda: tf.add(x, z), lambda: tf.square(y))
 ```
 
@@ -208,7 +208,7 @@ I am going to construct and visualize the computational graph to illustrate why 
 
 **Example 1:**
 
-```
+```python
 import tensorflow as tf
 x = tf.constant(3.0)
 y = tf.constant(2.0)
@@ -255,7 +255,7 @@ There is an excellent blog post about this function [here](https://towardsdatasc
 
 The example 1 was a little boring and the result was completely what we expected. Things get more interesting in this example.
 
-```
+```python
 x = tf.constant(3.0)
 y = tf.constant(2.0)
 z = tf.multiply(x, y)
