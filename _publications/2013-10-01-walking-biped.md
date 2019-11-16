@@ -8,7 +8,7 @@ have been investigated.'
 date: 2013-10-01
 venue: 'Applied Mechanics and Materials'
 paperurl: 'https://www.scientific.net/AMM.307.107'
-citation: 'Hadi, Sadati et al. (2009). &quot;Optimum Design, Manufacturing and Experiment of a Passive Walking Biped: Effects of Structural Parameters on Efficiency, Stability and Robustness on Uneven Trains.&quot; <i>Journal 1</i>.'
+citation: 'Hadi, Sadati et al. (2013). &quot;Optimum Design, Manufacturing and Experiment of a Passive Walking Biped: Effects of Structural Parameters on Efficiency, Stability and Robustness on Uneven Trains.&quot; <i>Applied Mechanics and Materials</i>.'
 ---
 S.M.Hadi Sadati, M. Borgheinejad, **H. Fooladi**, M. Naraghi, and A.R. Ohadi
 
