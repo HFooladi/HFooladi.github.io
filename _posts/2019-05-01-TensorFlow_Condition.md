@@ -1,7 +1,7 @@
 ---
 title:  "TensorFlow Control Flow: tf.cond()"
 date:   2019-05-01 5:00:00
-permalink: /posts/2019/05/TensorFlow_Condition/
+permalink: /posts/2019/05/TensorFlow-Condition/
 tags:
   - programming
   - tensorflow

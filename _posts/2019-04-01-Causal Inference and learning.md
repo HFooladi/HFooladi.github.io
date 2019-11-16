@@ -1,7 +1,7 @@
 ---
 title:  "Causal Inference and learning"
 date:   2019-04-01 5:00:00
-permalink: /posts/2019/04/Causal Inference and learning/
+permalink: /posts/2019/04/Causal-Inference-and-learning/
 tags:
   - causality
   - causal inference 
