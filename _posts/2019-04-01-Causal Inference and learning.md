@@ -1,12 +1,11 @@
 ---
-layout: post
-comments: true
 title:  "Causal Inference and learning"
-excerpt: "I have started to learn more about the topic of causal inference and causal learning. Therefore, I have decided to put together here every resource 
-I am using during my journey towards understanding this topic."
 date:   2019-04-01 5:00:00
-tags: causal-learning causality
-mathjax: true
+permalink: /posts/2019/04/Causal Inference and learning/
+tags:
+  - causality
+  - causal inference 
+
 ---
 
 I have started to learn more about the topic of causal inference and causal learning. Therefore, I have decided to put together here every resource I am using during my journey towards understanding this topic. My interests in this topic span around philosophical notion and argument about causality to the recent trends and attempt in the machine learning community for reconciling causal graph with deep learning.

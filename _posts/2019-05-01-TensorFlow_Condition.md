@@ -1,10 +1,10 @@
 ---
-layout: post
-comments: true
 title:  "TensorFlow Control Flow: tf.cond()"
-excerpt: A deeper look at how control flow operations work in the TensorFlow
 date:   2019-05-01 5:00:00
-tags: programming tensorflow control-flow
+permalink: /posts/2019/05/TensorFlow_Condition/
+tags:
+  - programming
+  - tensorflow
 mathjax: true
 ---
 
