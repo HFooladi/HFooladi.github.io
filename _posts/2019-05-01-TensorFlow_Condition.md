@@ -60,7 +60,7 @@ These constructs enable TensorFlow to determine whether or not to execute a subg
 
 Let’s see an example to make things more clear. I have taken inspiration from this post for providing this example.
 
-```
+```python
 import tensorflow as tf
 from tensorflow.python.ops import control_flow_ops
 
