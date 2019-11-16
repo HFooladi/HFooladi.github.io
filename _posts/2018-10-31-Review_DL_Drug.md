@@ -17,7 +17,7 @@ I can divide the application of deep learning in drug discovery into three diffe
 - Drug-target interaction prediction
 
 <div class="imgcap">
-<img src="/assets/Review_DL_Drug/AI_Drug.JPG" height="300" class="center">
+<img src="/images/assets/Review_DL_Drug/AI_Drug.JPG" height="300" class="center">
 <div class="thecap" style="text-align:center">Figure 1: Three areas that deep learning can help and facilitate drug discovery.</div>
 </div>
 
@@ -28,7 +28,7 @@ In the following, I am trying to elaborate more on each category and discuss som
 Machine learning problems broadly are classified into three subgroups: supervised learning, unsupervised learning, and reinforcement learning. Drug properties prediction can be considered as a supervised learning problem. The input to the algorithms is a drug (compound) and the output is drug property (e.g., drug toxicity or solubility). 
 
 <div class="imgcap">
-<img src="/assets/Review_DL_Drug/Representation.JPG" height="300" class="center">
+<img src="/images/assets/Review_DL_Drug/Representation.JPG" height="300" class="center">
 <div class="thecap" style="text-align:center">Figure 2: Different ways that a molecule can be represented.</div>
 </div>
 
@@ -42,7 +42,7 @@ Therefor, there are three ways to represent a drug (compound):
 One way to represent a drug in input pipeline of machine learning framework is the molecular fingerprint. The most prevalent type of fingerprint is a series of binary digits (bits) that represent the presence or absence of particular substructures in the molecule. Thus, a drug is described as a vector (array) of zeros and ones. 
 
 <div class="imgcap">
-<img src="/assets/Review_DL_Drug/Binary_Fingerprint.PNG" height="300" class="center">
+<img src="/images/assets/Review_DL_Drug/Binary_Fingerprint.PNG" height="300" class="center">
 <div class="thecap" style="text-align:center">Figure 3: How to represent a molecule in a binary vector.</div>
 </div>
 
@@ -53,7 +53,7 @@ It has been used extensively in the literature [[Eli Fernández-de Gortari et al
 Another way to represent a molecule is encoding a structure as a text. It is the way of converting graph structure data to textual content and using the text in the machine learning pipeline. One of the standards and most popular representation is simplified molecular-input line-entry system (SMILES). After conversion, we can use powerful algorithms from natural language processing (NLP) literature to process the drug and for example, predict the properties and side effects [[Sunyoung Kwon]](https://arxiv.org/abs/1704.08432). 
 
 <div class="imgcap">
-<img src="/assets/Review_DL_Drug/SMILES.png" height="500" class="center">
+<img src="/images/assets/Review_DL_Drug/SMILES.png" height="500" class="center">
 <div class="thecap" style="text-align:center">Figure 4: How to represent a molecule in SMILES code.</div>
 </div>
 
@@ -91,7 +91,7 @@ The problem is, generating a compound, given certain desirable properties. As it
 Good amount of works, generate the SMILES code of compounds. i.e., the output of the algorithm is SMILES code (text) and it should be converted in the chemical space. [Rafael Gomez-Bombarelli et. al.](http://pubs.acs.org/doi/full/10.1021/acscentsci.7b00572) proposed a method for automatic chemical design using a data-driven continuous representation of molecules.
 
 <div class="imgcap">
-<img src="/assets/Review_DL_Drug/Drug_Design_Hernandez.PNG" alt="alternate text" height="300" class="center">
+<img src="/images/assets/Review_DL_Drug/Drug_Design_Hernandez.PNG" alt="alternate text" height="300" class="center">
 <div class="thecap" style="text-align:center">Figure 5: Using variational autoencoder to generate compounds with desired properties. Matt J. Kusner et. al.</div>
 </div> 
 
