@@ -59,7 +59,7 @@ The summary of something we have discussed so far:
 - SCM + observational distribution --> counterfactuals
 
 <div class="imgcap">
-<img src="/images/assets/Causal_Inference_and_learning/ladder_of_causation.PNG" height="200" class="center">
+<img src="/images/assets/Causal_Inference_and_learning/ladder_of_causation.PNG" height="100" class="center">
 <div class="thecap" style="text-align:center">Figure 1: Three rungs of ladder of causation</div>
 </div>
 
