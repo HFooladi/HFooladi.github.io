@@ -40,6 +40,7 @@ Work experience
 Skills
 ======
 * Machine learning (causal learning)
+* Bioinformatics
 * Programming
   * Python 
   * R
@@ -67,4 +68,4 @@ Teaching
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Active Open Source Developer
