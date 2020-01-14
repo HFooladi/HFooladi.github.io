@@ -83,7 +83,7 @@ author:
   name             : "Hosein Fooladi"
   avatar           : "profile.png"
   bio              : "Machine Learning Researcher"
-  location         : "Tehran, Iran"
+  location         : #"Tehran, Iran"
   employer         :
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=jLLcHQ8AAAAJ&hl=en"
