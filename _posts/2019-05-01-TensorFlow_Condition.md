@@ -10,7 +10,7 @@ mathjax: true
 
 I have published this post at Medium too. You can find Medium version [here](https://towardsdatascience.com/tensorflow-control-flow-tf-cond-903e020e722a)
 
-### 1. Introduction
+## 1. Introduction
 
 Tensorflow is one of the most popular deep learning frameworks and has played a key role in advancing deep learning. 
 I am using Tensorflow for more than two years, but I have seen lots of bizarre and unpredictable behavior during using control flow.
@@ -21,7 +21,7 @@ provide some examples for illustration. Hopefully, I will cover tf.while_loop in
 
 **Note:** I am going to cover low-level operations in this post. There are other ops like Functional ops, which is beyond the scope of this blog post.
 
-### 2. Switch and Merge
+## 2. Switch and Merge
 
 Two important ops that are used during the construction of the graph are Switch and Merge. Therefore, in this section, 
 I am going to introduce how they work and provide some examples for becoming familiar with some of their weird behavior!
@@ -35,7 +35,7 @@ I am going to introduce how they work and provide some examples for becoming fam
 As you can observe, the switch receives two inputs: data and predicate, and provides two outputs: data and dead tensor!. 
 Also, Merge receive two (or more than two) inputs and provides one output which is the data. I am going to go to more details in the following.
 
-#### 2.1. Switch
+### 2.1. Switch
 
 First, let’s consider the switch. If you visit the Tensorflow website, you can find this definition and summary about switch operation:
 
@@ -107,7 +107,7 @@ InvalidArgumentError: Retval[0] does not have value
 
 Now, I think it’s enough for Switch. let’s see how Merge operates.
 
-#### 2.2. Merge
+### 2.2. Merge
 
 Merge is another operator which is required for construction of tf.cond() graph.
 
@@ -159,7 +159,7 @@ Merge(output=2.0, value_index=0)
 Sometimes, it returns the value of x_0and sometimes the value of x_3. So, be cautious about this behavior.
 Note: Dead tensors propagate through the computational graph until they reach to the Merge ops.
 
-### 3. tf.cond()
+## 3. tf.cond()
 
 Now, I think we have a good grasp of how Switch and Merge operate. It is a good time to dive into the tf.cond(). 
 I am considering the simple case, where the input arguments are pred, true_fn, and false_fn.
@@ -297,7 +297,7 @@ So, by understanding switch and merge and realizing how tf.cond() works, hopeful
 I m going to finish this post here. Thanks for reading the post up to the end. Please let me know if I have made a mistake or something is wrong. 
 Hopefully, I am going to cover tf.while_loop() in the subsequent post.
 
-### References
+## References
 
 - Inside [TensorFlow](https://youtu.be/IzKXEbpT9Lg): Control Flow
 - Tensorflow, node which is [dead](https://stackoverflow.com/questions/46680462/tensorflow-node-which-is-dead)
