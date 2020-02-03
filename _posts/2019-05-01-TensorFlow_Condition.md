@@ -201,7 +201,7 @@ In the TensorFlow website, you can find the following statement:
 
 > **WARNING:** Any Tensors or Operations created outside of true_fn and false_fn will be executed regardless of which branch is selected at runtime. 
 > Although this behavior is consistent with the dataflow model of TensorFlow, it has frequently surprised users who expected a lazier semantics.
-'''
+
 
 So, I a going to provide an example to clarify what this warning says. I am providing two examples: in the first one all the operations are defined within the true_fn and false_fn, and in the second example, some operations are defined outside this functions. 
 I am going to construct and visualize the computational graph to illustrate why this behavior occurs.
