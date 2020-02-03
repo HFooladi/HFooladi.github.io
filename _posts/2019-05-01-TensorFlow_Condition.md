@@ -53,10 +53,10 @@ There is not a clear reference that explains why and how dead tensors are useful
 but it seems they are useful for distributed processing, and their existence is an implementation detail. 
 e.g., you can find [here](https://stackoverflow.com/questions/46680462/tensorflow-node-which-is-dead?source=post_page---------------------------) one somehow convincing answer:
 
-'''
-First of all, dead tensors are an implementation detail of TensorFlow’s control flow constructs: tf.cond() and tf.while_loop(). 
-These constructs enable TensorFlow to determine whether or not to execute a subgraph based on a data-dependent value.
-'''
+
+> First of all, dead tensors are an implementation detail of TensorFlow’s control flow constructs: tf.cond() and tf.while_loop(). 
+> These constructs enable TensorFlow to determine whether or not to execute a subgraph based on a data-dependent value.
+
 
 Let’s see an example to make things more clear. I have taken inspiration from this post for providing this example.
 
@@ -198,9 +198,9 @@ Hopefully, you have learned something about tf.cond() up to know, and you have b
 I am going to end this post by providing one controversial example and explain how something we have learned so far can help us to understand the inner working. 
 In the TensorFlow website, you can find the following statement:
 
-'''
-**WARNING:** Any Tensors or Operations created outside of true_fn and false_fn will be executed regardless of which branch is selected at runtime. 
-Although this behavior is consistent with the dataflow model of TensorFlow, it has frequently surprised users who expected a lazier semantics.
+
+> **WARNING:** Any Tensors or Operations created outside of true_fn and false_fn will be executed regardless of which branch is selected at runtime. 
+> Although this behavior is consistent with the dataflow model of TensorFlow, it has frequently surprised users who expected a lazier semantics.
 '''
 
 So, I a going to provide an example to clarify what this warning says. I am providing two examples: in the first one all the operations are defined within the true_fn and false_fn, and in the second example, some operations are defined outside this functions. 
