@@ -39,10 +39,10 @@ Also, Merge receive two (or more than two) inputs and provides one output which 
 
 First, let’s consider the switch. If you visit the Tensorflow website, you can find this definition and summary about switch operation:
 
-'''
-Forwards data to the output port determined by pred. If pred is true, the data input is forwarded to output_true. 
-Otherwise, the data goes to output_false.
-'''
+
+> Forwards data to the output port determined by pred. If pred is true, the data input is forwarded to output_true. 
+> Otherwise, the data goes to output_false.
+
 
 As I mentioned before, Switch receives two inputs. One of them is a predicate, which is boolean tensor (true or false), and another one is the data that should be passed. 
 Predicate determines whether the data should be passed by output_true branch or output_false branch. 
