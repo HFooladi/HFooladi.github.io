@@ -16,6 +16,8 @@ Drug discovery is one of the areas that can gain benefit a lot from this success
 Drug discovery is a very time-consuming and expensive task and deep learning can be used to make this process faster and cheaper. 
 Recently, lots of papers have been published around this topic and in this post, I am going to present a detailed review to see how it is possible to use deep learning in this domain. 
 
+Note: I updated this post a little bit at Feb 2020 to add recent works.
+
 I can divide the application of deep learning in drug discovery mainly into three different categories:
 
 - Drug properties prediction
