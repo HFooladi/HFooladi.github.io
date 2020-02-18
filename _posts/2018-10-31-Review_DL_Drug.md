@@ -29,6 +29,9 @@ I can divide the application of deep learning in drug discovery mainly into thre
 <div class="thecap" style="text-align:center">Figure 1: Three areas that deep learning can help and facilitate drug discovery.</div>
 </div>
 
+{% include figure image_path="/images/assets/Review_DL_Drug/AI_Drug.JPG" alt="this is a placeholder image" caption="Figure 1: Three areas that deep learning can help and facilitate drug discovery." %}
+
+
 In the following, I am trying to elaborate more on each category and discuss some relevant papers.
 
 ## Drug properties prediction
