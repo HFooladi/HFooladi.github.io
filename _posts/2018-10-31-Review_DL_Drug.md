@@ -71,16 +71,25 @@ You can follow this [guide](https://www.rdkit.org/UGM/2012/Landrum_RDKit_UGM.Fin
 Another way to represent a molecule is encoding a structure as a text. It is the way of converting graph structure data to textual content 
 and using the text (encoded string) in the machine learning pipeline. One of the standards and most popular representation
 is Simplified Molecular-Input Line-Entry System (SMILES). After conversion, we can use powerful algorithms from natural language processing (NLP) literature
-to process the drug and for example, predict the properties, side effects, or even chemical-chemical interation. [Sunyoung Kwon](https://arxiv.org/abs/1704.08432) [3]. 
+to process the drug and for example, predict the properties, side effects, or even chemical-chemical interaction. [[Sunyoung Kwon]](https://arxiv.org/abs/1704.08432) [3]. 
 
 <div class="imgcap">
 <img src="/images/assets/Review_DL_Drug/SMILES.png" height="500" class="center">
 <div class="thecap" style="text-align:center">Figure 4: How to represent a molecule in SMILES code.</div>
 </div>
 
+If you are interested to learn more about SMILES, you can follow this [link](http://opensmiles.org/opensmiles.html)[4]. Although SMILES is very popular
+among chemists and machine learning researchers, it is not the only text-based representation available for representing a drug. InChIKey Is another popular
+representation you can find in the literature. [Mario Krenn et.al.](https://arxiv.org/abs/1905.13741) [5] proposed SELFIES (SELF-referencIng Embedded Strings), 
+which are based on a Chomsky type-2 grammar. I am talking more about them (advantages) in the De Novo Drug Design section.
+
 ### Graph structure data
 
-Prevalence of deep learning on graph structure data, such as graph convolution network [[Thomas Kipf]](https://tkipf.github.io/graph-convolutional-networks/), has made it possible to use graph data directly as an input to the deep learning pipeline. e.g., the compound can be considered as the graph, where vertices are atoms, and chemical bond between atoms are edges. 
+Prevalence of deep learning on graph-structured data, such as graph convolution network [Thomas Kipf](https://tkipf.github.io/graph-convolutional-networks/) [6], 
+has made it possible to use graph data directly as an input to the deep learning pipeline. 
+E.g., a compound can be considered as a graph, where vertices are atoms, and chemical bonds between atoms are edges. We have seen a significant success
+in the graph neural network area, and there are libraries such as [Deep Graph Library](https://www.dgl.ai/), 
+[PyToch-Geometric](https://github.com/rusty1s/pytorch_geometric), [PyTorch-BigGraph](https://github.com/facebookresearch/PyTorch-BigGraph) dedicated for this work. 
 
 ## Drug-Target Interaction Prediction
 
@@ -123,5 +132,14 @@ They have used VAEs for generating the molecules. The input representation is SM
 ## References
 
 1- Database fingerprint (DFP): an approach to represent molecular databases, [Eli Fernández-de Gortari et al.](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-017-0195-1#Sec11)
+
 2- Fingerprints in the [RDKit](https://www.rdkit.org/UGM/2012/Landrum_RDKit_UGM.Fingerprints.Final.pptx.pdf)
+
 3- DeepCCI: End-to-end Deep Learning for Chemical-Chemical Interaction Prediction, [Sunyoung Kwon](https://arxiv.org/abs/1704.08432)
+
+4- OpenSMILES specification. [link](http://opensmiles.org/opensmiles.html)
+
+5- SELFIES: a robust representation of semantically constrained graphs with an example application in chemistry, [Mario Krenn et.al.](https://arxiv.org/abs/1905.13741)
+
+6- GRAPH CONVOLUTIONAL NETWORKS, [Thomas Kipf](https://tkipf.github.io/graph-convolutional-networks/) 
+
