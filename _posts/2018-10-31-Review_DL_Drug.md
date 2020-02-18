@@ -78,12 +78,12 @@ to process the drug and for example, predict the properties, side effects, or ev
 <div class="thecap" style="text-align:center">Figure 4: How to represent a molecule in SMILES code.</div>
 </div>
 
-If you are interested to learn more about SMILES, you can follow this [link](http://opensmiles.org/opensmiles.html)[4]. Although SMILES is very popular
+If you are interested to learn more about SMILES, you can follow this [link](http://opensmiles.org/opensmiles.html) [4]. Although SMILES is very popular
 among chemists and machine learning researchers, it is not the only text-based representation available for representing a drug. InChIKey Is another popular
 representation you can find in the literature. [Mario Krenn et.al.](https://arxiv.org/abs/1905.13741) [5] proposed SELFIES (SELF-referencIng Embedded Strings), 
 which are based on a Chomsky type-2 grammar. I am talking more about them (advantages) in the De Novo Drug Design section.
 
-### Graph structure data
+### Graph-structured data
 
 Prevalence of deep learning on graph-structured data, such as graph convolution network [Thomas Kipf](https://tkipf.github.io/graph-convolutional-networks/) [6], 
 has made it possible to use graph data directly as an input to the deep learning pipeline. 
@@ -93,24 +93,59 @@ in the graph neural network area, and there are libraries such as [Deep Graph Li
 
 ## Drug-Target Interaction Prediction
 
-Proteins play a central role in living creatures; i.e., proteins are the key players for most of the functions within and outside the cells of living creatures. e.g., There are some proteins that are responsible for apoptosis, cellular differentiation, and other critical functions. Another important fact is, the function of a protein is directly dependent on its three-dimensional structure. i.e., changing the structure of the protein can significantly alter the functionality of the proteins, and it is one of the important facts for drug discovery. Lots of the drugs (small molecules) are designed to bind to the proteins, change their structure, and consequently alter the functionality. In addition, it is crucial to note that changing one protein function can have a dramatic effect on cellular function. Proteins directly interact with each other (e.g., you can see protein-protein networks), and also some proteins act as a transcription factor, which means they can repress or activates the expression of other genes in the cells. Therefore, altering one protein function can have a dramatic effect on the cells and can modify a different cellular pathway.
+Proteins play a central role in living creatures; i.e., proteins are the key players for most of the functions 
+within and outside the cells of living creatures. E.g., There are some proteins that are responsible for apoptosis, 
+cellular differentiation, and other critical functions. Another important fact is, the function of a protein is directly dependent 
+on its three-dimensional structure. I.e., changing the structure of the protein can significantly alter the functionality of the proteins, and it is 
+one of the important facts for drug discovery. Lots of the drugs (small molecules) are designed to bind to the specific proteins, change their structure, 
+and consequently alter the functionality. In addition, it is crucial to note that changing the function of only one protein can have a dramatic effect on cellular 
+function. Proteins directly interact with each other (e.g., you can see protein-protein networks), and also some proteins act as a 
+transcription factor, which means they can repress or activates the expression of other genes in the cells. Therefore, altering one protein function 
+can have a dramatic effect on the cells and can modify a different cellular pathway.
 
-As a result, one important problem in computational drug discovery is predicting whether a particular drug can bind to particular proteins or not. This is the concept which is called drug-target interaction (DTI) prediction and has received significant attention within recent years. 
+<div class="imgcap">
+<img src="/images/assets/Review_DL_Drug/Collagen.JPG" height="300" class="center">
+<div class="thecap" style="text-align:center">Figure 5: Collagen Adhesin and Collagen Complex Structure. 
+Collagen proteins are shaped like cords, which transmit tension between cartilage, ligaments, bones, and skin. </div>
+</div>
 
-[Qingyuan Feng et.al.](https://arxiv.org/abs/1807.09741) proposed a deep learning-based framework for drug-target interaction prediction. Most of the deep learning frameworks for DTI prediction take both compound and protein information as the input, but the difference is what representations they are using to feed to the neural networks. As I mentioned in the previous section, a compound can be represented in numerous ways (binary fingerprint, SMILES code, features extracted from graph convolution networks), and proteins as well can have different representation. Depending on the input representation, various architectures can be used to handle the DTI prediction. e.g., If we are going to use a text-based representation for both compounds and proteins (SMILES code for compound and Amino acid or other sequence-based descriptors for proteins), the RNNs based architectures are the first thing that comes to mind.
+As a result, one important problem in computational drug discovery is predicting whether a particular drug can bind to particular proteins or not. 
+This is a concept which is called drug-target interaction (DTI) prediction and has received significant attention within recent years. 
 
-[Matthew Ragoza et.al.](https://pubs.acs.org/doi/10.1021/acs.jcim.6b00740) proposed a method for Protein−Ligand Scoring with Convolutional Neural Network. Instead of text based representation, they have utilized the three-dimensional (3D) representation of a
-protein−ligand. Consequently, They have decided to use convolutional neural networks that can act on this 3D structures and extract meaningfull and approporiate features for predicting Protein−Ligand binding affinity.
+We can frame the DTI prediction task as the following:
 
-Although it has become a great trend to propose deep learning algorithms for in-silico DTI prediction and they have achieved to impressive results in some cases, the papers are very similar and the only innovation I found within them is the choice of input representation and subsequently, the architecture to act on the input. So, I can summarize this task as the followings:
+- Description: Binary classification that predict the binding affinity of compound and protein (it can be formlized as a regression task or binary classification)
 
-- Finding the database that contains information about compounds and targets and whether they are interacting with each other or not.
+- Inputs: Compounds and proteins representation
+
+- Output: 0-1 or a real number in $[0-1]$
+
+[Qingyuan Feng et.al.](https://arxiv.org/abs/1807.09741) [7] proposed a deep learning-based framework for drug-target interaction prediction. 
+Most of the deep learning frameworks for DTI prediction take both compound and protein information as the input, but the difference is 
+what representations they are using to feed to the neural networks. As I mentioned in the previous section, a compound can be represented in 
+numerous ways (binary fingerprint, SMILES code, features extracted from graph convolution networks), and proteins as well can have different 
+representations. Depending on the input representation, various architectures can be used to handle the DTI prediction. 
+E.g., If we are going to use a text-based representation for both compounds and proteins (SMILES code for compound and Amino acid or 
+other sequence-based descriptors for proteins), the RNNs based architectures are the first thing that comes to mind.
+
+[Matthew Ragoza et.al.](https://pubs.acs.org/doi/10.1021/acs.jcim.6b00740) [8] proposed a method for Protein−Ligand Scoring with Convolutional Neural Network. 
+Instead of text-based representation, they have utilized the three-dimensional (3D) representation of a
+protein−ligand. Consequently, they have decided to use convolutional neural networks that can act on this 3D structure and extract meaningfull 
+and appropriate features for predicting Protein−Ligand binding affinity.
+
+Although it has become a great trend to propose deep learning algorithms for in-silico DTI prediction, and they have achieved to impressive results in 
+some cases, the papers are very similar and the only innovation I found within them is the choice of input representation and subsequently, 
+the architecture to act on the input. So, I can summarize this task as the followings:
+
+- Finding the database that contains information about compounds and targets, and whether they are interacting with each other or not (E.g., [STITCH database](http://stitch.embl.de/)).
 - Most often, in DTI prediction, the networks take a pair of compound and proteins as the input.
 - You should choose the representation you find appropriate for compounds and proteins. I reviewed some of them, but there are other representations.
-- Based on the representation you chose, you should consider suitable neural network architecture to handle the input. As a rule of thumb, you can use RNNs based architectures (GRU, LSTM, ...) in case of text-based representation for inputs and Convolutional neural networks in case of image or 3D structure.
+- Based on the representation you chose, you should consider suitable neural network architecture to handle the input. As a rule of thumb, you can use RNNs based architectures (GRU, LSTM, ...) and transformers 
+in case of text-based representation for inputs and Convolutional neural networks in case of image or 3D structure.
 - The problem can be considered as the binary classification (whether a compound bind to the target) or regression (prediction the strength of affinity between compound and proteins).
 
-So, that's it for DTI prediction. At first, maybe it seems a difficult and challenging task, but the papers I have read are using very simple techniques and strategies to tackle this problem.
+So, that's it for DTI prediction. At first, maybe it seems a difficult and challenging task, but the papers I have read are using very simple techniques
+and strategies to tackle this problem.
 
 ## De Novo Drug Design
 
@@ -142,4 +177,8 @@ They have used VAEs for generating the molecules. The input representation is SM
 5- SELFIES: a robust representation of semantically constrained graphs with an example application in chemistry, [Mario Krenn et.al.](https://arxiv.org/abs/1905.13741)
 
 6- GRAPH CONVOLUTIONAL NETWORKS, [Thomas Kipf](https://tkipf.github.io/graph-convolutional-networks/) 
+
+7- PADME: A Deep Learning-based Framework for Drug-Target Interaction Prediction, [Qingyuan Feng et.al.](https://arxiv.org/abs/1807.09741)
+
+8- Protein–Ligand Scoring with Convolutional Neural Networks, [Matthew Ragoza et.al.](https://pubs.acs.org/doi/10.1021/acs.jcim.6b00740)
 
