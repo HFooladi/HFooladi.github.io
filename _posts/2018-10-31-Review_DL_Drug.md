@@ -50,14 +50,18 @@ Therefore, there are different ways to represent a drug (compound):
 
 ### Molecular fingerprint
 
-One way to represent a drug in input pipeline of machine learning framework is the molecular fingerprint. The most prevalent type of fingerprint is a series of binary digits (bits) that represent the presence or absence of particular substructures in the molecule. Thus, a drug is described as a vector (array) of zeros and ones. 
+One way to represent a drug in the input pipeline of the machine learning framework is molecular fingerprint. 
+The most prevalent type of fingerprint is a series of binary digits (bits) that represent the presence or absence of particular substructures in the molecule. 
+Thus, a drug (small compound) is described as a vector (array) of zeros and ones. 
 
 <div class="imgcap">
 <img src="/images/assets/Review_DL_Drug/Binary_Fingerprint.PNG" height="300" class="center">
 <div class="thecap" style="text-align:center">Figure 3: How to represent a molecule in a binary vector.</div>
 </div>
 
-It has been used extensively in the literature [[Eli Fernández-de Gortari et al.]](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-017-0195-1#Sec11). But, it is apparent that encoding a molecule as a vector is not the reversible process; i.e., we can not fully reconstruct molecule from the fingerprint, which indicates that lots of information are lost during this operation.
+It has been used extensively in the literature [1]. 
+But, it is apparent that encoding a molecule as a vector is not a reversible process (it is a lossy transformation); 
+i.e., we can not fully reconstruct a molecule from the fingerprint, which indicates that lots of information are lost during this operation.
 
 ### SMILES code
 
@@ -109,3 +113,7 @@ Good amount of works, generate the SMILES code of compounds. i.e., the output of
 They have used VAEs for generating the molecules. The input representation is SMILES code, and obviously, the output will be SMILES code too. The nice trick is using Gaussian process in the latent space (which is a continuous space) to reach to the point with desired properties. Then, converting this point in the latent space to the SMILES code using the decoder. The paper is well-written and definitely a recommended reading. However, The problem is that there is not a one-one correspondence between SMILES code and molecules. i.e., not all the produced code can be converted back to original (chemical) space, and as a result, the generated SMILES code often don't correspond to the valid molecules.
 
 [Matt J. Kusner et. al.](https://arxiv.org/pdf/1703.01925.pdf) proposed Grammar VAE to specifically address this issue (producing SMILES code that does not correspond to valid molecules). Instead of feeding SMILES string directly to the network and generating SMILES code, they are converting the SMILES code to the parse tree (by utilizing SMILES context-free grammar). Using the grammar, They are able to generate more syntactically valid molecules.  
+
+## References
+
+1- [[Eli Fernández-de Gortari et al.]](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-017-0195-1#Sec11).
