@@ -7,14 +7,20 @@ tags:
   - drug-discovery 
 ---
 
-Deep learning algorithms have achieved state of the art performance in a lot of different tasks. Convolutional Neural Network (CNN) can be used to achieve great performance in image classification, object detection, and semantic segmentation tasks. Recurrent Neural Networks (RNNs) and its descendants like LSTMs and GRUs are the first things that come to mind in order to tackle problems like neural language translation , speech recognition and even they can be used to generate new texts and music.
+Deep learning algorithms have achieved state of the art performance in a lot of different tasks. 
+Convolutional Neural Network (CNN) can be used to achieve great performance in image classification, object detection, and semantic segmentation tasks. 
+Recurrent Neural Networks (RNNs) and its descendants like LSTMs and GRUs are the first things that come to mind in order to tackle problems like 
+neural language translation, speech recognition and even they can be used to generate new texts and music.
 
-One of the areas that can benefit a lot from this success of deep learning is drug discovery. Drug discovery is a very time-consuming and expensive task and deep learning can be used to make this process faster and cheaper. Recently, lots of papers have been published around this topic and in this post, I am going to present a detailed review to see how it is possible to use deep learning in this domain. 
+Drug discovery is one of the areas that can gain benefit a lot from this success of deep learning. 
+Drug discovery is a very time-consuming and expensive task and deep learning can be used to make this process faster and cheaper. 
+Recently, lots of papers have been published around this topic and in this post, I am going to present a detailed review to see how it is possible to use deep learning in this domain. 
 
-I can divide the application of deep learning in drug discovery into three different categories:
+I can divide the application of deep learning in drug discovery mainly into three different categories:
+
 - Drug properties prediction
 - De Novo drug design
-- Drug-target interaction prediction
+- Drug-target interaction (DTI) prediction
 
 <div class="imgcap">
 <img src="/images/assets/Review_DL_Drug/AI_Drug.JPG" height="300" class="center">
@@ -25,17 +31,22 @@ In the following, I am trying to elaborate more on each category and discuss som
 
 ## Drug properties prediction
 
-Machine learning problems broadly are classified into three subgroups: supervised learning, unsupervised learning, and reinforcement learning. Drug properties prediction can be considered as a supervised learning problem. The input to the algorithms is a drug (compound) and the output is drug property (e.g., drug toxicity or solubility). 
+Machine learning problems broadly are classified into three subgroups: supervised learning, unsupervised learning (self-supervised learning), and reinforcement learning. 
+Drug properties prediction can be framed as a supervised learning problem. The input to the algorithms is a drug (compound), and the output is drug property (e.g., drug toxicity or solubility). 
+
+- Input: A drug (small molecule)
+- output: 0-1 label to indicate whether a drug has certain properties or not. It can also be framed as a multi-label classification or regression task. 
 
 <div class="imgcap">
 <img src="/images/assets/Review_DL_Drug/Representation.JPG" height="300" class="center">
 <div class="thecap" style="text-align:center">Figure 2: Different ways that a molecule can be represented.</div>
 </div>
 
-Therefor, there are three ways to represent a drug (compound):
+Therefore, there are different ways to represent a drug (compound):
+
 - Molecular fingerprint
-- Text data (like SMILES)
-- Graph strcuture
+- Text-based representation (e.g., SMILES, InChIKey, SELFIES)
+- Graph structure (2d or 3d graph)
 
 ### Molecular fingerprint
 
