@@ -76,7 +76,7 @@ is Simplified Molecular-Input Line-Entry System (SMILES). After conversion, we c
 to process the drug and for example, predict the properties, side effects, or even chemical-chemical interaction. [[Sunyoung Kwon]](https://arxiv.org/abs/1704.08432) [3]. 
 
 <div class="imgcap">
-<img src="/images/assets/Review_DL_Drug/SMILES.png" height="500" class="center">
+<img src="/images/assets/Review_DL_Drug/SMILES.JPG" height="300" class="center">
 <div class="thecap" style="text-align:center">Figure 4: How to represent a molecule in SMILES code.</div>
 </div>
 
