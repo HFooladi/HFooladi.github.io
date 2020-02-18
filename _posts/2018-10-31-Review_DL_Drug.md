@@ -63,9 +63,15 @@ It has been used extensively in the literature [1].
 But, it is apparent that encoding a molecule as a vector is not a reversible process (it is a lossy transformation); 
 i.e., we can not fully reconstruct a molecule from the fingerprint, which indicates that lots of information are lost during this operation.
 
+There are lots of different fingerprints for representing a small molecule. 
+You can follow this [guide](https://www.rdkit.org/UGM/2012/Landrum_RDKit_UGM.Fingerprints.Final.pptx.pdf) [2] to learn more about them.
+
 ### SMILES code
 
-Another way to represent a molecule is encoding a structure as a text. It is the way of converting graph structure data to textual content and using the text in the machine learning pipeline. One of the standards and most popular representation is simplified molecular-input line-entry system (SMILES). After conversion, we can use powerful algorithms from natural language processing (NLP) literature to process the drug and for example, predict the properties and side effects [[Sunyoung Kwon]](https://arxiv.org/abs/1704.08432). 
+Another way to represent a molecule is encoding a structure as a text. It is the way of converting graph structure data to textual content 
+and using the text (encoded string) in the machine learning pipeline. One of the standards and most popular representation
+is Simplified Molecular-Input Line-Entry System (SMILES). After conversion, we can use powerful algorithms from natural language processing (NLP) literature
+to process the drug and for example, predict the properties, side effects, or even chemical-chemical interation. [Sunyoung Kwon](https://arxiv.org/abs/1704.08432) [3]. 
 
 <div class="imgcap">
 <img src="/images/assets/Review_DL_Drug/SMILES.png" height="500" class="center">
@@ -116,4 +122,6 @@ They have used VAEs for generating the molecules. The input representation is SM
 
 ## References
 
-1- [[Eli Fernández-de Gortari et al.]](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-017-0195-1#Sec11).
+1- Database fingerprint (DFP): an approach to represent molecular databases, [Eli Fernández-de Gortari et al.](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-017-0195-1#Sec11)
+2- Fingerprints in the [RDKit](https://www.rdkit.org/UGM/2012/Landrum_RDKit_UGM.Fingerprints.Final.pptx.pdf)
+3- DeepCCI: End-to-end Deep Learning for Chemical-Chemical Interaction Prediction, [Sunyoung Kwon](https://arxiv.org/abs/1704.08432)
