@@ -106,7 +106,7 @@ transcription factor, which means they can repress or activates the expression o
 can have a dramatic effect on the cells and can modify a different cellular pathway.
 
 <div class="imgcap">
-<img src="/images/assets/Review_DL_Drug/Collagen.JPG">
+<img src="/images/assets/Review_DL_Drug/Collagen.JPG" alt="drawing" width="200"/>
 <div class="thecap" style="text-align:center">Figure 5: Collagen Adhesin and Collagen Complex Structure. 
 Collagen proteins are shaped like cords, which transmit tension between cartilage, ligaments, bones, and skin. </div>
 </div>
