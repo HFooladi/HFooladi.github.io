@@ -195,8 +195,8 @@ and the algorithm for the generation (VAE, GAN, Normalizing Flow, Genetic algori
 | Method                        | Input (output representation) | Algorithm (Model) | Comment                                                               |
 |-------------------------------|-------------------------------|-------------------|-----------------------------------------------------------------------|
 | Character VAE [9]             | SMILES                        | VAE               | Bayesian optimization on the  latent space                            |
-| Grammar VAE [10]              | Grammer rules from SMILES     | VAE               | Producing more grammatically valid SMILES                             |
-| ORGAN [11]                    | SMILES                        | GAN               | 1. Reconciling GAN with RL. 2. Based on SeqGAN                        |
+| Grammar VAE [10]              | Grammar rules from SMILES     | VAE               | Producing more grammatically valid SMILES                             |
+| ORGAN [11]                    | SMILES                        | GAN + RL          | 1. Reconciling GAN with RL. 2. Based on SeqGAN                        |
 | JT-VAE [12]                   | Fragments                     | VAE               | Packing molecules into the  meaningful fragments                      |
 | GENTRL [13]                   | SMILES                        | VAE + RL          | They used GENTRL to discover potent inhibitors of (DDR1)              |
 | AkshatKumar Nigam et al. [14] | SELFIES                       | GA + DNN          | 1. Genetic algorithm. 2. Robustness of SELFIES                        |
