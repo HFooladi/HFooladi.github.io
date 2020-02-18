@@ -185,15 +185,42 @@ Using the grammar, They can generate more syntactically valid molecules. Moreove
 > Surprisingly, we show that not only does our model more often generate valid outputs, it also learns a more coherent latent space in which nearby points 
 decode to similar discrete outputs. 
 
+More recently, Mario Krenn et.el. proposed another method based on VAE and SELFIES representation [5]. The main advantage of the SELFIES is the robustness.
+ 
+But, these are small samples of the works in the area of deep learning for generating a small molecule. Based on the representation of the compound (SMILES, SELFIES, Graph, ...),
+and the algorithm for the generation (VAE, GAN, Normalizing Flow, Genetic algorithms) you can find diverse approaches in the literature (next table).
+
+| Method                        | Input (output representation) | Algorithm (Model) | Comment                                                               |
+|-------------------------------|-------------------------------|-------------------|-----------------------------------------------------------------------|
+| Character VAE [9]             | SMILES                        | VAE               | Bayesian optimization on the  latent space                            |
+| Grammar VAE [10]              | Grammer rules from SMILES     | VAE               | Producing more grammatically valid SMILES                             |
+| ORGAN [11]                    | SMILES                        | GAN               | 1. Reconciling GAN with RL. 2. Based on SeqGAN                        |
+| JT-VAE [12]                   | Fragments                     | VAE               | Packing molecules into the  meaningful fragments                      |
+| GENTRL [13]                   | SMILES                        | VAE + RL          | They used GENTRL to discover potent inhibitors of (DDR1)              |
+| AkshatKumar Nigam et al. [14] | SELFIES                       | GA + DNN          | 1. Genetic algorithm. 2. Robustness of SELFIES                        |
+| Synthesizable Molecules [15]  | Fragments                     | VAE               | 1. Focus is on the synthesizability 2. Provide synthesis route        |
+
+
+## Conclusion
+
+In this post, I tried to review some of the applications of deep learning in drug discovery. Clearly, this review is not complete, and I 
+did not have time to cover more areas (and I did not want to make this post longer), but I tried to provide references for curious readers. 
+I hope this post encourages you to contribute to this area for making drug discovery less-expensive and less tedious work.
+
 ## References
 
 1. Database fingerprint (DFP): an approach to represent molecular databases, [Eli Fernández-de Gortari et al.](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-017-0195-1#Sec11)
 2. Fingerprints in the [RDKit](https://www.rdkit.org/UGM/2012/Landrum_RDKit_UGM.Fingerprints.Final.pptx.pdf)
 3. DeepCCI: End-to-end Deep Learning for Chemical-Chemical Interaction Prediction, [Sunyoung Kwon](https://arxiv.org/abs/1704.08432)
 4. OpenSMILES specification. [link](http://opensmiles.org/opensmiles.html)
-5. SELFIES: a robust representation of semantically constrained graphs with an example application in chemistry, [Mario Krenn et.al.](https://arxiv.org/abs/1905.13741)
+5. SELFIES: a robust representation of semantically constrained graphs with an example application in chemistry, [Mario Krenn et al.](https://arxiv.org/abs/1905.13741)
 6. GRAPH CONVOLUTIONAL NETWORKS, [Thomas Kipf](https://tkipf.github.io/graph-convolutional-networks/) 
-7. PADME: A Deep Learning-based Framework for Drug-Target Interaction Prediction, [Qingyuan Feng et.al.](https://arxiv.org/abs/1807.09741)
-8. Protein–Ligand Scoring with Convolutional Neural Networks, [Matthew Ragoza et.al.](https://pubs.acs.org/doi/10.1021/acs.jcim.6b00740)
-9. Automatic Chemical Design Using a Data-Driven Continuous Representation of Molecules, [Rafael Gomez-Bombarelli et. al.](http://pubs.acs.org/doi/full/10.1021/acscentsci.7b00572)
-10. Grammar Variational Autoencoder, [Matt J. Kusner et. al.](https://arxiv.org/pdf/1703.01925.pdf)
+7. PADME: A Deep Learning-based Framework for Drug-Target Interaction Prediction, [Qingyuan Feng et al.](https://arxiv.org/abs/1807.09741)
+8. Protein–Ligand Scoring with Convolutional Neural Networks, [Matthew Ragoza et al.](https://pubs.acs.org/doi/10.1021/acs.jcim.6b00740)
+9. Automatic Chemical Design Using a Data-Driven Continuous Representation of Molecules, [Rafael Gomez-Bombarelli et al.](http://pubs.acs.org/doi/full/10.1021/acscentsci.7b00572)
+10. Grammar Variational Autoencoder, [Matt J. Kusner et al.](https://arxiv.org/pdf/1703.01925.pdf)
+11. Objective-Reinforced Generative Adversarial Networks (ORGAN) for SequenceGeneration Models, [Gabriel Guimaraes et al.](https://arxiv.org/pdf/1705.10843.pdf)
+12. Junction Tree Variational Autoencoder for Molecular Graph Generation, [Wengong Jin et al.](https://arxiv.org/abs/1802.04364)
+13. Deep learning enables rapid identification of potent DDR1 kinase inhibitors, [Alex Zhavoronkov et al.](https://www.nature.com/articles/s41587-019-0224-x)
+14. Augmenting Genetic Algorithms with Deep Neural Networks for Exploring the Chemical Space, [AkshatKumar Nigam et al.](https://arxiv.org/abs/1909.11655)
+15. A Model to Search for Synthesizable Molecules, [John Bradshaw et al.](https://arxiv.org/abs/1906.05221)
