@@ -1,7 +1,7 @@
 ---
-title:  "Review: Deep Learning in drug discovery"
+title:  "Review: Deep Learning In Drug Discovery"
 date:   2018-10-31 5:00:00
-permalink: /posts/2018/10/Review-Deep-Learning-in-drug-discovery/
+permalink: /posts/2018/10/Review-Deep-Learning-In-Drug-Discovery/
 tags:
   - chemoinformatics
   - drug-discovery 
@@ -115,12 +115,10 @@ This is a concept which is called drug-target interaction (DTI) prediction and h
 We can frame the DTI prediction task as the following:
 
 - Description: Binary classification that predict the binding affinity of compound and protein (it can be formlized as a regression task or binary classification)
-
 - Inputs: Compounds and proteins representation
-
 - Output: 0-1 or a real number in $[0-1]$
 
-[Qingyuan Feng et.al.](https://arxiv.org/abs/1807.09741) [7] proposed a deep learning-based framework for drug-target interaction prediction. 
+[Qingyuan Feng et.al.](https://arxiv.org/abs/1807.09741) [7] proposed a deep learning-based framework for drug-target interaction prediction [7]. 
 Most of the deep learning frameworks for DTI prediction take both compound and protein information as the input, but the difference is 
 what representations they are using to feed to the neural networks. As I mentioned in the previous section, a compound can be represented in 
 numerous ways (binary fingerprint, SMILES code, features extracted from graph convolution networks), and proteins as well can have different 
@@ -128,7 +126,7 @@ representations. Depending on the input representation, various architectures ca
 E.g., If we are going to use a text-based representation for both compounds and proteins (SMILES code for compound and Amino acid or 
 other sequence-based descriptors for proteins), the RNNs based architectures are the first thing that comes to mind.
 
-[Matthew Ragoza et.al.](https://pubs.acs.org/doi/10.1021/acs.jcim.6b00740) [8] proposed a method for Protein−Ligand Scoring with Convolutional Neural Network. 
+[Matthew Ragoza et.al.](https://pubs.acs.org/doi/10.1021/acs.jcim.6b00740) proposed a method for Protein−Ligand Scoring with Convolutional Neural Network [8]. 
 Instead of text-based representation, they have utilized the three-dimensional (3D) representation of a
 protein−ligand. Consequently, they have decided to use convolutional neural networks that can act on this 3D structure and extract meaningfull 
 and appropriate features for predicting Protein−Ligand binding affinity.
@@ -141,7 +139,7 @@ the architecture to act on the input. So, I can summarize this task as the follo
 - Most often, in DTI prediction, the networks take a pair of compound and proteins as the input.
 - You should choose the representation you find appropriate for compounds and proteins. I reviewed some of them, but there are other representations.
 - Based on the representation you chose, you should consider suitable neural network architecture to handle the input. As a rule of thumb, you can use RNNs based architectures (GRU, LSTM, ...) and transformers 
-in case of text-based representation for inputs and Convolutional neural networks in case of image or 3D structure.
+in case of text-based representation for inputs, and Convolutional neural networks in case of image or 3D structure.
 - The problem can be considered as the binary classification (whether a compound bind to the target) or regression (prediction the strength of affinity between compound and proteins).
 
 So, that's it for DTI prediction. At first, maybe it seems a difficult and challenging task, but the papers I have read are using very simple techniques
@@ -149,36 +147,53 @@ and strategies to tackle this problem.
 
 ## De Novo Drug Design
 
-So far, we have just observed discriminative algorithms; i.e., given a drug, the algorithm can predict the side effect and other associated properties, or given compound-protein pairs, it will forecast whether they can bind or not. However, what if we are interested in designing a compound that has certain properties? e.g., we want to design a compound that can bind to a particular protein, modify some pathways, and does not interact with other pathways, and also have some physical property like the specific range of solubility. We can not tackle this problem with the toolkits we introduced in the previous sections. This problem is best realized in the realm of generative models. Generative models, form autoregressive algorithm, Variational autoencoders (VAEs), and generative adversarial networks (GANs), have become pervasive and widespread in the machine learning community. However, the attempts to utilize them in the task of De Novo drug design is not very old.
+So far, we have just observed discriminative algorithms; i.e., given a drug, the algorithm can predict the side effect and other associated properties, 
+or given compound-protein pairs, it will forecast whether they can bind or not. 
+However, what if we are interested in designing a compound that has certain properties? E.g., we want to design a compound that can bind to a particular 
+protein, modify some pathways, and does not interact with other pathways, and also have some physical property like the specific range of solubility. 
+We can not tackle this problem with the toolkits we introduced in the previous sections. This problem is best realized in the realm of generative models. 
+Generative models, from autoregressive algorithm, Normalizing flows, Variational autoencoders (VAEs), and generative adversarial networks (GANs), 
+have become pervasive and widespread in the machine learning community. However, the attempts to utilize them in the task of De Novo drug design is not very old.
 
-The problem is, generating a compound, given certain desirable properties. As it seems obvious, it is harder than the two other problems we discussed in the last sections. The space of possible chemical molecules is extraordinarily large and searching in this space to find a proper drug is very time-consuming and near impossible tasks. I am seeing recent trends in applying generative models for designing chemical molecules. Although there are some promising results in the literature, this field is in infancy, and it requires more mature methods. Here I am going to review some of the best papers I have read in this area.
+The problem is, generating a compound, given certain desirable properties. As it seems obvious, it is harder than the two other problems we discussed in the last sections. 
+The space of possible chemical molecules is extraordinarily large and searching in this space to find a proper drug is very time-consuming and near-impossible 
+tasks. I am seeing recent trends in applying generative models for designing chemical molecules. Although there are some promising results 
+in the literature, this field is in infancy, and it requires more mature methods. Here I am going to review some of the best papers I have read in this area.
 
-Good amount of works, generate the SMILES code of compounds. i.e., the output of the algorithm is SMILES code (text) and it should be converted in the chemical space. [Rafael Gomez-Bombarelli et. al.](http://pubs.acs.org/doi/full/10.1021/acscentsci.7b00572) proposed a method for automatic chemical design using a data-driven continuous representation of molecules.
+You can find a lot of paper in the literature that generates the SMILES as the output, and at the end, convert the SMILES into the chemical space. 
+[Rafael Gomez-Bombarelli et. al.](http://pubs.acs.org/doi/full/10.1021/acscentsci.7b00572) proposed a method for automatic chemical design using a 
+data-driven continuous representation of molecules [9].
 
 <div class="imgcap">
 <img src="/images/assets/Review_DL_Drug/Drug_Design_Hernandez.PNG" alt="alternate text" height="300" class="center">
-<div class="thecap" style="text-align:center">Figure 5: Using variational autoencoder to generate compounds with desired properties. Matt J. Kusner et. al.</div>
+<div class="thecap" style="text-align:center">Figure 5: Using variational autoencoder to generate compounds with desired properties. Source: Rafael Gomez-Bombarelli et. al. [9]</div>
 </div> 
 
-They have used VAEs for generating the molecules. The input representation is SMILES code, and obviously, the output will be SMILES code too. The nice trick is using Gaussian process in the latent space (which is a continuous space) to reach to the point with desired properties. Then, converting this point in the latent space to the SMILES code using the decoder. The paper is well-written and definitely a recommended reading. However, The problem is that there is not a one-one correspondence between SMILES code and molecules. i.e., not all the produced code can be converted back to original (chemical) space, and as a result, the generated SMILES code often don't correspond to the valid molecules.
+They have used VAEs for generating the molecules. The input representation is SMILES code, and the output will be SMILES code too. 
+The nice trick in the paper is using the Gaussian process in the latent space (which is a continuous space) to reach to the point with desired properties. 
+Then, converting (decoding) this point in the latent space to the SMILES code using the decoder. The paper is well-written and definitely a recommended reading. 
+However, The problem is that there is not a one-one correspondence between SMILES code and molecules. I.e., not all the produced code 
+can be converted back to original (chemical) space, and as a result, the generated SMILES code often doesn't correspond to the valid molecules.
 
-[Matt J. Kusner et. al.](https://arxiv.org/pdf/1703.01925.pdf) proposed Grammar VAE to specifically address this issue (producing SMILES code that does not correspond to valid molecules). Instead of feeding SMILES string directly to the network and generating SMILES code, they are converting the SMILES code to the parse tree (by utilizing SMILES context-free grammar). Using the grammar, They are able to generate more syntactically valid molecules.  
+SMILES are very popular representation, but they come with one great disadvantage: SMILES are not robust representation. I.e., changing one character (character mutation)
+in the SMILES can change a molecule from valid to invalid. 
+
+[Matt J. Kusner et. al.](https://arxiv.org/pdf/1703.01925.pdf) proposed Grammar VAE to specifically address this issue (producing SMILES code that does not correspond to valid molecules) [10]. 
+Instead of feeding SMILES string directly to the network and generating SMILES code, they are converting the SMILES code to the parse tree (by utilizing SMILES context-free grammar). 
+Using the grammar, They can generate more syntactically valid molecules. Moreover, authors state that:
+
+> Surprisingly, we show that not only does our model more often generate valid outputs, it also learns a more coherent latent space in which nearby points 
+decode to similar discrete outputs. 
 
 ## References
 
-1- Database fingerprint (DFP): an approach to represent molecular databases, [Eli Fernández-de Gortari et al.](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-017-0195-1#Sec11)
-
-2- Fingerprints in the [RDKit](https://www.rdkit.org/UGM/2012/Landrum_RDKit_UGM.Fingerprints.Final.pptx.pdf)
-
-3- DeepCCI: End-to-end Deep Learning for Chemical-Chemical Interaction Prediction, [Sunyoung Kwon](https://arxiv.org/abs/1704.08432)
-
-4- OpenSMILES specification. [link](http://opensmiles.org/opensmiles.html)
-
-5- SELFIES: a robust representation of semantically constrained graphs with an example application in chemistry, [Mario Krenn et.al.](https://arxiv.org/abs/1905.13741)
-
-6- GRAPH CONVOLUTIONAL NETWORKS, [Thomas Kipf](https://tkipf.github.io/graph-convolutional-networks/) 
-
-7- PADME: A Deep Learning-based Framework for Drug-Target Interaction Prediction, [Qingyuan Feng et.al.](https://arxiv.org/abs/1807.09741)
-
-8- Protein–Ligand Scoring with Convolutional Neural Networks, [Matthew Ragoza et.al.](https://pubs.acs.org/doi/10.1021/acs.jcim.6b00740)
-
+1. Database fingerprint (DFP): an approach to represent molecular databases, [Eli Fernández-de Gortari et al.](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-017-0195-1#Sec11)
+2. Fingerprints in the [RDKit](https://www.rdkit.org/UGM/2012/Landrum_RDKit_UGM.Fingerprints.Final.pptx.pdf)
+3. DeepCCI: End-to-end Deep Learning for Chemical-Chemical Interaction Prediction, [Sunyoung Kwon](https://arxiv.org/abs/1704.08432)
+4. OpenSMILES specification. [link](http://opensmiles.org/opensmiles.html)
+5. SELFIES: a robust representation of semantically constrained graphs with an example application in chemistry, [Mario Krenn et.al.](https://arxiv.org/abs/1905.13741)
+6. GRAPH CONVOLUTIONAL NETWORKS, [Thomas Kipf](https://tkipf.github.io/graph-convolutional-networks/) 
+7. PADME: A Deep Learning-based Framework for Drug-Target Interaction Prediction, [Qingyuan Feng et.al.](https://arxiv.org/abs/1807.09741)
+8. Protein–Ligand Scoring with Convolutional Neural Networks, [Matthew Ragoza et.al.](https://pubs.acs.org/doi/10.1021/acs.jcim.6b00740)
+9. Automatic Chemical Design Using a Data-Driven Continuous Representation of Molecules, [Rafael Gomez-Bombarelli et. al.](http://pubs.acs.org/doi/full/10.1021/acscentsci.7b00572)
+10. Grammar Variational Autoencoder, [Matt J. Kusner et. al.](https://arxiv.org/pdf/1703.01925.pdf)
