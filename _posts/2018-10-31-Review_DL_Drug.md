@@ -82,6 +82,9 @@ to process the drug and for example, predict the properties, side effects, or ev
 <div class="thecap" style="text-align:center">Figure 4: How to represent a molecule in SMILES code.</div>
 </div>
 
+<p style="text-align: center"><img src="/images/assets/Review_DL_Drug/SMILES.JPG" width="55%"></p>
+
+
 If you are interested to learn more about SMILES, you can follow this [link](http://opensmiles.org/opensmiles.html) [4]. Although SMILES is very popular
 among chemists and machine learning researchers, it is not the only text-based representation available for representing a drug. InChIKey Is another popular
 representation you can find in the literature. [Mario Krenn et.al.](https://arxiv.org/abs/1905.13741) [5] proposed SELFIES (SELF-referencIng Embedded Strings), 
