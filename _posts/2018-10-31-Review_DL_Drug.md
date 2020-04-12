@@ -107,11 +107,10 @@ function. Proteins directly interact with each other (e.g., you can see protein-
 transcription factor, which means they can repress or activates the expression of other genes in the cells. Therefore, altering one protein function 
 can have a dramatic effect on the cells and can modify a different cellular pathway.
 
-<div class="imgcap">
-<img src="/images/assets/Review_DL_Drug/Collagen.JPG" alt="drawing" width="300" class="center"/>
+<p style="text-align: center"><img src="/images/assets/Review_DL_Drug/Collagen.JPG" width="55%"></p>
 <div class="thecap" style="text-align:center">Figure 5: Collagen Adhesin and Collagen Complex Structure. 
 Collagen proteins are shaped like cords, which transmit tension between cartilage, ligaments, bones, and skin. </div>
-</div>
+
 
 As a result, one important problem in computational drug discovery is predicting whether a particular drug can bind to particular proteins or not. 
 This is a concept which is called drug-target interaction (DTI) prediction and has received significant attention within recent years. 
