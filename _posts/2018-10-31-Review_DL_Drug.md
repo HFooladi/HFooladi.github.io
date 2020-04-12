@@ -169,7 +169,7 @@ data-driven continuous representation of molecules [9].
 
 <div class="imgcap">
 <img src="/images/assets/Review_DL_Drug/Drug_Design_Hernandez.PNG" alt="alternate text" height="300" class="center">
-<div class="thecap" style="text-align:center">Figure 5: Using variational autoencoder to generate compounds with desired properties. Source: Rafael Gomez-Bombarelli et. al. [9]</div>
+<div class="thecap" style="text-align:center">Figure 6: Using variational autoencoder to generate compounds with desired properties. Source: Rafael Gomez-Bombarelli et. al. [9]</div>
 </div> 
 
 They have used VAEs for generating the molecules. The input representation is SMILES code, and the output will be SMILES code too. 
