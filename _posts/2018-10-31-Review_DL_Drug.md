@@ -77,12 +77,9 @@ and using the text (encoded string) in the machine learning pipeline. One of the
 is Simplified Molecular-Input Line-Entry System (SMILES). After conversion, we can use powerful algorithms from natural language processing (NLP) literature
 to process the drug and for example, predict the properties, side effects, or even chemical-chemical interaction. [[Sunyoung Kwon]](https://arxiv.org/abs/1704.08432) [3]. 
 
-<div class="imgcap">
-<img src="/images/assets/Review_DL_Drug/SMILES.JPG" height="300" class="center">
-<div class="thecap" style="text-align:center">Figure 4: How to represent a molecule in SMILES code.</div>
-</div>
 
 <p style="text-align: center"><img src="/images/assets/Review_DL_Drug/SMILES.JPG" width="55%"></p>
+<div class="thecap" style="text-align:center">Figure 4: How to represent a molecule in SMILES code.</div>
 
 
 If you are interested to learn more about SMILES, you can follow this [link](http://opensmiles.org/opensmiles.html) [4]. Although SMILES is very popular
