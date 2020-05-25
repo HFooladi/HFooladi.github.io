@@ -13,8 +13,8 @@ $paragraph-indent           : false; // true, false (default)
 $indent-var                 : 1.3em;
 
 /* system typefaces */
-$serif                      : 'Muli', Georgia, Times, serif;
-$sans-serif                 : 'Muli', -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$serif                      : 'Latin Modern', 'Muli', Georgia, Times, serif;
+$sans-serif                 : 'Latin Modern', 'Muli', -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
 $monospace                  : 'Courier New', Monaco, Consolas, "Lucida Console", monospace;
 $muli                       : 'Muli', sans-serif;
 
