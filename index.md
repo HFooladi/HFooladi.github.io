@@ -22,7 +22,7 @@ Now, my main research areas are machine learning in drug discovery, and intersec
 - Philosophy and Psychology
 - Physics
  
-You can consider me as an explorer, because I havee explored a lot of different fields and disciplines. I like authentic and original ideas.
+You can consider me as an explorer, because I have explored a lot of different fields and disciplines. I like authentic and original ideas.
 
 ### Non-Academic
 
