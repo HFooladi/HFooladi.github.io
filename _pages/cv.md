@@ -17,14 +17,14 @@ Education
 
 Work experience
 ======
-* Spring 2018-Present: Chief scientific officer (C.S.O.)
-  * Shenakht Pajouh
-  * Duties included: Reconciling Psychology knowledge with machine learning in order to build automated mental health assistant.
-  
 * Spring 2019 - Present: Senior Data Scientist - Chemoinformatics / Machine learning expert
   * [AI VIVO](http://www.aivivo.co/)
-  * Duties included: machine learning for drug repositioning and drug combination
-
+  * Duties included: Machine learning for drug repositioning, drug combination, and de novo drug design.
+  
+* Spring 2018-Present: Chief scientific officer (C.S.O.)
+  * Shenakht Pajouh
+  * Duties included: Reconciling Psychological knowledge with machine learning in order to build automated mental health assistant.
+  
 * Winter 2017 - Winter 2018: Machine learning reasearcher
   * Cambridge system biology centre
   * Duties included: Deep learning in drug discovery
@@ -39,7 +39,7 @@ Work experience
   
 Skills
 ======
-* Machine learning (causal learning)
+* Machine learning (Bayesian inference, Causal learning)
 * Bioinformatics
 * Programming
   * Python 
