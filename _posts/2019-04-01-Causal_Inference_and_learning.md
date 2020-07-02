@@ -58,7 +58,7 @@ The summary of something we have discussed so far:
 - Given the observational distribution and causal graph, we are equipped with sufficient knowledge to answer to the interventional query.
 - SCM + observational distribution --> counterfactuals
 
-<p style="text-align: center"><img src="/images/assets/Causal_Inference_and_learning/ladder_of_causation.PNG" width="55%"></p>
+<p style="text-align: center"><img src="/images/assets/Causal_Inference_and_learning/causal_ladder.JPG"></p>
 <div class="thecap" style="text-align:center">Figure 1: Three rungs of ladder of causation.</div>
 
 
