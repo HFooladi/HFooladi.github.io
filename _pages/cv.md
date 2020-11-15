@@ -18,11 +18,11 @@ Education
 Work experience
 ======
 * Spring 2019 - Present: Senior Data Scientist - Chemoinformatics / Machine learning expert
-  * [AI VIVO](http://www.aivivo.co/)
+  * [AI VIVO](http://www.aivivo.co/), Cambridge, UK
   * Duties included: Machine learning for drug repositioning, drug combination, and de novo drug design.
   
 * Spring 2018-Present: Chief scientific officer (C.S.O.)
-  * Shenakht Pajouh
+  * Shenakht Pajouh, Tehran, Iran
   * Duties included: Reconciling Psychological knowledge with machine learning in order to build automated mental health assistant.
   
 * Winter 2017 - Winter 2018: Machine learning reasearcher
