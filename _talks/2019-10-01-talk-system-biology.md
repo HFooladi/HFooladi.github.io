@@ -10,4 +10,6 @@ location: "Tehran"
 
 In this talk, I presented our work on pattern formation during human embryonic stem cell development. 
 We proposed a multicellular mathematical model for pattern formation during the in-vitro gastrulation of human ESCs. 
-This model enhances the basic principles of the Waddington epigenetic landscape with cell-cell communication, which enables us to describe how the pattern and tissue formation occurs in the course of development. 
+This model enhances the basic principles of the Waddington epigenetic landscape with cell-cell communication, which enables us to describe how the pattern and tissue formation occurs in the course of development.
+
+You can [download](https://hfooladi.github.io//files/Self_organization2019.pdf) the slides. 
