@@ -26,7 +26,7 @@ You can consider me as an explorer, because I have explored a lot of different f
 
 ### Non-Academic
 
-- I love watching anime and reading manga. My favorites animes are Neon Genesisi Evangelion, Death Note, Attack On Titans and Tokyo Ghoul. I have started writing notes about underlying anime philosophies.
+- I love watching anime and reading manga. My favorites animes are Neon Genesis Evangelion, Death Note, Attack On Titans and Tokyo Ghoul. I have started writing notes about underlying anime philosophies.
 - I like sports a lot. I am a professional Squash and Football player. Moreover, I am a fan of Formula 1.
 - In addition, I am enjoying reading philosophical and psychological books. you can refer to [my goodreads](https://www.goodreads.com/user/show/75993307-hosein-fooladi) to find out more about my favorites topics.
 - Moreover, I like playing games. I prefer the games in the style of [Limbo](https://playdead.com/games/limbo/) and [Inside](https://playdead.com/games/inside/)
