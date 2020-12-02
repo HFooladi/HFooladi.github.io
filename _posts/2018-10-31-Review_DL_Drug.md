@@ -4,17 +4,18 @@ date:   2018-10-31 5:00:00
 permalink: /posts/2018/10/Review-Deep-Learning-In-Drug-Discovery/
 tags:
   - chemoinformatics
+  - computational-chemistry
   - drug-discovery 
 ---
 
-Deep learning algorithms have achieved state of the art performance in a lot of different tasks. 
-Convolutional Neural Network (CNN) can be used to achieve great performance in image classification, object detection, and semantic segmentation tasks. 
-Recurrent Neural Networks (RNNs) and its descendants like LSTMs and GRUs are the first things that come to mind in order to tackle problems like 
-neural language translation, speech recognition and even they can be used to generate new texts and music.
+Deep learning algorithms have achieved a state of the art performance in a lot of different tasks. 
+Convolutional Neural Network (CNN) can be used to achieve considerable performance in image classification, object detection, and semantic segmentation tasks. 
+Recurrent Neural Networks (RNNs) and their descendants like LSTMs and GRUs are the first things that come to mind to tackle problems like neural language 
+translation, speech recognition, and even they are used to generate new texts and music.
 
-Drug discovery is one of the areas that can gain benefit a lot from this success of deep learning. 
-Drug discovery is a very time-consuming and expensive task and deep learning can be used to make this process faster and cheaper. 
-Recently, lots of papers have been published around this topic and in this post, I am going to present a detailed review to see how it is possible to use deep learning in this domain. 
+Drug discovery is one of the areas that can gain a significant benefit from this success of deep learning. Drug discovery is a very time-consuming 
+and expensive task, and machine learning (including deep learning) has the potential to make this process faster and cheaper. Recently, lots of papers 
+have been published around this topic, and in this post, I am going to present a detailed review to see how it is possible to use deep learning in this domain. 
 
 Note: I updated this post a little bit at Feb 2020 to add recent works.
 
