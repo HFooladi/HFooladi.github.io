@@ -8,7 +8,9 @@ tags:
 
 ---
 
-I have started to learn more about the topic of causal inference and causal learning. Therefore, I have decided to put together here every resource I am using during my journey towards understanding this topic. My interests in this topic span around philosophical notion and argument about causality to the recent trends and attempt in the machine learning community for reconciling causal graph with deep learning.
+I have started to learn more about the topic of causal inference and causal learning. Therefore, I have decided to put together here every resource 
+I am using during my journey towards understanding this topic. My interest in this topic originated from the philosophical debate about causality, 
+and recently, I have become interested in the current trends and attempt in the machine learning community for reconciling causal graphs with deep learning.
 
 ### [The Book of Why: The New Science of Cause and Effect](https://www.amazon.com/Book-Why-Science-Cause-Effect/dp/046509760X)
 
@@ -79,7 +81,7 @@ its parents, and
 
 - (iii) the Markov factorization property with respect to the DAG G if
 
-$$ p(x) = p(x_1, x_2, ..., x_n) = \prod_{j=1}^{n} {p(x_j\mid PA(x_j))} $$
+$$ \mathbb{P}_X(x) = \mathbb{P}_{X_1, X2, ...,X_n }(x_1, x_2, ..., x_n) = \prod_{j=1}^{n} {\mathbb{P}_{X_j\mid PA(X_j)}(x_j\mid PA(x_j))} $$
 
 Generally, when we have access to only observational data, we should take two steps to recover the causal graph.
 
