@@ -148,7 +148,7 @@ in case of text-based representation for inputs, and Convolutional neural networ
 
 So, that's it for DTI prediction. At first, maybe it seems a difficult and challenging task, but the papers I have read are using very simple techniques
 and strategies to tackle this problem. Moreover, if you are working on DTI prediction (or binding affinity prediction), definitely check 
-this repository: https://github.com/kexinhuang12345/DeepPurpose
+[DeepPurpose](https://github.com/kexinhuang12345/DeepPurpose) repository. 
 
 ## De Novo Drug Design
 
