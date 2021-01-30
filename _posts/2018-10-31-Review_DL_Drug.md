@@ -147,7 +147,8 @@ in case of text-based representation for inputs, and Convolutional neural networ
 - The problem can be considered as the binary classification (whether a compound bind to the target) or regression (prediction the strength of affinity between compound and proteins).
 
 So, that's it for DTI prediction. At first, maybe it seems a difficult and challenging task, but the papers I have read are using very simple techniques
-and strategies to tackle this problem.
+and strategies to tackle this problem. Moreover, if you are working on DTI prediction (or binding affinity prediction), definitely check 
+this repository: https://github.com/kexinhuang12345/DeepPurpose
 
 ## De Novo Drug Design
 
