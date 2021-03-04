@@ -14,7 +14,7 @@ I have been actively involved in different projects including cell fate specific
 
 Now, my main research areas are machine learning in drug discovery (generally scientific machine learning) and the intersection 
 of artificial intelligence with cognition (vaguely named AGI). Occasionally, I am doing freelancing works. So please feel
-free to [contact](fooladi.hosein@gmail.com) me if you think your project has an intersection with my expertise domain.
+free to [contact](mailto:fooladi.hosein@gmail.com) me if you think your project has an intersection with my expertise domain.
 
 ## Interests
 
