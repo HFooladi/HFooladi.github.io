@@ -17,7 +17,10 @@ Education
 
 Work experience
 ======
-* Spring 2019 - Present: Senior Data Scientist - Chemoinformatics / Machine learning expert
+* Spring 2021 - Present: Head of Data Science
+  * [Celeris Therapeutics](https://celeristx.com/), Graz, Austria
+ 
+* Spring 2019 - Spring 2021: Senior Data Scientist - Chemoinformatics / Machine learning expert
   * [AI VIVO](http://www.aivivo.co/), Cambridge, UK
   * Duties included: Machine learning for drug repositioning, drug combination, and de novo drug design.
   
