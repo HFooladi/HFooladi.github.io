@@ -32,7 +32,7 @@ Work experience
   * Cambridge system biology centre
   * Duties included: Deep learning in drug discovery
   
-* Spring 2017: Bioinformatics reasearcher
+* Spring 2017: Bioinformatics researcher
   * Royan Institute, Tehran, Iran
   * Duties included: Reconstructing context-specific metabolic networks from gene expression data.
   
