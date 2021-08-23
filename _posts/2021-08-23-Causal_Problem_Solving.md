@@ -1,20 +1,20 @@
 ---
 title:  "Communication, coordination and competition in causal problem solving"
 date:   2021-08-23 5:00:00
-permalink: /posts/2021/08/Causal-Problem-Solving
+permalink: /posts/2021/08/Causal_Problem_Solving
 tags:
   - causality
   - computational-cognition
   - mutli-agent
   - reinforcement-learning
 ---
-Once upon a time, I received an offer to pursue my PhD study at the school of Philosophy, Psychology & Language science, University
-of Edinburgh. I wanted to study what are the differences/similarities between human and RL agents in cooperative problem solving. But,
+Once upon a time, I received an offer to pursue my PhD study at the school of Philosophy, Psychology & Language Science, University
+of Edinburgh. I wanted to study what are the differences/similarities between human and RL agents in cooperative problem-solving. But,
 situation did not go well, and I could not start the PhD program at Edinburgh.
 
-I spent a fair amount of time for writing a proposal that led to my acceptance. So, I thought maybe it is good idea now to share the
+I spent a fair amount of time writing a proposal that led to my acceptance. So, I thought maybe it is a good idea now to share the
 proposal on my blog. Maybe someone else can find it useful. I have put the Motivation section in the blog. If you are interested, you can
-download the pdf of the whole proposal from [here](https://hfooladi.github.io//files/Edinburgh_Proposal_Hosein_Fooladi_Final.pdf)  
+download the pdf of the whole proposal from [here](https://hfooladi.github.io//files/Edinburgh_Proposal_Hosein_Fooladi_Final.pdf). 
 
 ## 1. Motivation
 
