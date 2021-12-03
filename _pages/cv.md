@@ -20,12 +20,14 @@ Work experience
 * Spring 2021 - Present: Chief Data Scientist (CDS)
   * [Celeris Therapeutics](https://celeristx.com/), Graz, Austria
   * Duties included: Machine learning for targeted protein degradation
-    * Machine learning to identify targets that are succeptible to degradation.
+    * Machine learning to identify targets that are susceptible to degradation.
     * Machine learning for ternary complex prediction (complex formed by two proteins and degrader).
  
 * Spring 2019 - Spring 2021: Senior Data Scientist - Chemoinformatics / Machine learning expert
   * [AI VIVO](http://www.aivivo.co/), Cambridge, UK
   * Duties included: Machine learning for drug repositioning, drug combination, and de novo drug design.
+    * Predicting the effect of different perturbations (mostly small molecules) on different cell lines. 
+    * Developing machine learning tools for predicting synergy of drug combinations.
   
 * Spring 2018-Present: Chief Scientific Officer (CSO)
   * Shenakht Pajouh, Tehran, Iran
