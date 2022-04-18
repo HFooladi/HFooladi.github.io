@@ -4,7 +4,7 @@ collection: teaching
 type: "Workshop"
 permalink: /teaching/2022-active-learning-drug-discovery
 venue: "Online"
-date: 2022
+date: 2022-04-15
 ---
 
 Active learning and Bayesian optimization have become important/prevalent tools in drug discovery and design. They provide a systematic way 
