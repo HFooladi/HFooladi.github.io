@@ -10,7 +10,9 @@ date: 2022-04-15
 Active learning and Bayesian optimization have become important/prevalent tools in drug discovery and design. They provide a systematic way 
 to select samples with a high amount of information. This property has made them an ideal choice in early-stage drug discovery, e.g., in hit identification 
 through virtual screening and also lead optimization. Also, they can be used to search through usually very large drug combination space to find
-drug pairs with the highest synergy score. In this workshop, first, we read and review the theoretical aspects of active learning and bayesian optimization. For example, we will talk about:
+drug pairs with the highest synergy score. In this workshop, first, we read and review the theoretical aspects of active learning and bayesian optimization. 
+
+For example, we will talk about:
 
 - Surrogate models
 - Uncertainty Quantification
