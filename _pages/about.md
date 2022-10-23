@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am **Hosein Fooladi**,  Just a human being. The following descriptions are just social statuses that I have gained through my life, which you may or may not be interested in.
+I am **Hosein Fooladi**, Just a human being. The following descriptions are just social statuses that I have gained through my life, which you may or may not be interested in.
 
 I am **Hosein Fooladi**, System Biology and also Machine Learning Researcher, and currently a PhD student at [Comp3D](https://comp3d.univie.ac.at/) lab. I have obtained my MSc in Biomedical engineering from 
 Sharif University of Technology (ranked 1 in Iran) and BSc in Mechanical engineering from Amirkabir University of Technology

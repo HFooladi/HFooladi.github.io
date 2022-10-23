@@ -4,9 +4,9 @@ layout: single
 author_profile: true                                                        
 ---
 
-I am **Hosein Fooladi**, System Biology, and also Deep Learning Researcher. I have obtained my MSc in Biomedical Engineering from Sharif University of Technology 
-and BSc in Mechanical engineering from Amirkabir University of Technology that enabled me to enrich my knowledge in diverse areas such as nonlinear dynamical 
-system analysis, computational and system biology, computational neuroscience, machine learning (including deep learning) for genomics data and biomedical image analysis.
+I am **Hosein Fooladi**, Just a human being. The following descriptions are just social statuses that I have gained through my life, which you may or may not be interested in.
+
+I am **Hosein Fooladi**, System Biology and also Machine Learning Researcher, and currently a PhD student at [Comp3D](https://comp3d.univie.ac.at/) lab. I have obtained my MSc in Biomedical Engineering from Sharif University of Technology  and BSc in Mechanical engineering from Amirkabir University of Technology that enabled me to enrich my knowledge in diverse areas such as nonlinear dynamical system analysis, computational and system biology, computational neuroscience, machine learning (including deep learning) for genomics data and biomedical image analysis.
 
 I have been actively involved in different projects including cell fate specification and pattern formation during development 
 (in collaboration with Royan Institute, Tehran, Iran), and the application of deep learning in disease modeling and drug discovery 
@@ -19,7 +19,7 @@ free to [contact](mailto:fooladi.hosein@gmail.com) me if you think your project 
 ## Interests
 
 - Machine learning
-- Computational and System Biology
+- Computational Drug Discovery and Design 
 - Philosophy and Psychology
 - Physics
  
