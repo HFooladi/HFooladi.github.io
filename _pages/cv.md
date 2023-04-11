@@ -12,7 +12,7 @@ Download PDF version of my CV from [here](https://hfooladi.github.io//files/CV_H
 
 Education
 ======
-* Ph.D. Student, Pharmacy (Cheminformatics), University of Vienna, Vienna, Austria, Present
+* Ph.D. Student, pharmaceutical sciences (Cheminformatics), University of Vienna, Vienna, Austria, Present
 * M.Sc., Electrical Engineering (Biomedical Engineering), Sharif University of Technology, Tehran, Iran, 2017
 * B.Sc., Mechanical Engineering, Amirkabir University of Technology (Tehran Polytechnic), Tehran, Iran, 2014
 
