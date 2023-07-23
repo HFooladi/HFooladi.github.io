@@ -10,7 +10,7 @@ outperforms RNN-based architectures.'
 date: 2019-03-02
 venue: 'ACL'
 paperurl: 'https://www.aclweb.org/anthology/W19-3606/'
-citation: 'Fahimeh, Hosseini et al. (2019). &quot;Recognizing Arrow Of Time In The Short Stories.&quot; <i>Journal 1</i>.'
+citation: 'Hosseini, Fahimeh, Hosein Fooladi, and Mohammad Reza Samsami. "Recognizing Arrow Of Time In The Short Stories." arXiv preprint arXiv:1903.10548 (2019).'
 ---
 Fahimeh Hosseini, **Hosein Fooladi**, Mohammad Reza Samsami
 
