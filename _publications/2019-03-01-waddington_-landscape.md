@@ -28,3 +28,16 @@ is initiated from the boundary and gradually spreads towards the center.
 This model provides a basis for in-silico modeling of self-organization.
 
 [https://doi.org/10.1093/bioinformatics/btz201](https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/btz201/5418791?redirectedFrom=fulltext), [bioRxiv](https://www.biorxiv.org/content/10.1101/241604v1), [github](https://github.com/HFooladi/Self_Organization)
+
+```
+@article{fooladi2019enhanced,
+  title={Enhanced Waddington landscape model with cell--cell communication can explain molecular mechanisms of self-organization},
+  author={Fooladi, Hosein and Moradi, Parsa and Sharifi-Zarchi, Ali and Hosein Khalaj, Babak},
+  journal={Bioinformatics},
+  volume={35},
+  number={20},
+  pages={4081--4088},
+  year={2019},
+  publisher={Oxford University Press}
+}
+```

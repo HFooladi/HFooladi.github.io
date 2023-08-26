@@ -21,3 +21,12 @@ have shown that a pre-trained BERT architecture achieves reasonable accuracy on 
 outperforms RNN-based architectures.
 
 [github](https://github.com/ShenakhtPajouh/transposition-data). [arXiv](https://arxiv.org/abs/1903.10548v1), Accepted at WiNLP 2019 workshop
+
+```
+@article{hosseini2019recognizing,
+  title={Recognizing Arrow Of Time In The Short Stories},
+  author={Hosseini, Fahimeh and Fooladi, Hosein and Samsami, Mohammad Reza},
+  journal={arXiv preprint arXiv:1903.10548},
+  year={2019}
+}
+```
