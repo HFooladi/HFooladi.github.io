@@ -19,6 +19,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 # gem "jekyll"
 
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
+
 # gem "activesupport", ">= 4.1.11"
 
 gem "nokogiri", ">= 1.11.0.rc4"
