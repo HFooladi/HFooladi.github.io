@@ -16,14 +16,13 @@ Tensorflow is one of the most popular deep learning frameworks and has played a 
  I have been using TensorFlow for more than two years, but I have encountered a lot of bizarre and unpredictable behavior when working with control flow.
 Recently (19 April 2019), I watched a [video](https://www.youtube.com/watch?v=IzKXEbpT9Lg&list=PLQY2H8rRoyvzIuB8rZXs7pfyjiSUs8Vza&index=2&t=900s) of 
 TensorFlow team’s own internal training sessions, which was very helpful and made it clearer how control flow operations work. I definitely recommend watching this video.
-The video covers tf.cond() and tf.while_loop in details.Inspired by this, I decided to write this post to provide a more detailed explanation of how tf.cond() works and to offer some illustrative examples. Hopefully, I will cover tf.while_loop() in a subsequent post.
+The video covers tf.cond() and tf.while_loop in details. Inspired by this, I decided to write this post to provide a more detailed explanation of how tf.cond() works and to offer some illustrative examples. Hopefully, I will cover tf.while_loop() in a subsequent post.
 
 **Note:** I am going to cover low-level operations in this post. There are other ops like Functional ops, which is beyond the scope of this blog post.
 
 ## 2. Switch and Merge
 
-Two important ops that are used during the construction of the graph are Switch and Merge. Therefore, in this section, 
-I am going to introduce how they work and provide some examples for becoming familiar with some of their weird behavior!
+Two important operations commonly used during graph construction are 'Switch' and 'Merge'. In this section, I will introduce how they work and provide some examples to help you become familiar with their somewhat unconventional behavior.
 
 <div class="imgcap">
 <img src="/images/assets/TensorFlow_Condition/1_Switch_Merge.PNG" height="300" class="center">
