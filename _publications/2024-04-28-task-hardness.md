@@ -5,7 +5,7 @@ permalink: /publication/2024-04-24-task-hardness
 excerpt: 'Today, machine learning methods are widely employed in drug discovery. However, the chronic lack of data 
 continues to hamper their further development, validation, and application. Several modern strategies aim to mitigate 
 the challenges associated with data scarcity by learning from data on related tasks.'
-date: 2024-28-04
+date: 2024-04-28
 venue: 'Journal of Chemical Information and Modeling'
 paperurl: 'https://chemrxiv.org/engage/chemrxiv/article-details/65b3cafd9138d23161cc5ea4'
 citation: 'Fooladi, Hosein, et al. "Quantifying the hardness of bioactivity prediction tasks for transfer learning" Journal of Chemical Information and Modeling (2024)'
