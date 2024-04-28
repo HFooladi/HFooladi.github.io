@@ -1,7 +1,7 @@
 ---
 title: "Quantifying the hardness of bioactivity prediction tasks for transfer learning"
 collection: publications
-permalink: /publication/2024-04-24-task_hardness
+permalink: /publication/2024-04-24-task-hardness
 excerpt: 'Today, machine learning methods are widely employed in drug discovery. However, the chronic lack of data 
 continues to hamper their further development, validation, and application. Several modern strategies aim to mitigate 
 the challenges associated with data scarcity by learning from data on related tasks.'
