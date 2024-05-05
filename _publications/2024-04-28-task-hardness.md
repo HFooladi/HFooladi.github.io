@@ -12,7 +12,7 @@ citation: 'Fooladi, Hosein, et al. "Quantifying the hardness of bioactivity pred
 ---
 **Hosein Fooladi**, Steffen Hirte, and Johannes Kirchmair
 
-*Abstract*: Today, machine learning methods are widely employed in drug discovery. However, the chronic lack of data
+**Abstract**: Today, machine learning methods are widely employed in drug discovery. However, the chronic lack of data
 continues to hamper their further development, validation, and application. Several modern strategies aim to mitigate
 the challenges associated with data scarcity by learning from data on related tasks. These knowledge-sharing approaches
 encompass transfer learning, multi-task learning, and meta-learning. A key question remaining to be answered for these

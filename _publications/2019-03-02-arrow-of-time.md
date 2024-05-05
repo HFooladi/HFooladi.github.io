@@ -14,7 +14,7 @@ citation: 'Hosseini, Fahimeh, Hosein Fooladi, and Mohammad Reza Samsami. "Recogn
 ---
 Fahimeh Hosseini, **Hosein Fooladi**, Mohammad Reza Samsami
 
-*Abstract*: Recognizing arrow of time in short stories is a challenging task. i.e., given only two paragraphs,
+**Abstract**: Recognizing arrow of time in short stories is a challenging task. i.e., given only two paragraphs,
 determining which comes first and which comes next is a difficult task even for humans. In
 this paper, we have collected and curated a novel dataset for tackling this challenging task. We
 have shown that a pre-trained BERT architecture achieves reasonable accuracy on the task, and
@@ -22,7 +22,7 @@ outperforms RNN-based architectures.
 
 [github](https://github.com/ShenakhtPajouh/transposition-data). [arXiv](https://arxiv.org/abs/1903.10548v1), Accepted at WiNLP 2019 workshop
 
-```
+```{bibtex}
 @article{hosseini2019recognizing,
   title={Recognizing Arrow Of Time In The Short Stories},
   author={Hosseini, Fahimeh and Fooladi, Hosein and Samsami, Mohammad Reza},
