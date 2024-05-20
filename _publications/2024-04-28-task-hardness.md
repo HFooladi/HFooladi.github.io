@@ -21,13 +21,11 @@ approaches is about the extent to which their performance can benefit from the r
 This study introduces a new method for quantifying and predicting the hardness of a bioactivity prediction task based on its relation to the available training tasks. The approach involves the generation of protein and chemical representations and the calculation of distances between the bioactivity prediction task and the available training tasks. In the example of meta-learning, we demonstrate that the proposed task hardness metric is inversely correlated with performance. The metric will be useful in estimating the task specific gain in performance that can be achieved through meta-learning.
 
 ```{bibtex}
-@article{fooladi2024bioactivityhardness,
+@article{fooladi2024quantifying,
   title={Quantifying the hardness of bioactivity prediction tasks for transfer learning},
   author={Fooladi, Hosein and Hirte, Steffen and Kirchmair, Johannes},
   journal={Journal of Chemical Information and Modeling},
-  volume={3},
-  pages={100072},
   year={2024},
-  publisher={ACS Publication}
+  publisher={ACS Publications}
 }
 ```
