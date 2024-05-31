@@ -7,7 +7,7 @@ continues to hamper their further development, validation, and application. Seve
 the challenges associated with data scarcity by learning from data on related tasks.'
 date: 2024-04-28
 venue: 'Journal of Chemical Information and Modeling'
-paperurl: 'https://chemrxiv.org/engage/chemrxiv/article-details/65b3cafd9138d23161cc5ea4'
+paperurl: 'https://doi.org/10.1021/acs.jcim.4c00160'
 citation: 'Fooladi, Hosein, et al. "Quantifying the hardness of bioactivity prediction tasks for transfer learning" Journal of Chemical Information and Modeling (2024)'
 ---
 **Hosein Fooladi**, Steffen Hirte, and Johannes Kirchmair
@@ -25,6 +25,9 @@ This study introduces a new method for quantifying and predicting the hardness o
   title={Quantifying the hardness of bioactivity prediction tasks for transfer learning},
   author={Fooladi, Hosein and Hirte, Steffen and Kirchmair, Johannes},
   journal={Journal of Chemical Information and Modeling},
+  volume={64},
+  number={10},
+  pages={4031-4046},
   year={2024},
   publisher={ACS Publications}
 }
