@@ -12,18 +12,20 @@ Download PDF version of my CV from [here](https://hfooladi.github.io//files/CV_H
 
 Education
 ======
+
 * Ph.D. Student, pharmaceutical sciences (Cheminformatics), University of Vienna, Vienna, Austria, Present
 * M.Sc., Electrical Engineering (Biomedical Engineering), Sharif University of Technology, Tehran, Iran, 2017
 * B.Sc., Mechanical Engineering, Amirkabir University of Technology (Tehran Polytechnic), Tehran, Iran, 2014
 
 Work experience
 ======
+
 * Feb 2021 - Feb 2022: Chief Data Scientist (CDS)
   * [Celeris Therapeutics](https://celeristx.com/), Graz, Austria
   * Duties included: Machine learning for targeted protein degradation
     * Machine learning to identify targets that are susceptible to degradation.
     * Machine learning for ternary complex prediction (complex formed by two proteins and degrader).
- 
+
 * Apr 2019 - Dec 2020: Senior Data Scientist - Chemoinformatics / Machine learning expert
   * [AI VIVO](http://www.aivivo.co/), Cambridge, UK
   * Duties included: Machine learning for drug repositioning, drug combination, and de novo drug design.
@@ -48,33 +50,44 @@ Work experience
   
 Skills
 ======
+
 * Machine learning (Bayesian inference, Causal learning)
 * Bioinformatics
 * Programming
-  * Python 
+  * Python
   * R
   * C++
   * Rust
 
-
 Publications
 ======
+
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
+
+Reviewer
+======
+
+* [Nature Machine Intelligence](https://www.nature.com/natmachintell/)
+* [Journal of Chemical Information and Modeling](https://pubs.acs.org/journal/jcisd8)
+* [Artificial Intelligence in the Life Sciences](https://www.sciencedirect.com/journal/artificial-intelligence-in-the-life-sciences)
   
 Talks
 ======
+
   <ul>{% for post in site.talks %}
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
   
 Teaching
 ======
+
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
 Service and leadership
 ======
+
 * Active Open Source Developer
