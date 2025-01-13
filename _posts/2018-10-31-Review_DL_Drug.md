@@ -6,6 +6,9 @@ tags:
   - chemoinformatics
   - computational-chemistry
   - drug-discovery 
+
+toc: true
+toc_label: "DL In Drug Discovery"
 ---
 
 Deep learning algorithms have achieved a state of the art performance in a lot of different tasks.

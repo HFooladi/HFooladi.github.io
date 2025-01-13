@@ -5,8 +5,9 @@ permalink: /posts/2019/05/TensorFlow-Condition/
 tags:
   - programming
   - tensorflow
-mathjax: true
 toc: true
+toc_label: "TensorFlow Condition"
+mathjax: true
 ---
 
 I have published this post at Medium too. You can find Medium version [here](https://towardsdatascience.com/tensorflow-control-flow-tf-cond-903e020e722a)

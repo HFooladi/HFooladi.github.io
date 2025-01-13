@@ -7,6 +7,9 @@ tags:
   - computational-cognition
   - mutli-agent
   - reinforcement-learning
+
+toc: true
+toc_label: "Causal Problem Solving"
 ---
 Once upon a time, I received an offer to pursue my PhD study at the school of Philosophy, Psychology & Language Science, University
 of Edinburgh. I wanted to study what are the differences/similarities between human and RL agents in cooperative problem-solving. But,

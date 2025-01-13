@@ -16,7 +16,10 @@ $indent-var: 1.3em !default;
 $serif: 'Latin Modern', Georgia, Times, serif !default;
 $sans-serif: 'Latin Modern', -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
-$monospace: Monaco, Consolas, "Lucida Console", monospace !default;
+$monospace: "Courier New", Monaco, Consolas, "Lucida Console", monospace !default;
+
+/* MathJax */
+$mathjax-font: 'Latin Modern', Georgia, Times, serif !default;
 
 /* sans serif typefaces */
 $sans-serif-narrow: $sans-serif !default;
