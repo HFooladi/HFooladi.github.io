@@ -1,7 +1,7 @@
 ---
 title: "Enhanced Waddington Landscape Model with Cell-Cell Communication Can Explain Molecular Mechanisms of Self-Organization"
 collection: publications
-permalink: /publication/waddingtopn-landscape
+permalink: /publications/waddingtopn-landscape
 excerpt: 'Here, we propose a multicellular mathematical model for pattern formation during in vitro gastrulation of human ESCs. 
 This model enhances the basic principles of Waddington epigenetic landscape with
 cell-cell communication, in order to enable pattern and tissue formation.'

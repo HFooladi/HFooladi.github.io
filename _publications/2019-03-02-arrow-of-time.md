@@ -1,7 +1,7 @@
 ---
 title: "Recognizing Arrow Of Time In The Short Stories"
 collection: publications
-permalink: /publication/2019-03-02-arrow-of-time
+permalink: /publications/2019-03-02-arrow-of-time
 excerpt: 'Recognizing arrow of time in short stories is a challenging task. i.e., given only two paragraphs,
 determining which comes first and which comes next is a difficult task even for humans. In
 this paper, we have collected and curated a novel dataset for tackling this challenging task. We

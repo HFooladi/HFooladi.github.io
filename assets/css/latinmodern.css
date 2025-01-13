@@ -1,4 +1,4 @@
-/*!
+/*
  * LaTeX.css (https://latex.now.sh/)
  *
  * Source: https://github.com/vincentdoerig/latex-css
@@ -7,40 +7,36 @@
 
 @font-face {
   font-family: 'Latin Modern';
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
   src: url('../fonts/LM-regular.woff2') format('woff2'),
-    url('../fonts/LM-regular.woff') format('woff'),
-    url('../fonts/LM-regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Latin Modern';
-  font-style: italic;
+       url('../fonts/LM-regular.woff') format('woff'),
+       url('../fonts/LM-regular.ttf') format('truetype');
   font-weight: normal;
-  font-display: swap;
-  src: url('../fonts/LM-italic.woff2') format('woff2'),
-    url('../fonts/LM-italic.woff') format('woff'),
-    url('../fonts/LM-italic.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Latin Modern';
   font-style: normal;
-  font-weight: bold;
-  font-display: swap;
-  src: url('../fonts/LM-bold.woff2') format('woff2'),
-    url('../fonts/LM-bold.woff') format('woff'),
-    url('../fonts/LM-bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Latin Modern';
-  font-style: italic;
+  src: url('../fonts/LM-bold.woff2') format('woff2'),
+       url('../fonts/LM-bold.woff') format('woff'),
+       url('../fonts/LM-bold.ttf') format('truetype');
   font-weight: bold;
-  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Latin Modern';
+  src: url('../fonts/LM-italic.woff2') format('woff2'),
+       url('../fonts/LM-italic.woff') format('woff'),
+       url('../fonts/LM-italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Latin Modern';
   src: url('../fonts/LM-bold-italic.woff2') format('woff2'),
-    url('../fonts/LM-bold-italic.woff') format('woff'),
-    url('../fonts/LM-bold-italic.ttf') format('truetype');
+       url('../fonts/LM-bold-italic.woff') format('woff'),
+       url('../fonts/LM-bold-italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
 }

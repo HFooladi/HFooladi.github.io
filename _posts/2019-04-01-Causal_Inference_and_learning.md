@@ -5,7 +5,9 @@ permalink: /posts/2019/04/Causal-Inference-and-learning/
 tags:
   - causality
   - causal inference 
-
+toc: true
+toc_label: "Causal Learning"
+mathjax: true
 ---
 
 I have started to learn more about the topic of causal inference and causal learning. Therefore, I have decided to put together here every resource 
@@ -26,23 +28,23 @@ Ferenc Huszár did a nice job of putting together three tutorials on introducing
 
 Moreover, there are some videos that accompany this tutorial. [Ferenc Huszár Causal Inference in Everyday Machine Learning](https://youtu.be/HOgx_SBBzn0)
 
-
 ### [Constructing the world: Active causal learning in cognition](https://www.bramleylab.ppls.ed.ac.uk/publication/2017-01-01_bramley2017phdthesis/)
 
 Although we are observing recent trends on reconciling causal inference with machine learning in the AI community, causality has been always one of the major topics in philosophy and psychology. There are a long-standing history and debate on causality and prominent philosophers such as David Hume have spent their career working in this subject. There is a debate about whether the world is causal or whether we are perceiving and understanding the world as causal. I believe that casualty is subjective and there is no such thing as the causal objective world. We are observing the world and inferring causal structure from observation and intervention; i.e., it is a good habit of the mind and can lead to scientific and technological discovery, and as a result, perceiving the world in this way has an evolutionary benefit.
 
 Anyways, let us talk about this reference. Dr. Neil Bramley has done a great job of exploring active causal learning in cognition. How human interact with surrounding objects and choose appropriate intervention to unveil the causal structures. He has shown that interventional and temporal cues, along with top-down hierarchical constraints, inform the gradual evolution and adaptation of increasingly rich causal representations.
 
-I recommend reading this Thesis to all the people who are interested in psychology and also reinforcement learning. 
+I recommend reading this Thesis to all the people who are interested in psychology and also reinforcement learning.
 
 ### Mini course on causality, Cambridge MIT
+
 This is the mini-course on causality presented by Jonas Peters. It contains more technical stuff and mathematical details. At first, I found it a little hard, but as time goes on, I was able to understand the material.
 
 It has been divided into four different parts.
 
 1. [Part 1](https://www.youtube.com/watch?v=zvrcyqcN9Wo)
 
-It begins with an introduction to causal learning. Jonas presents some examples to show that Why causality matters and why we need to consider it seriously. Because most of the problem and decision making in real life consists of intervention and for being able to predict an outcome, we should equip ourselves with the tools of causal learning. After that, he introduces structural causal model (SCM) and shows how conditional distribution differs from interventional distribution. 
+It begins with an introduction to causal learning. Jonas presents some examples to show that Why causality matters and why we need to consider it seriously. Because most of the problem and decision making in real life consists of intervention and for being able to predict an outcome, we should equip ourselves with the tools of causal learning. After that, he introduces structural causal model (SCM) and shows how conditional distribution differs from interventional distribution.
 
 Then he proceeds by introducing confounder, and how we can define a valid adjustment set. In the end, he explains how the randomized controlled experiment adjust for confounder variables. 
 
@@ -50,17 +52,18 @@ Then he proceeds by introducing confounder, and how we can define a valid adjust
 
 It starts by describing how we are identifying that two random variables, X and Y, are causally related, and how the causal strength is measured. Next, we will become familiar with one fundamental topic, instrumental variables, which has been important tools in economic studies. Then Jonas introduces one very important topics: counterfactuals. It is quite fundamental and widespread topic in philosophy and psychology. It is very related to imagination and retrospection. Moreover, it can be used to solve the problem of credit assignment and responsibility attribution. The goal of counterfactual is to answer a question like this: given the world we are living now, what would have happened if I had not attended to the university? This concept has significant implication in reinforcement learning, and we are observing more works. e.g., you can look at the following papers to learn more:
 
-- [Intrinsic Social Motivation via Causal Influence in Multi-Agent RL](https://www.media.mit.edu/publications/intrinsic-social-motivation-via-causal-influence-in-multi-agent-rl/)
+* [Intrinsic Social Motivation via Causal Influence in Multi-Agent RL](https://www.media.mit.edu/publications/intrinsic-social-motivation-via-causal-influence-in-multi-agent-rl/)
 
-- [Designing agent incentives to avoid side effects](https://medium.com/@deepmindsafetyresearch/designing-agent-incentives-to-avoid-side-effects-e1ac80ea6107)
+* [Designing agent incentives to avoid side effects](https://medium.com/@deepmindsafetyresearch/designing-agent-incentives-to-avoid-side-effects-e1ac80ea6107)
 
 The summary of something we have discussed so far:
-- Conditional distribution is different from interventional distribution.
-- Given just observational distribution, we can not identify causal graph and therefore, we are not able to answer the question related to the intervention.
-- Given the observational distribution and causal graph, we are equipped with sufficient knowledge to answer to the interventional query.
-- SCM + observational distribution --> counterfactuals
 
-<p style="text-align: center"><img src="/images/assets/Causal_Inference_and_learning/causal_ladder.JPG"></p>
+* Conditional distribution is different from interventional distribution.
+* Given just observational distribution, we can not identify causal graph and therefore, we are not able to answer the question related to the intervention.
+* Given the observational distribution and causal graph, we are equipped with sufficient knowledge to answer to the interventional query.
+* SCM + observational distribution --> counterfactuals
+
+<p style="text-align: center"><img src="/assets/images/blog/Causal_Inference_and_learning/causal_ladder.JPG"></p>
 <div class="thecap" style="text-align:center">Figure 1: Three rungs of ladder of causation.</div>
 
 
@@ -68,27 +71,25 @@ Next, Jonas turns the topic and introduces the concept of d-separation in graphs
 
 One method to approximately recover causal graph is independence-based methods. It is not possible to use this method without holding certain assumptions. Two assumptions that must be satisfied are:
 
-- Markov property
-- Faithfullness
+* Markov property
+* Faithfullness
 
 **Markov property**: Given a DAG $$G$$ and a joint distribution $$P_X$$, this distribution is said to satisfy
-- (i) the global Markov property with respect to the DAG G if:
+* (i) the global Markov property with respect to the DAG G if:
 
     $$ A; B\ d-sep.\ by\ C \rightarrow A \perp B \mid C $$
 
-- (ii) the local Markov property with respect to the DAG G if each variable is independent of its non-descendants given 
+* (ii) the local Markov property with respect to the DAG G if each variable is independent of its non-descendants given 
 its parents, and
 
-- (iii) the Markov factorization property with respect to the DAG G if
+* (iii) the Markov factorization property with respect to the DAG G if
 
 $$ \mathbb{P}_X(x) = \mathbb{P}_{X_1, X2, ...,X_n }(x_1, x_2, ..., x_n) = \prod_{j=1}^{n} {\mathbb{P}_{X_j\mid PA(X_j)}(x_j\mid PA(x_j))} $$
 
 Generally, when we have access to only observational data, we should take two steps to recover the causal graph.
 
-- The first step is to learn independence and conditional independence between variables from observational data. When we are dealing with high-dimensional data, it can be a time-consuming and difficult task.
+* The first step is to learn independence and conditional independence between variables from observational data. When we are dealing with high-dimensional data, it can be a time-consuming and difficult task.
 
-- Second, By inferring independence between variables and considering faithfulness assumption, we are able to recover causal graph up to some certainty.
+* Second, By inferring independence between variables and considering faithfulness assumption, we are able to recover causal graph up to some certainty.
 
 The bad news is that even be holding Markov property, and faithfulness assumption, we are not able to recover causal graph completely. There can be different structures that satisfy independence and conditional independence properties. The class of structures which satisfy the same independence and conditional independence properties are called *Markov equivalence*. 
-
-

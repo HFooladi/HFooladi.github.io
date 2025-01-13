@@ -1,7 +1,7 @@
 ---
 title: "Optimum Design, Manufacturing and Experiment of a Passive Walking Biped: Effects of Structural Parameters on Efficiency, Stability and Robustness on Uneven Trains"
 collection: publications
-permalink: /publication/passive-walking-biped
+permalink: /publications/passive-walking-biped
 excerpt: 'In this research, a deployed model of biped that can be built has been considered, and then its walking performance sensitivity 
 such as efficiency, stability and robustness on uneven trains due to variation of structural parameters and their optimum limits 
 have been investigated.'

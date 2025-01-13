@@ -6,6 +6,7 @@ tags:
   - programming
   - tensorflow
 mathjax: true
+toc: true
 ---
 
 I have published this post at Medium too. You can find Medium version [here](https://towardsdatascience.com/tensorflow-control-flow-tf-cond-903e020e722a)
@@ -25,7 +26,7 @@ The video covers tf.cond() and tf.while_loop in details. Inspired by this, I dec
 Two important operations commonly used during graph construction are 'Switch' and 'Merge'. In this section, I will introduce how they work and provide some examples to help you become familiar with their somewhat unconventional behavior.
 
 <div class="imgcap">
-<img src="/images/assets/TensorFlow_Condition/1_Switch_Merge.PNG" height="300" class="center">
+<img src="/assets/images/blog/TensorFlow_Condition/1_Switch_Merge.PNG" height="300" class="center">
 <div class="thecap" style="text-align:center">Figure 1: Schematics of what are the inputs and outputs of Switch and Merge, and how they work.</div>
 </div>
 
@@ -81,7 +82,7 @@ Tensor("Switch:0", shape=(), dtype=float32) Tensor("Switch:1", shape=(), dtype=f
 So, let’s dive in to see what’s happening in this example. I have created the figure that illustrates what is going on.
 
 <div class="imgcap">
-<img src="/images/assets/TensorFlow_Condition/2_Switch.PNG" height="300" class="center">
+<img src="/assets/images/blog/TensorFlow_Condition/2_Switch.PNG" height="300" class="center">
 <div class="thecap" style="text-align:center">Figure 2: Illustrating what is happening in the provided example.</div>
 </div>
 
@@ -110,7 +111,7 @@ Now, I think it’s enough for Switch. let’s see how Merge operates.
 Merge is another operator which is required for construction of tf.cond() graph.
 
 <div class="imgcap">
-<img src="/images/assets/TensorFlow_Condition/3_Merge.PNG" height="300" class="center">
+<img src="/assets/images/blog/TensorFlow_Condition/3_Merge.PNG" height="300" class="center">
 <div class="thecap" style="text-align:center">Figure 3: Merge ops</div>
 </div>
 
@@ -176,7 +177,7 @@ tf.cond(x < y, lambda: tf.add(x, z), lambda: tf.square(y))
 I have constructed the computational graph for this simple example, and you can find it in figure 4.
 
 <div class="imgcap">
-<img src="/images/assets/TensorFlow_Condition/4_tf_cond.PNG" height="400" class="center">
+<img src="/assets/images/blog/TensorFlow_Condition/4_tf_cond.PNG" height="400" class="center">
 <div class="thecap" style="text-align:center">Figure 4: computational graph to show how tf.cond() works.</div>
 </div>
 
@@ -236,7 +237,7 @@ So, there are three input arguments and consequently, there exist three switches
 Constructing a computational graph for this case will be easy.
 
 <div class="imgcap">
-<img src="/images/assets/TensorFlow_Condition/5_tf.cond_ex1.PNG" height="400" class="center">
+<img src="/assets/images/blog/TensorFlow_Condition/5_tf.cond_ex1.PNG" height="400" class="center">
 <div class="thecap" style="text-align:center">Figure 5: Computational graph for Example 1.</div>
 </div>
 
@@ -283,7 +284,7 @@ Some of the tensors (z and print_output) have defined outside the function and a
 let’s draw the graph to make this point clear:
 
 <div class="imgcap">
-<img src="/images/assets/TensorFlow_Condition/6_tf.cond_ex2.PNG" height="400" class="center">
+<img src="/assets/images/blog/TensorFlow_Condition/6_tf.cond_ex2.PNG" height="400" class="center">
 <div class="thecap" style="text-align:center">Figure 6: Computational graph for Example 2.</div>
 </div>
 
