@@ -1,5 +1,5 @@
 ---
-title:  "TensorFlow Control Flow: tf.cond()"
+title:  "Understanding TensorFlow Control Flow: Deep Dive into tf.cond()"
 date:   2019-05-01 5:00:00
 permalink: /posts/2019/05/TensorFlow-Condition/
 tags:
@@ -14,13 +14,13 @@ I have published this post at Medium too. You can find Medium version [here](htt
 
 ## 1. Introduction
 
-Tensorflow is one of the most popular deep learning frameworks and has played a key role in advancing deep learning. 
- I have been using TensorFlow for more than two years, but I have encountered a lot of bizarre and unpredictable behavior when working with control flow.
-Recently (19 April 2019), I watched a [video](https://www.youtube.com/watch?v=IzKXEbpT9Lg&list=PLQY2H8rRoyvzIuB8rZXs7pfyjiSUs8Vza&index=2&t=900s) of 
-TensorFlow team’s own internal training sessions, which was very helpful and made it clearer how control flow operations work. I definitely recommend watching this video.
-The video covers tf.cond() and tf.while_loop in details. Inspired by this, I decided to write this post to provide a more detailed explanation of how tf.cond() works and to offer some illustrative examples. Hopefully, I will cover tf.while_loop() in a subsequent post.
+As one of the most popular deep learning frameworks, TensorFlow has been instrumental in advancing the field of deep learning. Despite working with TensorFlow for over two years, I've often found myself puzzled by its control flow operations and their sometimes unpredictable behavior.
+Recently, I stumbled upon a [goldmine](https://www.youtube.com/watch?v=IzKXEbpT9Lg&list=PLQY2H8rRoyvzIuB8rZXs7pfyjiSUs8Vza&index=2&t=900s) – an internal training video from the TensorFlow team (April 19, 2019) that shed light on how control flow operations work. The video offered an in-depth exploration of tf.cond() and tf.while_loop(), providing clarity I'd been seeking.
+In this post, I'll focus specifically on demystifying tf.cond(), sharing detailed explanations and practical examples from my experience. For those interested in tf.while_loop(), stay tuned for a follow-up post where I'll dive into that topic.
 
-**Note:** I am going to cover low-level operations in this post. There are other ops like Functional ops, which is beyond the scope of this blog post.
+**A Quick Note Before We Begin**
+
+This post focuses on low-level operations in TensorFlow. While there are other operations like Functional ops, we'll save those for another discussion to keep this focused and digestible.
 
 ## 2. Switch and Merge
 
@@ -30,7 +30,6 @@ Two important operations commonly used during graph construction are 'Switch' an
 <img src="/assets/images/blog/TensorFlow_Condition/1_Switch_Merge.PNG" height="300" class="center">
 <div class="thecap" style="text-align:center">Figure 1: Schematics of what are the inputs and outputs of Switch and Merge, and how they work.</div>
 </div>
-
 
 As you can observe, the switch receives two inputs: data and predicate, and provides two outputs: data and dead tensor!. 
 Also, Merge receive two (or more than two) inputs and provides one output which is the data. I am going to go to more details in the following.
