@@ -32,34 +32,3 @@
     <script src="{{ script | relative_url }}"></script>
   {% endfor %}
 {% endif %}
-
-<!-- For code blocks -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Wrap all pre elements with code inside
-    document.querySelectorAll('pre > code').forEach(function(codeBlock) {
-      const container = codeBlock.parentNode;
-      const header = document.createElement('div');
-      header.className = 'code-header';
-      
-      const button = document.createElement('button');
-      button.className = 'copy-code-button';
-      header.appendChild(button);
-      
-      // Insert header before pre element
-      container.parentNode.insertBefore(header, container);
-      
-      button.addEventListener('click', function() {
-        const code = codeBlock.textContent;
-        navigator.clipboard.writeText(code).then(function() {
-          button.classList.add('copied');
-          setTimeout(function() {
-            button.classList.remove('copied');
-          }, 2000);
-        }).catch(function(err) {
-          console.error('Failed to copy: ', err);
-        });
-      });
-    });
-  });
-  </script>
