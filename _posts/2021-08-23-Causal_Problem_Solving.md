@@ -11,15 +11,13 @@ tags:
 toc: true
 toc_label: "Causal Problem Solving"
 ---
-## 1. Introduction
-
 In an exciting turn of events, I received an offer to pursue a PhD at the University of Edinburgh's School of Philosophy, Psychology & Language Sciences. My research would have explored the similarities and differences between humans and reinforcement learning (RL) agents in cooperative problem-solving. Though circumstances prevented me from starting the program, I believe the work I put into the proposal shouldn't go to waste.
 
 I invested fair amount of time developing this research proposal, and I'd like to share it with the broader research community. Below, I've included the Motivation section from my proposal. If you're interested in reading the complete document, you can download it [here](https://hfooladi.github.io//files/Edinburgh_Proposal_Hosein_Fooladi_Final.pdf).
 
-## 2. Motivation
+## 1. Motivation
 
-### 2.1. Introduction
+### 1.1. Introduction
 
 It has been argued that humans perceive and interpret the world through the lens of a causal model (e.g. Sloman, 2005; Steyvers et al., 2003). Such a causal model can help explain why observed events occurred (Coenen et al., 2015; Meder et al, 2014) and help predict what will happen next (Clark, 2014). Humans also have an innate willingness to ask “why” questions and seek reasons and explanations underlying the phenomena they encounter in the world (Bramley et al., 2015; Schmidhuber, 2010).
 
@@ -27,6 +25,6 @@ One important question is what is the relationship between this causal represent
 
 In my PhD, I propose to explore how people communicate during group causal reasoning problems. Broadly, individuals must reason about one another’s knowledge and attempt to share insights order to maximize the influence among other agents in the environment and ultimately task specific reward. My goal is to shed light on the understanding of how human share beliefs through communication during joint problem solving. I propose to analyse this problem using a combination of active learning (Settles, 2012), multi-agent reinforcement learning (Shoham, 2003) and game theory (Nash, 1950).
 
-### 2.2. The multi-agent Reinforcement Learning framework
+### 1.2. The multi-agent Reinforcement Learning framework
 
 Reinforcement learning (RL) deals with agents acting in an environment with the goal of establishing a policy (i.e. state-behaviour mapping) that maximises their expected future rewards (Sutton & Barto, 2018). While a popular framework in theoretical neuroscience (from whence it originates) RL has not been applied extensively in the study of higher-level cognition. Recent advancements have explored intrinsic reward signals—like “curiosity” —that can drive learning in the absence of well-shaped extrinsic rewards (Pathak et al., 2017; Schmidhuber, 2010). Multi-agent RL generalises the formalism to settings with multiple agents that might share or differ in what they find rewarding. Each agent observes the environment, infers the state of the world based on the belief (i.e. agents state can differ at each time), and choose an action/policy maximizing expected cumulative reward. In multi-agent RL setting, it is possible to train agents to output statements in a shared or initially undetermined language, e.g. with the intrinsic goal of exerting causal influence on other agents in the environment. Causal influence assessment can take place through comparison between observed outcomes and simulated counterfactual outcomes (Lewis, 1979; Pearl, 2009; Jaques et al., 2018).In this setting, agent language acquisition and understanding is grounded and embedded in collective group pursuit (e.g. Gauthier & Mordatch, 2016; Hermann et al., 2017; Mikolov et al., 2015), i.e. providing a potential explanation for how lexical concepts relate to the real world by acting into the world. This approach is called intrinsic social motivation via causal influence and has great potential as a framework within which to study communication and emergent coordination within natural human group settings.
