@@ -26,7 +26,7 @@ masthead_title           : # overrides the website title displayed in the masthe
 words_per_minute         : 200
 enable_copy_code_button  : true
 comments:
-  provider               : "false" # false (default), "disqus", "discourse", "facebook", "staticman_v2", "staticman", "utterances", "giscus", "custom"
+  provider               : "utterances" # false (default), "disqus", "discourse", "facebook", "staticman_v2", "staticman", "utterances", "giscus", "custom"
   disqus:
     shortname            :
   discourse:
