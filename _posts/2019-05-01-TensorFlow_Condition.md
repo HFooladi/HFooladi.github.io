@@ -15,7 +15,7 @@ I have published this post at Medium too. You can find Medium version [here](htt
 ## 1. Introduction
 
 As one of the most popular deep learning frameworks, TensorFlow has been instrumental in advancing the field of deep learning. Despite working with TensorFlow for over two years, I've often found myself puzzled by its control flow operations and their sometimes unpredictable behavior.
-Recently, I stumbled upon an interesting [resource](https://www.youtube.com/watch?v=IzKXEbpT9Lg&list=PLQY2H8rRoyvzIuB8rZXs7pfyjiSUs8Vza&index=2&t=900s) – an internal training video from the TensorFlow team (April 19, 2019) - that shed light on how control flow operations work. The video offered an in-depth exploration of tf.cond() and tf.while_loop(), providing clarity and sufficient depth I was looking for.
+Recently, I stumbled upon an interesting [resource](https://www.youtube.com/watch?v=IzKXEbpT9Lg&list=PLQY2H8rRoyvzIuB8rZXs7pfyjiSUs8Vza&index=2&t=900s) – an internal training video from the TensorFlow team (April 19, 2019) – that shed light on how control flow operations work. The video offered an in-depth exploration of tf.cond() and tf.while_loop(), providing clarity and sufficient depth I was looking for.
 In this post, I'll focus specifically on demystifying tf.cond(), sharing detailed explanations and practical examples from my experience. For those interested in tf.while_loop(), stay tuned for a follow-up post where I'll dive into that topic.
 
 **A Quick Note Before We Begin**
@@ -131,7 +131,7 @@ Merge(output=2.0, value_index=2)
 '''
 ```
 
-It behaves completely according to our expectation. 
+It behaves completely according to our expectation.
 But, things get a little unexpected and bizarre, when you feed two tensors which have data into the Merge.
 
 ```python
