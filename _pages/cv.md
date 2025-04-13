@@ -48,16 +48,21 @@ Work experience
   * Sharif University of Technology, Tehran, Iran
   * Duties included: Advanced bioinformatics course, system biology course
   
-Skills
+Technical Skills
 ======
+* **Machine Learning**: Advanced (Bayesian methods, causal inference, deep learning, reinforcement learning)
+* **Programming**: Python (advanced), R (advanced), C++ (intermediate), Rust (intermediate)
+* **ML Frameworks**: PyTorch, TensorFlow, scikit-learn, XGBoost, Jax
+* **Cheminformatics Tools**: RDKit, Open Babel, DeepChem, Schrödinger Suite
+* **Bioinformatics**: Sequence analysis, pathway analysis, network biology
 
-* Machine learning (Bayesian inference, Causal learning)
-* Bioinformatics
-* Programming
-  * Python
-  * R
-  * C++
-  * Rust
+Research Expertise
+======
+* Drug discovery automation
+* Targeted protein degradation
+* Multi-omics data integration
+* Network pharmacology
+* Systems biology
 
 Publications
 ======
