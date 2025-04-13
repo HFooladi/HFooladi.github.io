@@ -13,7 +13,7 @@ Download PDF version of my CV from [here](https://hfooladi.github.io//files/CV_H
 Education
 ======
 
-* Ph.D. Student, Pharmaceutical Sciences (Cheminformatics), University of Vienna - CDLAB-MIB Industry Partnership, Vienna, Austria, Present
+* Ph.D. Student, Pharmaceutical Sciences (Cheminformatics), University of Vienna - CD-Lab MIB Industry Partnership, Vienna, Austria, Present
 * M.Sc., Electrical Engineering (Biomedical Engineering), Sharif University of Technology, Tehran, Iran, 2017
 * B.Sc., Mechanical Engineering, Amirkabir University of Technology (Tehran Polytechnic), Tehran, Iran, 2014
 
@@ -29,7 +29,7 @@ Work experience
 * Apr 2019 - Dec 2020: Senior Data Scientist - Chemoinformatics / Machine learning expert
   * [AI VIVO](http://www.aivivo.co/), Cambridge, UK
   * Duties included: Machine learning for drug repositioning, drug combination, and de novo drug design.
-    * Predicting the effect of different perturbations (mostly small molecules) on different cell lines. 
+    * Predicting the effect of different perturbations (mostly small molecules) on different cell lines.
     * Developing machine learning tools for predicting synergy of drug combinations.
   
 * May 2018 - Dec 2019: Chief Scientific Officer (CSO)
