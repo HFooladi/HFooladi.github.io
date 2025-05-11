@@ -10,6 +10,7 @@ tags:
 toc: true
 toc_label: "DL In Drug Discovery"
 ---
+![Review DL Banner](/assets/images/blog/Review_DL_Drug/Review_DL_banner.png)
 
 Deep learning algorithms have achieved a state of the art performance in a lot of different tasks.
 Convolutional Neural Network (CNN) can be used to achieve considerable performance in image classification, object detection, and semantic segmentation tasks. 
