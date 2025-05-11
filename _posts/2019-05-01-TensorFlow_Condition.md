@@ -9,6 +9,7 @@ toc: true
 toc_label: "TensorFlow Condition"
 mathjax: true
 ---
+![TensorFlow Control Flow Banner](/assets/images/blog/TensorFlow_Condition/tensorflow_cond_banner.png)
 
 I have published this post at Medium too. You can find Medium version [here](https://towardsdatascience.com/tensorflow-control-flow-tf-cond-903e020e722a)
 
