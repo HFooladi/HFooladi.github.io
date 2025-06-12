@@ -10,13 +10,8 @@ redirect_from:
 
 I am **Hosein Fooladi**, Just a human being. The following descriptions are just social statuses that I have gained through my life, which you may or may not be interested in.
 
-I am **Hosein Fooladi**, System Biology and also Machine Learning Researcher, and currently a PhD student at [Comp3D](https://comp3d.univie.ac.at/) lab. I have obtained my MSc in Biomedical engineering from 
-Sharif University of Technology (ranked 1 in Iran) and BSc in Mechanical engineering from Amirkabir University of Technology
-(top 3 in Iran) that enable me to enrich my knowledge in diverse areas such as nonlinear dynamical system analysis, 
-computational and system biology, computational neuroscience, machine learning (including deep learning) for genomics data and biomedical image analysis.  
-I have been actively involved in different projects including cell fate specification and pattern formation during development
-(in collaboration with Royan Institute, Tehran, Iran) and the application of deep learning in disease modeling and drug discovery
-(in collaboration with the Cambridge Systems Biology Centre, University of Cambridge).
+I am **Hosein Fooladi**, an experienced Data Scientist and Machine Learning researcher specializing in drug discovery, computational biology, and causal learning. I am currently pursuing my PhD in Pharmaceutical Sciences (Cheminformatics) at the University of Vienna, where I work at the Comp3D lab. My thesis focuses on developing machine learning models for domain generalization in the chemical space.
+My academic journey began with a BSc in Mechanical Engineering from Amirkabir University of Technology and continued with an MSc in Biomedical Engineering from Sharif University of Technology, where I was awarded as the Best Master's Student. This diverse educational background has enabled me to enrich my knowledge in areas such as nonlinear dynamical system analysis, computational and systems biology, computational neuroscience, and machine learning for genomics data and biomedical image analysis.
 
 #### Non-Academic
 
