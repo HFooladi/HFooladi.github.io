@@ -15,7 +15,7 @@ title                    : "Hosein Fooladi"
 title_separator          : "-"
 subtitle                 : # "A Jekyll theme"
 name                     : &name "Hosein Fooladi" # &name is a YAML anchor which can be *referenced later
-description              : &description "Machine Learning Researcher."
+description              : &description "PhD researcher in Machine Learning & Drug Discovery | Cheminformatics | Out-of-Distribution Generalization | University of Vienna"
 url                      : https://hfooladi.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "HFooladi/HFooladi.github.io"

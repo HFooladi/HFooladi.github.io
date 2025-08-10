@@ -1,7 +1,9 @@
 ---
 title: About
 layout: single
-author_profile: true                                                        
+author_profile: true
+description: "PhD researcher in Machine Learning & Drug Discovery specializing in cheminformatics, out-of-distribution generalization, and computational chemistry at University of Vienna"
+keywords: "machine learning, drug discovery, cheminformatics, PhD researcher, computational chemistry, out-of-distribution generalization, University of Vienna, PROTAC, molecular modeling"
 ---
 
 I am **Hosein Fooladi**, Just a human being. The following descriptions are just social statuses that I have gained through my life, which you may or may not be interested in.
