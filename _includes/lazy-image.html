@@ -1,0 +1,6 @@
+<img src="{{ include.src | relative_url }}" 
+     alt="{{ include.alt | default: '' }}" 
+     loading="lazy"
+     {% if include.class %}class="{{ include.class }}"{% endif %}
+     {% if include.width %}width="{{ include.width }}"{% endif %}
+     {% if include.height %}height="{{ include.height }}"{% endif %}>
