@@ -1,5 +1,5 @@
 ---
-title: Diffusion Models Course Implementation-First Learning of Score-Based and Diffusion Generative Models"
+title: Diffusion Models Course"
 collection: teaching
 type: "graduate course"
 permalink: /teaching/2025-diffusion-course
@@ -8,7 +8,7 @@ date: 2025-11-01
 location: "Vienna, Austria"
 ---
 
-## Diffusion Models Course
+## Diffusion Models Course: Implementation-First Learning of Score-Based and Diffusion Generative Models
 
 A comprehensive course on diffusion models, starting from foundational concepts and building up to state-of-the-art techniques. You can find the course on my Github: [Diffusion-Course](https://github.com/HFooladi/blog-notebooks/tree/main/diffusion-course)
 
