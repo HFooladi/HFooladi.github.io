@@ -1,5 +1,5 @@
 ---
-title: Diffusion Models Course"
+title: Diffusion Models Course
 collection: teaching
 type: "graduate course"
 permalink: /teaching/2025-diffusion-course
