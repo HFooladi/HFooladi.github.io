@@ -1,5 +1,5 @@
 ---
-title: Diffusion Models Course: Implementation-First Learning of Score-Based and Diffusion Generative Models"
+title: Diffusion Models Course Implementation-First Learning of Score-Based and Diffusion Generative Models"
 collection: teaching
 type: "graduate course"
 permalink: /teaching/2025-diffusion-course
