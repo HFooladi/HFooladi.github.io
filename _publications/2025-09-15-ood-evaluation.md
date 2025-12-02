@@ -3,7 +3,7 @@ title: "Evaluating Machine Learning Models for Molecular Property Prediction: Pe
 collection: publications
 permalink: /publications/2025-09-15-ood-evaluation
 excerpt: 'Today, machine learning models are employed extensively to predict the physicochemical and biological properties of molecules. Their performance is typically evaluated on in-distribution (ID) data, i.e., data originating from the same distribution as the training data. However, the real-world applications of such models often involve molecules that are more distant from the training data, necessitating the assessment of their performance on out-of-distribution (OOD) data. '
-date: 2025-03-05
+date: 2025-09-15
 venue: 'Journal of Chemical Information and Modeling'
 paperurl: 'https://doi.org/10.1021/acs.jcim.5c00475'
 citation: 'Fooladi, Hosein, et al. "Evaluating Machine Learning Models for Molecular Property Prediction: Performance and Robustness on Out-of-Distribution Data." Journal of Chemical Information and Modeling 65.19 (2025): 9871-9891.'
