@@ -17,7 +17,7 @@ In this research, a deployed model of biped that can be built has been considere
 
 [researchgate](https://www.researchgate.net/publication/258746206_Optimum_Design_Manufacturing_and_Experiment_of_a_Passive_Walking_Biped_Effects_of_Structural_Parameters_on_Efficiency_Stability_and_Robustness_on_Uneven_Trains), [Applied Mechanics and Materials](https://www.scientific.net/AMM.307.107)
 
-```{bibtex}
+```bibtex
 @article{sadati2013optimum,
   title={Optimum Design, Manufacturing and Experiment of a Passive Walking Biped: Effects of Structural Parameters on Efficiency, Stability and Robustness on Uneven Trains},
   author={Sadati, SM Hadi and Borgheinejad, M and Fooladi, H and Naraghi, M and Ohadi, AR},
