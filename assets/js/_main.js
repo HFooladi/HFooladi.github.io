@@ -89,12 +89,6 @@ $(document).ready(function () {
 
   // Magnific-Popup options
   $(".image-popup").magnificPopup({
-    // disableOn: function() {
-    //   if( $(window).width() < 500 ) {
-    //     return false;
-    //   }
-    //   return true;
-    // },
     type: "image",
     tLoading: "Loading image #%curr%...",
     gallery: {
