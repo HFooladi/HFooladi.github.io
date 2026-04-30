@@ -2,7 +2,7 @@
 title: "Active learning in drug discovery"
 collection: teaching
 type: "Workshop"
-permalink: /teaching/2022-active-learning-drug-discovery
+permalink: /teaching/2022-active-learning-drug-discovery/
 venue: "Online"
 date: 2022-04-15
 ---

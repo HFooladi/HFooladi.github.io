@@ -2,7 +2,7 @@
 title: "Advanced bioinformatics"
 collection: teaching
 type: "graduate course"
-permalink: /teaching/2017-bioinformatics
+permalink: /teaching/2017-bioinformatics/
 venue: "Sharif University of Technology, Computer Engineering"
 date: 2017-01-01
 location: "Tehran, Iran"

@@ -2,7 +2,7 @@
 title: Diffusion Models Course
 collection: teaching
 type: "graduate course"
-permalink: /teaching/2025-diffusion-course
+permalink: /teaching/2025-diffusion-course/
 venue: "University of Vienna"
 date: 2025-11-01
 location: "Vienna, Austria"

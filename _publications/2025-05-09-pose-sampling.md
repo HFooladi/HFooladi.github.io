@@ -1,7 +1,7 @@
 ---
 title: "Integrating Machine Learning-Based Pose Sampling with Established Scoring Functions for Virtual Screening"
 collection: publications
-permalink: /publications/2025-05-09-pose-sampling
+permalink: /publications/2025-05-09-pose-sampling/
 excerpt: 'Physics-based docking methods have long been the cornerstone of structure-based virtual screening (VS). However, the emergence of machine learning (ML)-based docking approaches has opened new possibilities for enhancing VS technologies.'
 date: 2025-05-09
 venue: 'Journal of Chemical Information and Modeling'

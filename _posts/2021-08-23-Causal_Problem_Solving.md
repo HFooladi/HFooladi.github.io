@@ -1,7 +1,7 @@
 ---
 title:  "Communication, Coordination and Competition in Causal Problem Solving"
 date:   2021-08-23 5:00:00
-permalink: /posts/2021/08/Causal_Problem_Solving
+permalink: /posts/2021/08/Causal_Problem_Solving/
 tags:
   - causality
   - computational-cognition

@@ -2,7 +2,7 @@
 title: "Causal learning and inference"
 collection: talks
 type: "Talk"
-permalink: /talks/2019-11-10-causal-learning
+permalink: /talks/2019-11-10-causal-learning/
 venue: "Sharif University of Technology, Department of Computer Engineering"
 date: 2019-11-10
 location: "Tehran"

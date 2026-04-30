@@ -2,7 +2,7 @@
 title: "Machine learning workshop"
 collection: teaching
 type: "Workshop"
-permalink: /teaching/2019-teaching-workshop
+permalink: /teaching/2019-teaching-workshop/
 venue: "Shenakht Pajouh"
 date: 2019-09-01
 location: "Tehran, Iran"

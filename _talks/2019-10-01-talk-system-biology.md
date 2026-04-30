@@ -2,7 +2,7 @@
 title: "System biology and waddington landscape"
 collection: talks
 type: "Talk"
-permalink: /talks/2019-10-01-talk-system-biology
+permalink: /talks/2019-10-01-talk-system-biology/
 venue: "Sharif University of Technology, Department of Computer Engineering"
 date: 2019-10-01
 location: "Tehran"

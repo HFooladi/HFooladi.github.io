@@ -168,6 +168,11 @@ exclude:
   - Rakefile
   - README
   - tmp
+  - CLAUDE.md
+  - SECURITY.md
+  - markdown_generator
+  - .obsidian
+  - _posts/.obsidian
 keep_files:
   - .git
   - .svn

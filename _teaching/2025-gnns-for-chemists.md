@@ -2,7 +2,7 @@
 title: "GNNs For Chemists"
 collection: teaching
 type: "graduate course"
-permalink: /teaching/2025-gnns-for-chemists
+permalink: /teaching/2025-gnns-for-chemists/
 venue: "University of Vienna"
 date: 2025-04-10
 location: "Vienna, Austria"
