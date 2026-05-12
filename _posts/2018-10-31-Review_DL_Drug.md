@@ -1,5 +1,6 @@
 ---
 title:  "Review: Deep Learning In Drug Discovery"
+description: "A detailed review of how deep learning is applied across drug discovery: property prediction, de novo design, and drug-target interaction prediction."
 date:   2018-10-31 5:00:00
 permalink: /posts/2018/10/Review-Deep-Learning-In-Drug-Discovery/
 tags:
@@ -30,7 +31,7 @@ I can divide the application of deep learning in drug discovery mainly into thre
 - Drug-target interaction (DTI) prediction
 
 <div class="imgcap">
-<img src="/assets/images/blog/Review_DL_Drug/AI_Drug.JPG" height="300" class="center">
+<img src="/assets/images/blog/Review_DL_Drug/AI_Drug.JPG" alt="Overview of artificial intelligence applications in drug discovery" height="300" class="center">
 <div class="thecap" style="text-align:center">Figure 1: Three areas that deep learning can help and facilitate drug discovery.</div>
 </div>
 
@@ -47,7 +48,7 @@ Drug properties prediction can be framed as a supervised learning problem. The i
 - output: 0-1 label to indicate whether a drug has certain properties or not. It can also be framed as a multi-label classification or regression task. 
 
 <div class="imgcap">
-<img src="/assets/images/blog/Review_DL_Drug/Representation.JPG" height="300" class="center">
+<img src="/assets/images/blog/Review_DL_Drug/Representation.JPG" alt="Different molecular representations used as input for deep learning models" height="300" class="center">
 <div class="thecap" style="text-align:center">Figure 2: Different ways that a molecule can be represented.</div>
 </div>
 
@@ -64,7 +65,7 @@ The most prevalent type of fingerprint is a series of binary digits (bits) that 
 Thus, a drug (small compound) is described as a vector (array) of zeros and ones. 
 
 <div class="imgcap">
-<img src="/assets/images/blog/Review_DL_Drug/Binary_Fingerprint.PNG" height="300" class="center">
+<img src="/assets/images/blog/Review_DL_Drug/Binary_Fingerprint.PNG" alt="Binary molecular fingerprint representation of a chemical compound" height="300" class="center">
 <div class="thecap" style="text-align:center">Figure 3: How to represent a molecule in a binary vector.</div>
 </div>
 
@@ -83,7 +84,7 @@ is Simplified Molecular-Input Line-Entry System (SMILES). After conversion, we c
 to process the drug and for example, predict the properties, side effects, or even chemical-chemical interaction. [[Sunyoung Kwon]](https://arxiv.org/abs/1704.08432) [3]. 
 
 
-<p style="text-align: center"><img src="/assets/images/blog/Review_DL_Drug/SMILES.JPG" width="55%"></p>
+<p style="text-align: center"><img src="/assets/images/blog/Review_DL_Drug/SMILES.JPG" alt="SMILES string representation of a chemical molecule" width="55%"></p>
 <div class="thecap" style="text-align:center">Figure 4: How to represent a molecule in SMILES code.</div>
 
 
@@ -112,7 +113,7 @@ function. Proteins directly interact with each other (e.g., you can see protein-
 transcription factor, which means they can repress or activates the expression of other genes in the cells. Therefore, altering one protein function 
 can have a dramatic effect on the cells and can modify a different cellular pathway.
 
-<p style="text-align: center"><img src="/assets/images/blog/Review_DL_Drug/Collagen.JPG" width="55%"></p>
+<p style="text-align: center"><img src="/assets/images/blog/Review_DL_Drug/Collagen.JPG" alt="Molecular structure of collagen" width="55%"></p>
 <div class="thecap" style="text-align:center">Figure 5: Collagen Adhesin and Collagen Complex Structure. 
 Collagen proteins are shaped like cords, which transmit tension between cartilage, ligaments, bones, and skin. </div>
 
@@ -174,7 +175,7 @@ You can find a lot of paper in the literature that generates the SMILES as the o
 data-driven continuous representation of molecules [9].
 
 <div class="imgcap">
-<img src="/assets/images/blog/Review_DL_Drug/Drug_Design_Hernandez.PNG" alt="alternate text" height="300" class="center">
+<img src="/assets/images/blog/Review_DL_Drug/Drug_Design_Hernandez.PNG" alt="Deep learning architecture for de novo drug design (Hernandez et al.)" height="300" class="center">
 <div class="thecap" style="text-align:center">Figure 6: Using variational autoencoder to generate compounds with desired properties. Source: Rafael Gomez-Bombarelli et. al. [9]</div>
 </div> 
 

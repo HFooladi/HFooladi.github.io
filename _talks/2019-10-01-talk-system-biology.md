@@ -1,5 +1,6 @@
 ---
 title: "System biology and waddington landscape"
+description: "A multicellular mathematical model of pattern formation during in-vitro gastrulation of human embryonic stem cells, extending the Waddington landscape with cell-cell communication."
 collection: talks
 type: "Talk"
 permalink: /talks/2019-10-01-talk-system-biology/

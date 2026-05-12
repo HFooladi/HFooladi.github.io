@@ -1,5 +1,6 @@
 ---
 title: "Quantifying the Hardness of Bioactivity Prediction Tasks for Transfer Learning"
+description: "Poster introducing a framework to quantify bioactivity prediction task hardness, guiding source-task selection for transfer learning under data scarcity in drug discovery."
 collection: talks
 type: "Conference poster"
 permalink: /talks/2024-06-26-cs3-task-hardness/

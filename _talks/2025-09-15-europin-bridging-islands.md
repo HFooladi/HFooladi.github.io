@@ -1,5 +1,6 @@
 ---
 title: "Bridging Islands in Chemical Space: Evaluating and Enhancing ML Generalization for Drug Discovery"
+description: "Oral presentation on understanding and improving ML generalization in chemical space, with recommendations for bioactivity and ADMET tasks under distribution shift."
 collection: talks
 type: "Conference talk"
 permalink: /talks/2025-09-15-europin-bridging-islands/

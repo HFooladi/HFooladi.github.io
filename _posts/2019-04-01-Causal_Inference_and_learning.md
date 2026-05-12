@@ -1,5 +1,6 @@
 ---
 title:  "Causal Inference and learning"
+description: "A curated reading list and tutorial roundup for learning causal inference and causal reasoning in machine learning."
 date:   2019-04-01 5:00:00
 permalink: /posts/2019/04/Causal-Inference-and-learning/
 tags:
@@ -63,7 +64,7 @@ The summary of something we have discussed so far:
 * Given the observational distribution and causal graph, we are equipped with sufficient knowledge to answer to the interventional query.
 * SCM + observational distribution --> counterfactuals
 
-<p style="text-align: center"><img src="/assets/images/blog/Causal_Inference_and_learning/causal_ladder.JPG"></p>
+<p style="text-align: center"><img src="/assets/images/blog/Causal_Inference_and_learning/causal_ladder.JPG" alt="The ladder of causation: association, intervention, and counterfactuals"></p>
 <div class="thecap" style="text-align:center">Figure 1: Three rungs of ladder of causation.</div>
 
 

@@ -1,5 +1,6 @@
 ---
 title: "Causal learning and inference"
+description: "An introduction to causal learning fundamentals — do-calculus, d-separation, invariant representations, and multi-cause causal inference — for an ML audience."
 collection: talks
 type: "Talk"
 permalink: /talks/2019-11-10-causal-learning/

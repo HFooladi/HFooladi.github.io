@@ -1,5 +1,6 @@
 ---
 title: "Assessing the Role of Machine Learning-Based Pose Sampling in Virtual Screening"
+description: "Poster on integrating ML-based pose sampling with established scoring functions for virtual screening, exploring how ML-driven pose generation complements physics-based docking."
 collection: talks
 type: "Conference poster"
 permalink: /talks/2025-06-02-iccs-pose-sampling/

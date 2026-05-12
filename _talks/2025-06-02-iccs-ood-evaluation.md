@@ -1,5 +1,6 @@
 ---
 title: "Evaluating Machine Learning Models for Molecular Property Prediction: Performance and Robustness on Out-of-Distribution Data"
+description: "Poster evaluating 14 ML models across 8 datasets and 10 splitting strategies, examining how OOD generation procedures shape performance and ID-OOD correlation."
 collection: talks
 type: "Conference poster"
 permalink: /talks/2025-06-02-iccs-ood-evaluation/

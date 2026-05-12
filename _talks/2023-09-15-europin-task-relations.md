@@ -1,5 +1,6 @@
 ---
 title: "Machine Learning for Molecular Activity Prediction: Quantification of Task Relations and Hardness for Small Organic Molecules and Proteins"
+description: "Poster on quantifying relationships and hardness between molecular activity prediction tasks to guide principled source-task selection for transfer learning."
 collection: talks
 type: "Conference poster"
 permalink: /talks/2023-09-15-europin-task-relations/

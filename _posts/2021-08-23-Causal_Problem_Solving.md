@@ -1,5 +1,6 @@
 ---
 title:  "Communication, Coordination and Competition in Causal Problem Solving"
+description: "A PhD research proposal exploring causal problem solving through multi-agent reinforcement learning, communication, and game theory."
 date:   2021-08-23 5:00:00
 permalink: /posts/2021/08/Causal_Problem_Solving/
 tags:

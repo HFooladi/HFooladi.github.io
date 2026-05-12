@@ -1,5 +1,6 @@
 ---
 title: "Development of Machine Learning Models for Domain Generalization in the Chemical Space"
+description: "Invited talk overviewing PhD work on ML for domain generalization in chemical space: task-hardness quantification and robust evaluation on out-of-distribution data."
 collection: talks
 type: "Invited talk"
 permalink: /talks/2024-09-15-boehringer-domain-generalization/
