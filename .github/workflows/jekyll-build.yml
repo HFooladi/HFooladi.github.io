@@ -9,6 +9,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # Gemfile.lock is generated on Windows and lists `wdm` (a Windows-only
+      # gem). On Linux runners the gem is excluded by `if Gem.win_platform?`
+      # in the Gemfile, so bundler in frozen mode refuses to reconcile.
+      BUNDLE_FROZEN: "false"
     steps:
       - uses: actions/checkout@v4
 
