@@ -350,14 +350,14 @@ gradient-alignment method has something to work with.
 
 If you found this useful, please cite it as:
 
-> Fooladi, H. (2026). *Why fingerprint-MLP gradients don't conflict, but graph-neural-net gradients do.* https://hfooladi.github.io
+> Fooladi, H. (2026). *Why fingerprint-MLP gradients don't conflict, but graph-neural-net gradients do.* https://hfooladi.github.io/posts/2026/06/why-fingerprint-mlp-gradients-dont-conflict/
 
 ```bibtex
 @misc{fooladi2026gradalign,
   author       = {Hosein Fooladi},
   title        = {Why fingerprint-{MLP} gradients don't conflict, but graph-neural-net gradients do},
   year         = {2026},
-  howpublished = {\url{https://hfooladi.github.io}},
+  howpublished = {\url{https://hfooladi.github.io/posts/2026/06/why-fingerprint-mlp-gradients-dont-conflict/}},
   note         = {Blog post}
 }
 ```
