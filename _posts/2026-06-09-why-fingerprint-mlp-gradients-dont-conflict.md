@@ -12,9 +12,16 @@ tags:
 toc: true
 toc_label: "Gradient Alignment"
 ---
-*How much does the encoder architecture — fixed-fingerprint MLP vs learned graph network — change
-the gradient alignment between tasks in multi-task learning? A lot. And that change is what decides
-whether gradient-surgery methods (PCGrad, CAGrad, RCGrad, cosine-gating) do anything at all.*
+*Gradient-surgery methods (PCGrad, CAGrad, RCGrad, cosine-gating) promise to stop auxiliary tasks
+from dragging down a focal task in multi-task learning. Whether they do anything turns out to hinge
+on a choice you might think was orthogonal to it: the encoder. Swap a Morgan-fingerprint MLP for a
+message-passing graph net and the between-task gradient alignment — the one quantity every one of
+these methods acts on — jumps by an order of magnitude. This post is about why, and what that means
+for when to bother reaching for surgery at all.*
+
+*This post records observations I made on multi-task learning while working on the OpenADMET PXR
+induction challenge — a research write-up of what I found, not a formal paper. I used Claude
+(Anthropic) for assistance with the writing and editing.*
 
 ---
 
@@ -26,7 +33,7 @@ gradient-surgery methods can do anything is decided by the cosine between the fo
 auxiliary gradients — so the size of that cosine is the thing to understand.
 
 The observation that started this: with a **Morgan-fingerprint MLP** that cosine is ≈0; swap in a
-**learned graph encoder** (D-MPNN) and it jumps ~10–20×. Only the graph encoder benefits from
+**graph encoder** (D-MPNN) and it jumps ~10–20×. Only the graph encoder benefits from
 gradient surgery; for the MLP every combiner gives the identical result.
 
 I built a probe to measure the cosine three ways — on the **minibatches the optimizer actually
@@ -44,7 +51,7 @@ random initialization. Three findings:
 3. **The alignment is a training-fit effect.** It's ≈0 at initialization and ≈0 on held-out data for
    every encoder; it is created during optimization, on the training distribution. (It is therefore
    not a measure of generalizable shared chemistry — but it still matters, because the optimizer acts
-   on it; see §6.)
+   on it; see §5c.)
 
 **Practitioner takeaway.** Before reaching for a gradient-surgery method, measure the focal↔aux cosine
 **on minibatches**. ≈0 (a wide MLP on fingerprints, with any input) → every combiner collapses to
@@ -66,9 +73,33 @@ absolute error; **lower is better**):
 - **Fingerprint MLP** (Morgan ECFP → MLP trunk → per-task heads): every combiner — averaging,
   cosine-gating, PCGrad, CAGrad, RCGrad — gives the *same* focal error. A null result; the combiner
   you pick does not matter.
-- **Learned D-MPNN** (molecular graph → message passing → per-task heads): plain averaging suffers
+- **D-MPNN** (molecular graph → message passing → per-task heads): plain averaging suffers
   negative transfer as less-related auxiliaries pile on (focal RAE rises from 0.61 single-task to
   ~0.63), and focal-aware surgery recovers part of it.
+
+Both encoders are trained end to end by the same loop; they differ only in what the shared trunk
+*sees* — a fixed Morgan fingerprint for the MLP, the raw molecular graph for the D-MPNN. (Neither is
+"the learned one": the MLP's trunk is learned too. And as §6 shows, it isn't the input that drives the
+gap.)
+
+The combiners being compared, one line each — they split along a single axis, **whether the focal
+task is privileged over the auxiliaries**:
+
+- *average* (symmetric) — step along the unweighted mean of all task gradients. The plain-MTL baseline.
+- *PCGrad* (Yu et al. 2020, symmetric) — for each conflicting pair of task gradients, project each out
+  of the other's direction, then average.
+- *CAGrad* (Liu et al. 2021, symmetric) — step in the direction that helps the worst-off task most
+  while staying close to the average gradient.
+- *cosine-gating* (Du et al. 2018, focal-aware) — drop any auxiliary whose gradient points away from
+  the focal gradient (negative cosine); average what remains.
+- *RCGrad (ours, focal-aware)* — keep the focal gradient untouched and project each *conflicting*
+  auxiliary onto the plane orthogonal to it, then average. An anchored variant of PCGrad — and **not**
+  Dey & Ning's (2024) learned-rotation RCGrad, which is a different method we don't use here.
+
+The *symmetric* methods treat focal and auxiliary tasks alike; the *focal-aware* ones protect the
+focal gradient. That distinction is the whole story below: when averaging hurts, it is the focal-aware
+methods that recover the loss — and on the MLP, where there is nothing to recover, all five collapse
+to the same answer.
 
 ![Test RAE vs number of auxiliary tasks, MLP vs GNN. For the MLP every method collapses below the single-task baseline (positive transfer); for the GNN plain averaging climbs above its baseline as auxiliaries are added (negative transfer) while focal-aware surgery stays below it.](/assets/images/blog/fingerprint-mlp-gradients/payoff_rae_vs_naux.png)
 
@@ -116,15 +147,18 @@ So the focal endpoint has ~3.3k training molecules; the 17 auxiliaries span 204 
 
 The number is the cosine between the focal task's gradient and each auxiliary's gradient, **on the
 shared trunk** (heads excluded), focal-centered, averaged over auxiliaries, averaged over training
-steps — call it `mean_aux_cos`. Across experiments:
+steps — the per-step (minibatch) focal↔aux cosine. Across experiments:
 
 | experiment (focal) | MLP + fingerprint | GNN + graph |
 |---|---|---|
 | auxiliary-scaling sweep (PXR) | 0.007–0.011 | 0.05–0.18 |
-| diverse endpoint — Solubility (10k, TDC) | 0.002–0.004 | 0.06–0.09 |
+| diverse endpoint — Solubility (10k, TDC) | 0.002–0.005 | 0.06–0.10 |
 
-Same ordering every time, and it replicates across endpoints (PXR, ExpansionRx) and graph
-architectures (D-MPNN, GINE). One subtlety worth stating up front: a slightly *positive* mean cosine
+The second row is a fully independent check: TDC's AqSolDB aqueous-solubility endpoint (~10k
+molecules) as the focal task, paired with six related ADME regression auxiliaries — lipophilicity,
+plasma-protein binding, Caco-2 permeability, volume of distribution, and hepatocyte and microsome
+clearance. Same ordering every time, and it holds across both endpoints (PXR and Solubility) and
+across graph architectures (D-MPNN, GINE). One subtlety worth stating up front: a slightly *positive* mean cosine
 does not mean "no conflict" — averaging is dragged down by the auxiliaries in the **negative tail**,
 and the mean is best read as a proxy for *how strongly the tasks interact* at all. The MLP's ≈0 says
 the tasks barely interact through the trunk; the GNN's ~0.06 says they interact a lot (some helpfully,
@@ -147,8 +181,8 @@ To answer all three I built one instrument and turned it on every epoch: a **ful
 per-layer gradient-geometry probe**. Every few epochs, in eval mode (dropout off), it computes each
 task's shared-trunk gradient on the **entire validation set** and on the **training set**, and reports
 the focal-centered cosine overall **and per layer**, plus the gradient-norm ratio — including at
-**epoch −1** (random init). (It's measurement-only — `torch.autograd.grad`, never touching the
-optimizer; a unit test confirms it reproduces a hand-computed cosine to 1e-5.) Full batch addresses
+**epoch −1** (random init). (It's measurement-only — a separate autograd pass that reads the
+gradients but never touches the optimizer, validated against a hand-computed cosine.) Full batch addresses
 the noise objection; per-layer + a parameter-count sweep addresses dimensionality; train-vs-held-out
 addresses the "real signal?" objection.
 
@@ -174,7 +208,8 @@ throughout. So minibatch noise is real and shrinks observed cosines, but it does
 ### 5b. Dimensionality explains much of the *MLP-vs-GNN* number — and reveals a continuum
 
 The entanglement sweep dials capacity while holding the task set fixed (the probe's epoch-end
-cosines, mean over 3 seeds, random split):
+cosines, mean over 3 seeds, random split). Configs are labelled by trunk width and depth — `mlp_h2048`
+is an MLP with a 2048-unit hidden trunk, `gnn_h300_d3` a depth-3 D-MPNN of width 300:
 
 | config | trunk params | minibatch | **train (full)** | **val (full)** |
 |---|---:|---:|---:|---:|
@@ -204,7 +239,7 @@ that the concatenated-trunk number reports.
 ### 5c. The alignment is a training-fit effect, not a stable task property
 
 Now read the **val** column above. It is ≈0 *everywhere* — for the narrow MLP (h32: train 0.23, val
-0.01) and for the GNN (h300_d3: train 0.06, val 0.004). The earlier finding that a narrow MLP's
+0.006) and for the GNN (h300_d3: train 0.06, val 0.004). The earlier finding that a narrow MLP's
 cosine "jumps to 0.13" was on the **training** set; on held-out molecules it is gone. The
 focal↔auxiliary gradient alignment is a property of how each model fits its *training distribution*,
 not a fixed signal the tasks carry. The per-epoch trajectory shows the same thing: every encoder
@@ -224,8 +259,9 @@ there is exactly what tracks "does surgery help."
 
 ## 6. Is it the input representation? (No.)
 
-The natural causal hypothesis is that sparse, near-orthogonal ECFP bits let an MLP route tasks
-through disjoint inputs, while a dense/learned representation forces them to share. I tested it
+§5 established that the gap is real (not minibatch noise) and a continuum, not a clean architecture
+dichotomy. So what *causes* it? The natural causal hypothesis is that sparse, near-orthogonal ECFP bits let an MLP route tasks
+through disjoint inputs, while a denser or graph-derived representation forces them to share. I tested it
 directly — **same MLP architecture, swap only the input**: sparse ECFP vs ~200 dense RDKit
 descriptors (`average`, mean over seeds):
 
@@ -252,7 +288,8 @@ not a clean large-batch property; the operational claim rests on the minibatch n
 
 ## 7. The mechanism: a shared low-rank representation
 
-At **matched hidden width** (so representation dimension can't confound), measuring the shared
+If the input isn't the cause, what is? The mechanism is in how each encoder organizes its *learned*
+shared representation. At **matched hidden width** (so representation dimension can't confound), measuring the shared
 representation and the per-task gradients on the same data:
 
 | config | rep. effective rank | grad overlap (mean \|cos\|) | test RAE |
@@ -295,24 +332,32 @@ entanglement.
   focal-aware surgery is worth trying. Don't trust the raw small-batch number alone — noise biases it
   down.
 
-The framing "MLPs and GNNs learn in fundamentally different regimes" is the wrong shape. It's one axis
-— representational entanglement, set by architecture and capacity — and it is what governs whether any
-gradient-alignment method has something to work with.
+A closing note on the title. "Fingerprint-MLP gradients don't conflict, graph-net gradients do" names
+the two ends of a spectrum, not two species. The real variable is representational entanglement — how
+much of a shared, low-rank representation the encoder forces the tasks through — and it is set by
+architecture *and* capacity together. A wide fingerprint MLP and a graph net are simply where two
+common defaults happen to land on that axis; narrow the MLP and it crosses over. The framing "MLPs and
+GNNs learn in fundamentally different regimes" is the wrong shape: it's one axis, and what the axis
+governs is whether any gradient-alignment method has something to work with.
 
 ## 9. Methods
 
-- **Cosine definitions.** Focal-centered ("star"), shared-trunk gradients only (heads excluded).
-  `mean_aux_cos` = minibatch, train mode, averaged over steps. The geometry probe = full split, eval
-  mode, overall + per-layer + norm ratio, recorded from epoch −1; reported on both val and train.
-- **The probe** is measurement-only (it uses `torch.autograd.grad` and never touches the optimizer).
-  Train-set probing is taken only at the endpoints (init/final) to keep it cheap; validation is
-  probed every few epochs.
+- **Cosine definitions.** All cosines are focal-centered (each auxiliary measured against the focal
+  gradient) and use shared-trunk gradients only (per-task heads excluded). The minibatch cosine is
+  taken in train mode (dropout active) and averaged over optimizer steps. The geometry probe instead uses the full
+  split in eval mode, and records the overall cosine, a per-layer breakdown, and the focal/aux
+  gradient-norm ratio — from epoch −1 (random init) onward, on both validation and train folds.
+- **The probe** is measurement-only — a separate autograd pass that reads the gradients and never
+  touches the optimizer state. Train-set probing is taken only at the endpoints (init/final) to keep
+  it cheap; validation is probed every few epochs.
 - **Encoders.** A fingerprint MLP (Morgan ECFP), a D-MPNN, and a GIN/GINE graph network.
-  **Featurizers**: `morgan` (sparse bits) and `rdkit2d` (~200 dense physchem descriptors,
-  train-fold-standardized).
-- **Geometry metrics**: effective rank, linear CKA (a linear representational-similarity index),
-  feature-hash random-projection cosine (to compare at matched dimension), and gradient-subspace
-  overlap.
+  **Featurizers**: Morgan fingerprints (sparse bits) and RDKit 2-D descriptors (~200 dense physchem
+  features, standardized on the train fold).
+- **Geometry metrics.** Two underlie the §7 table. *Effective rank* (Roy & Vetterli 2007) measures
+  how many independent directions the shared representation actually spans — i.e. how compressed it
+  is. *Gradient overlap* is the unsigned, all-pairs mean |cos| among the per-task gradients (the
+  quantity labelled "grad overlap" in §7), capturing how much a whole *set* of tasks shares gradient
+  direction — as opposed to the signed, focal-centered cosine used everywhere else.
 - **Caveats.** 3 seeds (10 for the GNN sweep); PXR focal, random split. The cosine is a trunk-gradient
   geometry measure; the RAE numbers are what tie it to focal performance. The GNN's full-batch (vs
   minibatch) cosine is noisy and occasionally negative — another reason the operational claim rests on
@@ -341,8 +386,10 @@ gradient-alignment method has something to work with.
 - Rogers & Hahn (2010). *Extended-Connectivity Fingerprints (ECFP/Morgan).* J. Chem. Inf. Model. 50(5).
 - Huang et al. (2021). *Therapeutic Data Commons (TDC).* NeurIPS Datasets & Benchmarks.
 
-**Analysis tools used here**
-- Roy & Vetterli (2007). *The Effective Rank: A Measure of Effective Dimensionality.* EUSIPCO.
+**Analysis tools**
+- Roy & Vetterli (2007). *The Effective Rank: A Measure of Effective Dimensionality.* EUSIPCO. — the effective-rank measure used in §7.
+
+*Related representational-similarity tools (not reported in this post):*
 - Kornblith et al. (2019). *Similarity of Neural Network Representations Revisited (CKA).* ICML. arXiv:1905.00414.
 - Weinberger et al. (2009). *Feature Hashing for Large Scale Multitask Learning.* ICML. arXiv:0902.2206.
 
