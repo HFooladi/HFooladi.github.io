@@ -5,5 +5,5 @@ task :build do
 end
 
 task :serve do
-  sh 'jekyll serve --watch --source _site --destination . --config _config.yml,_config.dev.yml'
+  sh 'jekyll serve --watch --config _config.yml,_config.dev.yml'
 end

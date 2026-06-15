@@ -14,7 +14,7 @@ toc_label: "Causal Problem Solving"
 ---
 In an exciting turn of events, I received an offer to pursue a PhD at the University of Edinburgh's School of Philosophy, Psychology & Language Sciences. My research would have explored the similarities and differences between humans and reinforcement learning (RL) agents in cooperative problem-solving. Though circumstances prevented me from starting the program, I believe the work I put into the proposal shouldn't go to waste.
 
-I invested fair amount of time developing this research proposal, and I'd like to share it with the broader research community. Below, I've included the Motivation section from my proposal. If you're interested in reading the complete document, you can download it [here](https://hfooladi.github.io//files/Edinburgh_Proposal_Hosein_Fooladi_Final.pdf).
+I invested fair amount of time developing this research proposal, and I'd like to share it with the broader research community. Below, I've included the Motivation section from my proposal. If you're interested in reading the complete document, you can download it [here](/files/Edinburgh_Proposal_Hosein_Fooladi_Final.pdf).
 
 ## 1. Motivation
 

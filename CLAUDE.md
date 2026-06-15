@@ -43,7 +43,7 @@ The site uses Jekyll collections to organize different types of content:
 
 ### Key Configuration
 - **Theme**: Minimal Mistakes remote theme (`mmistakes/minimal-mistakes@master`)
-- **Search**: Algolia-powered search with full content indexing
+- **Search**: lunr-powered client-side search with full content indexing
 - **Comments**: Utterances for GitHub-based comments
 - **Analytics**: Google Universal Analytics
 - **Social**: Twitter, GitHub, LinkedIn integration
@@ -68,4 +68,4 @@ The site uses Jekyll collections to organize different types of content:
 - Site builds to `_site/` directory
 - Uses GitHub Pages compatible plugins only
 - Supports both local development and GitHub Pages deployment
-- Search index managed through Algolia with API key configuration
+- Search index built client-side by lunr (no external service or API key needed)
