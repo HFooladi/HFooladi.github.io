@@ -7,8 +7,6 @@ date: 2025-09-15
 venue: 'Journal of Chemical Information and Modeling'
 paperurl: 'https://doi.org/10.1021/acs.jcim.5c00475'
 codeurl: 'https://github.com/HFooladi/ALineMol'
-header:
-  teaser: /assets/images/publications/2025-09-15-ood-evaluation.jpg
 citation: 'Fooladi, Hosein, et al. "Evaluating Machine Learning Models for Molecular Property Prediction: Performance and Robustness on Out-of-Distribution Data." Journal of Chemical Information and Modeling 65.19 (2025): 9871-9891.'
 authors: '**Hosein Fooladi**, Thi Ngoc Lan Vu, Miriam Mathea, and Johannes Kirchmair'
 bibtex: |
