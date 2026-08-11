@@ -9,9 +9,20 @@ date: 2019-03-01
 venue: 'Bioinformatics'
 paperurl: 'https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/btz201/5418791?redirectedFrom=fulltext'
 citation: 'Hosein, Fooladi. (2019). &quot;Enhanced Waddington Landscape Model with Cell-Cell Communication Can Explain Molecular Mechanisms of Self-Organization.&quot; <i>Bioinformatics 1</i>. 1(3).'
+authors: '**Hosein Fooladi**, Parsa Moradi, Ali Sharifi-Zarchi, and Babak Hosein Khalaj'
+codeurl: 'https://github.com/HFooladi/Self_Organization'
+bibtex: |
+  @article{fooladi2019enhanced,
+    title={Enhanced Waddington landscape model with cell--cell communication can explain molecular mechanisms of self-organization},
+    author={Fooladi, Hosein and Moradi, Parsa and Sharifi-Zarchi, Ali and Hosein Khalaj, Babak},
+    journal={Bioinformatics},
+    volume={35},
+    number={20},
+    pages={4081--4088},
+    year={2019},
+    publisher={Oxford University Press}
+  }
 ---
-**Hosein Fooladi**, Parsa Moradi, Ali Sharifi-Zarchi, and Babak Hosein Khalaj
-
 **Abstract**: Motivation: The molecular mechanisms of self-organization that orchestrate embryonic cells to create
 astonishing patterns have been among major questions of developmental biology. It is recently shown that
 embryonic stem cells (ESCs), when cultured in particular micropatterns, can self-organize and mimic the
@@ -27,17 +38,4 @@ under certain conditions. Moreover, we have tested different boundary conditions
 is initiated from the boundary and gradually spreads towards the center.
 This model provides a basis for in-silico modeling of self-organization.
 
-[https://doi.org/10.1093/bioinformatics/btz201](https://academic.oup.com/bioinformatics/advance-article-abstract/doi/10.1093/bioinformatics/btz201/5418791?redirectedFrom=fulltext), [bioRxiv](https://www.biorxiv.org/content/10.1101/241604v1), [github](https://github.com/HFooladi/Self_Organization)
-
-```bibtex
-@article{fooladi2019enhanced,
-  title={Enhanced Waddington landscape model with cell--cell communication can explain molecular mechanisms of self-organization},
-  author={Fooladi, Hosein and Moradi, Parsa and Sharifi-Zarchi, Ali and Hosein Khalaj, Babak},
-  journal={Bioinformatics},
-  volume={35},
-  number={20},
-  pages={4081--4088},
-  year={2019},
-  publisher={Oxford University Press}
-}
-```
+Preprint available on [bioRxiv](https://www.biorxiv.org/content/10.1101/241604v1).

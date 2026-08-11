@@ -56,6 +56,8 @@ The site uses Jekyll collections to organize different types of content:
 
 ### Content Structure
 - Publications include citation format, venue, and paper URLs
+- Publication frontmatter is canonical for `authors` (markdown string, own name bolded), `codeurl`, and `bibtex` (YAML block scalar); bodies hold the abstract only. The listing (`/publications/`, via `_includes/archive-single-publication.html`) renders Barron-style rows; `_layouts/publication.html` renders authors/venue/buttons/BibTeX on detail pages
+- Publication thumbnails: set `header.teaser`, convention `assets/images/publications/<slug>.png` (~800x600); without one a gradient venue tile renders
 - Posts support tags, table of contents (toc), and MathJax
 - All content uses permalink patterns defined in `_config.yml`
 - Blog listings (`/year-archive/`, `/tags/`) render posts as a card grid (`_includes/archive-single-card.html`, styles in `_sass/minimal-mistakes/_custom.scss`)

@@ -1,0 +1,23 @@
+---
+layout: single
+---
+{% if page.authors %}
+  <p class="pub-entry__authors pub-detail__authors">{{ page.authors | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+{% endif %}
+<p class="pub-entry__meta">
+  {% if page.venue %}<span class="pub-entry__venue">{{ page.venue }}</span>{% endif %}
+  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y" }}</time>
+  {% if page.paperurl %}<a class="pub-entry__btn" href="{{ page.paperurl }}">Paper</a>{% endif %}
+  {% if page.codeurl %}<a class="pub-entry__btn" href="{{ page.codeurl }}">Code</a>{% endif %}
+</p>
+
+{{ content }}
+
+{% if page.bibtex %}
+<h2>BibTeX</h2>
+{%- comment -%}
+  Rouge-shaped markup so the theme's copy-code button attaches
+  (.page__content pre.highlight > code in assets/js/_main.js).
+{%- endcomment -%}
+<div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{{ page.bibtex | xml_escape }}</code></pre></div></div>
+{% endif %}

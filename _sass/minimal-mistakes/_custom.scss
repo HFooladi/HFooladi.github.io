@@ -145,3 +145,178 @@
   background: rgba($primary-color, 0.12);
   color: mix(#000, $primary-color, 15%);
 }
+
+/*
+   Publication list rows (used on /publications/ and publication detail pages)
+   ========================================================================== */
+
+.pub-list {
+  margin: 0 0 2em;
+  padding: 0;
+  list-style: none;
+}
+
+.pub-entry {
+  margin: 0 0 1.25em;
+  background: $background-color;
+  border-radius: $border-radius * 2;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.pub-entry__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 600px) {
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+.pub-entry__media {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (min-width: 600px) {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 130px;
+  }
+}
+
+.pub-entry__fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 1em;
+  text-align: center;
+  color: #fff;
+  font-family: $serif;
+  font-size: 0.95em;
+  line-height: 1.4;
+  background: linear-gradient(135deg, $primary-color, mix(#000, $primary-color, 35%));
+}
+
+.pub-entry__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  padding: 1em 1.25em;
+  /* let the expanded BibTeX <pre> scroll instead of widening the grid track */
+  min-width: 0;
+}
+
+.pub-entry__title {
+  margin: 0;
+  font-size: 1.05em;
+  line-height: 1.35;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary-color;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $primary-color;
+      outline-offset: 2px;
+    }
+  }
+}
+
+.pub-entry__authors {
+  margin: 0;
+  font-size: 0.8em;
+  color: $muted-text-color;
+
+  strong {
+    color: $text-color;
+  }
+}
+
+.pub-entry__meta {
+  margin: 0;
+  font-size: 0.75em;
+  color: $muted-text-color;
+}
+
+.pub-entry__venue {
+  display: inline-block;
+  margin-right: 0.35em;
+  padding: 0.15em 0.7em;
+  border-radius: 999px;
+  background: rgba($primary-color, 0.12);
+  color: mix(#000, $primary-color, 15%);
+}
+
+.pub-entry__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-top: auto;
+  padding-top: 0.35em;
+}
+
+.pub-entry__btn {
+  display: inline-block;
+  padding: 0.2em 0.8em;
+  font-size: 0.7em;
+  font-family: $sans-serif;
+  text-decoration: none;
+  color: $primary-color;
+  background: transparent;
+  border: 1px solid rgba($primary-color, 0.5);
+  border-radius: 999px;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba($primary-color, 0.1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $primary-color;
+    outline-offset: 2px;
+  }
+}
+
+.pub-entry__bib {
+  summary {
+    list-style: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  /* expanded BibTeX takes the full width of the actions row */
+  &[open] {
+    flex-basis: 100%;
+  }
+}
+
+.pub-entry__bibtex {
+  margin: 0.5em 0 0;
+  padding: 0.75em 1em;
+  font-size: 0.7em;
+  overflow-x: auto;
+}

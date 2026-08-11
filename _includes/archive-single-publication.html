@@ -1,0 +1,39 @@
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<li class="pub-entry">
+  <article class="pub-entry__inner" itemscope itemtype="https://schema.org/ScholarlyArticle">
+    <div class="pub-entry__media">
+      {% if post.header.teaser %}
+        {% include lazy-image.html src=post.header.teaser alt="" class="pub-entry__img" %}
+      {% else %}
+        <div class="pub-entry__fallback" aria-hidden="true"><span>{{ post.venue | truncate: 45 }}</span></div>
+      {% endif %}
+    </div>
+    <div class="pub-entry__body">
+      <h2 class="pub-entry__title no_toc" itemprop="headline">
+        <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
+      </h2>
+      {% if post.authors %}
+        <p class="pub-entry__authors" itemprop="author">{{ post.authors | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+      {% endif %}
+      <p class="pub-entry__meta">
+        {% if post.venue %}<span class="pub-entry__venue">{{ post.venue }}</span>{% endif %}
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y" }}</time>
+      </p>
+      <div class="pub-entry__actions">
+        {% if post.paperurl %}<a class="pub-entry__btn" href="{{ post.paperurl }}">Paper</a>{% endif %}
+        {% if post.codeurl %}<a class="pub-entry__btn" href="{{ post.codeurl }}">Code</a>{% endif %}
+        {% if post.bibtex %}
+          <details class="pub-entry__bib">
+            <summary class="pub-entry__btn">BibTeX</summary>
+            <pre class="pub-entry__bibtex"><code>{{ post.bibtex | xml_escape }}</code></pre>
+          </details>
+        {% endif %}
+      </div>
+    </div>
+  </article>
+</li>
