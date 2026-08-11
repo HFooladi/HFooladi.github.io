@@ -6,6 +6,7 @@ excerpt: 'Physics-based docking methods have long been the cornerstone of struct
 date: 2025-05-09
 venue: 'Journal of Chemical Information and Modeling'
 paperurl: 'https://doi.org/10.1021/acs.jcim.5c00380'
+codeurl: 'https://github.com/lan-codes/Benchmark_VS'
 citation: 'Vu, Thi Ngoc Lan, Hosein Fooladi, and Johannes Kirchmair. "Integrating Machine Learning-Based Pose Sampling with Established Scoring Functions for Virtual Screening." Journal of Chemical Information and Modeling 65.10 (2025): 4833-4843.'
 authors: 'Thi Ngoc Lan Vu, **Hosein Fooladi**, and Johannes Kirchmair'
 bibtex: |

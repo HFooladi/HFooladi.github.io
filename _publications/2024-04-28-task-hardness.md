@@ -8,6 +8,7 @@ the challenges associated with data scarcity by learning from data on related ta
 date: 2024-04-28
 venue: 'Journal of Chemical Information and Modeling'
 paperurl: 'https://doi.org/10.1021/acs.jcim.4c00160'
+codeurl: 'https://github.com/HFooladi/THEMAP'
 citation: 'Fooladi, Hosein, et al. "Quantifying the hardness of bioactivity prediction tasks for transfer learning" Journal of Chemical Information and Modeling (2024)'
 authors: '**Hosein Fooladi**, Steffen Hirte, and Johannes Kirchmair'
 bibtex: |
