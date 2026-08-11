@@ -3,6 +3,8 @@ title:  "Causal Inference and learning"
 description: "A curated reading list and tutorial roundup for learning causal inference and causal reasoning in machine learning."
 date:   2019-04-01 5:00:00
 permalink: /posts/2019/04/Causal-Inference-and-learning/
+header:
+  teaser: /assets/images/blog/Causal_Inference_and_learning/causal_ladder.JPG
 tags:
   - causality
   - causal inference 

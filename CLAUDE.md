@@ -58,6 +58,9 @@ The site uses Jekyll collections to organize different types of content:
 - Publications include citation format, venue, and paper URLs
 - Posts support tags, table of contents (toc), and MathJax
 - All content uses permalink patterns defined in `_config.yml`
+- Blog listings (`/year-archive/`, `/tags/`) render posts as a card grid (`_includes/archive-single-card.html`, styles in `_sass/minimal-mistakes/_custom.scss`)
+- Post cover images: set `header.teaser` in frontmatter, convention `assets/images/blog/<slug>/cover.png` (~1280x720, cropped to 16:9 on cards); posts without a teaser get a styled gradient fallback card
+- Card excerpts use the post's `description:` frontmatter (excerpt fallback), so keep `description` filled in
 
 ### Assets and Styling
 - Custom CSS in `assets/css/` (academicons, collapse effects)

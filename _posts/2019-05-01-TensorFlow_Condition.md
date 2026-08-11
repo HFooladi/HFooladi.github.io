@@ -3,6 +3,8 @@ title:  "Understanding TensorFlow Control Flow: Deep Dive into tf.cond()"
 description: "A deep dive into TensorFlow's tf.cond() control flow: how Switch and Merge work, with practical examples that demystify conditional graph execution."
 date:   2019-05-01 5:00:00
 permalink: /posts/2019/05/TensorFlow-Condition/
+header:
+  teaser: /assets/images/blog/TensorFlow_Condition/tensorflow_cond_banner.png
 tags:
   - programming
   - tensorflow

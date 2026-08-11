@@ -3,6 +3,8 @@ title:  "Why fingerprint-MLP gradients don't conflict, but graph-neural-net grad
 description: "How encoder architecture (fixed-fingerprint MLP vs learned graph network) changes gradient alignment between tasks in multi-task learning, and when gradient-surgery methods actually help."
 date:   2026-06-09 5:00:00
 permalink: /posts/2026/06/why-fingerprint-mlp-gradients-dont-conflict/
+header:
+  teaser: /assets/images/blog/fingerprint-mlp-gradients/payoff_rae_vs_naux.png
 tags:
   - multi-task-learning
   - deep-learning

@@ -3,6 +3,8 @@ title:  "Review: Deep Learning In Drug Discovery"
 description: "A detailed review of how deep learning is applied across drug discovery: property prediction, de novo design, and drug-target interaction prediction."
 date:   2018-10-31 5:00:00
 permalink: /posts/2018/10/Review-Deep-Learning-In-Drug-Discovery/
+header:
+  teaser: /assets/images/blog/Review_DL_Drug/Review_DL_banner.png
 tags:
   - chemoinformatics
   - computational-chemistry

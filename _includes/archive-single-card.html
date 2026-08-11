@@ -1,0 +1,46 @@
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+{% if post.description %}
+  {% assign excerpt_text = post.description %}
+{% else %}
+  {% assign excerpt_text = post.excerpt | markdownify | strip_html | strip %}
+{% endif %}
+
+{% assign words_per_minute = post.words_per_minute | default: site.words_per_minute | default: 200 %}
+{% assign words = post.content | strip_html | number_of_words %}
+{% assign minutes = words | divided_by: words_per_minute %}
+{% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+
+<li class="entry-card{% unless post.header.teaser %} entry-card--no-img{% endunless %}">
+  <article class="entry-card__inner" itemscope itemtype="https://schema.org/CreativeWork"{% if post.locale %} lang="{{ post.locale }}"{% endif %}>
+    <div class="entry-card__media">
+      {% if post.header.teaser %}
+        {% include lazy-image.html src=post.header.teaser alt="" class="entry-card__img" %}
+      {% else %}
+        <div class="entry-card__fallback" aria-hidden="true"><span>{{ title | strip_html | truncate: 60 }}</span></div>
+      {% endif %}
+    </div>
+    <div class="entry-card__body">
+      <h3 class="entry-card__title no_toc" itemprop="headline">
+        <a href="{{ post.url | relative_url }}" rel="permalink" class="entry-card__link">{{ title }}</a>
+      </h3>
+      <p class="entry-card__meta">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <span aria-hidden="true">&middot;</span>
+        <span>{{ minutes }} {{ site.data.ui-text[site.locale].minute_read | default: "minute read" }}</span>
+      </p>
+      {% if excerpt_text and excerpt_text != "" %}
+        <p class="entry-card__excerpt" itemprop="description">{{ excerpt_text | truncate: 140 }}</p>
+      {% endif %}
+      {% if post.tags and post.tags != empty %}
+        <p class="entry-card__tags">
+          {% for tag in post.tags limit: 3 %}<span class="entry-card__tag">{{ tag }}</span>{% endfor %}
+        </p>
+      {% endif %}
+    </div>
+  </article>
+</li>

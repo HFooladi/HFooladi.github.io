@@ -159,6 +159,7 @@ exclude:
   - log
   - node_modules
   - package.json
+  - "*.gemspec"
   - Rakefile
   - README
   - tmp
