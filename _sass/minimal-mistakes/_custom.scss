@@ -364,3 +364,44 @@
   /* keep clear of the copy button in the top-right corner */
   padding-right: 2.5em;
 }
+
+/* ==========================================================================
+   Reading focus: click a paragraph to highlight it (assets/js/reading-focus.js)
+   Warm parchment tones; the box-shadow spread pads the block without
+   shifting the surrounding text.
+   ========================================================================== */
+
+$reading-hover: #f8f3e6;
+$reading-on: #f1e8d3;
+$reading-accent: #c9a96a;
+
+.page__content {
+  /* body paragraphs and list items only; the sticky table of contents
+     (.sidebar__right / nav.toc) also sits inside .page__content */
+  :is(p, li):not(.sidebar__right *, nav *) {
+    border-radius: $border-radius;
+    transition: background-color 0.18s ease, box-shadow 0.18s ease;
+
+    &:hover {
+      background-color: $reading-hover;
+      box-shadow: 0 0 0 0.35em $reading-hover;
+    }
+
+    &.is-reading {
+      background-color: $reading-on;
+      box-shadow: 0 0 0 0.5em $reading-on, -0.75em 0 0 0 $reading-accent;
+    }
+  }
+
+  /* nested lists: don't tint the parent item when hovering a child */
+  li:has(li:hover):hover {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :is(p, li) {
+      transition: none;
+    }
+  }
+}
