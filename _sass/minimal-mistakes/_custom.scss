@@ -353,3 +353,14 @@
     color: $muted-text-color;
   }
 }
+
+/* ==========================================================================
+   BibTeX blocks: wrap long title/author lines instead of scrolling sideways
+   ========================================================================== */
+
+.language-bibtex pre.highlight {
+  white-space: pre-wrap;
+  word-break: break-word;
+  /* keep clear of the copy button in the top-right corner */
+  padding-right: 2.5em;
+}
