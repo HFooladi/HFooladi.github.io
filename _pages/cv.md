@@ -66,7 +66,7 @@ Head of Machine Learning from Feb 2021; Chief Data Scientist from Dec 2021
 ### Senior Data Scientist - Cheminformatics/ML Expert
 **[AI VIVO](http://www.aivivo.co/)** | Cambridge, UK | *Apr 2019 - Dec 2020*  
 Part of a 5+ team of ML, biology and chemistry specialists working on a single on-premise GPU node
-- "Virtual cells": predicted small-molecule perturbation responses across cell lines on LINCS L1000 (978 landmark genes, 1.3M profiles, ~20k compounds) with a Dr.VAE-family latent-transition model; open-sourced the data processing as [lincs_processing](https://github.com/HFooladi/lincs_processing)
+- "Virtual cells": predicted small-molecule perturbation responses across cell lines on LINCS L1000 (978 landmark genes, 1.3M profiles, ~20k compounds) with a Dr.VAE-family latent-transition model ([overview with figures](/research/#virtual-cells-perturbation-response-prediction)); open-sourced the data processing as [lincs_processing](https://github.com/HFooladi/lincs_processing)
 - Drug repositioning via transfer learning from ChEMBL (2M+ compounds) to rare-disease targets
 - VAE-based de novo molecular design with multi-objective optimization
 - Drug-combination synergy prediction (O'Neil, NCI-ALMANAC, DrugComb, DrugCombDB)
