@@ -79,9 +79,10 @@ Developing machine learning models that maintain performance when applied to mol
 ## Research Impact
 
 ### Recent Publications
-- **2025**: Evaluating ML Models for Molecular Property Prediction (ChemRxiv)
-- **2024**: Quantifying Task Hardness for Transfer Learning (J. Chem. Inf. Model.)
-- **2023**: Bayesian Optimization for Ternary Complex Prediction (AI Life Sciences)
+- **2025**: [Evaluating ML Models for Molecular Property Prediction on Out-of-Distribution Data](/publications/2025-09-15-ood-evaluation/) (J. Chem. Inf. Model.)
+- **2025**: [ML-Based Pose Sampling with Established Scoring Functions for Virtual Screening](/publications/2025-05-09-pose-sampling/) (J. Chem. Inf. Model.)
+- **2024**: [Quantifying Task Hardness for Transfer Learning](/publications/2024-04-24-task-hardness/) (J. Chem. Inf. Model.)
+- **2023**: [Bayesian Optimization for Ternary Complex Prediction](/publications/2023-12-01-botcp/) (AI in the Life Sciences)
 
 ### Research Tools & Software
 - Development of computational tools for drug discovery
