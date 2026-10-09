@@ -97,12 +97,7 @@ What mattered most was evaluation. Dr.VAE's own sanity check asks whether predic
 
 ## Where this is going
 
-The task-distance idea is not specific to chemistry. Any field that trains on a collection of datasets and is then handed a new one faces the same question: is the new dataset close to something we have, and if not, how badly will the model do? One dataset distance can answer it for all of them. For bioactivity assays this is THEMAP and it is published. For histopathology cohorts, embedded with a pathology foundation model, and for perturbation screens, embedded through their expression signatures, it is a proposal: fine-tune from the closest cohort, borrow from the nearest screened contexts, and flag the distant cases before training rather than after. Together with test-time adaptation, this is where the thesis is heading.
-
-<figure class="research-figure">
-  <a href="/assets/images/research/transfer-map.png" title="Open full-size figure"><img src="/assets/images/research/transfer-map.png" alt="Three rows, each with data, an embedding, a distance-to-existing-datasets panel and a decision. Bioactivity assays (THEMAP, published): embed with ECFP, ChemBERTa and ESM-2, transfer from the nearest assays. Histopathology cohorts (proposal): embed with pathology foundation-model tiles, fine-tune from the closest cohort. Perturbation screens (proposal): embed expression signatures, borrow from the nearest contexts. Footer: one distance for all three, the optimal-transport dataset distance."></a>
-  <figcaption>One distance, three kinds of data. The first row is published work; the other two are proposals that reuse the same machinery.</figcaption>
-</figure>
+My goal is to develop robust and trustworthy machine learning models for drug discovery. In practice that means putting the emphasis on rigorous evaluation: testing models under the distribution shifts they will actually meet, new chemotypes, new targets, new assays and new biological contexts, rather than on the convenient splits where every method looks good. A model earns trust when we know where it works, where it fails, and can tell the two apart before a prediction is used.
 
 ## Selected publications
 
