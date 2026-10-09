@@ -38,4 +38,9 @@ under certain conditions. Moreover, we have tested different boundary conditions
 is initiated from the boundary and gradually spreads towards the center.
 This model provides a basis for in-silico modeling of self-organization.
 
+<figure class="research-figure">
+  <a href="/assets/images/research/waddington-self-organization.png" title="Open full-size figure"><img src="/assets/images/research/waddington-self-organization.png" alt="Left: the BMP4/Noggin two-gene circuit inside one cell and its Waddington landscape. Right: a micropatterned hESC colony with concentric fate territories emerging from the edge inward."></a>
+  <figcaption>Inside one cell: BMP4 activates itself and Noggin, Noggin inhibits BMP4 (two ODEs, eight parameters); a lone cell can oscillate, coupled cells settle into a fate. Across the colony: secreted BMP4 and Noggin diffuse between cells and the germ-layer territories (CDX2+, SOX17+, BRA+, SOX2+ from edge to centre) emerge from the boundary inward; 3 mm colonies form spots instead of rings.</figcaption>
+</figure>
+
 Preprint available on [bioRxiv](https://www.biorxiv.org/content/10.1101/241604v1).

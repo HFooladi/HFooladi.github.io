@@ -30,3 +30,8 @@ encompass transfer learning, multi-task learning, and meta-learning. A key quest
 approaches is about the extent to which their performance can benefit from the relatedness of available source (training) tasks, in other words, how difficult (“hard”) a test task is to a model, given the available source tasks.
 
 This study introduces a new method for quantifying and predicting the hardness of a bioactivity prediction task based on its relation to the available training tasks. The approach involves the generation of protein and chemical representations and the calculation of distances between the bioactivity prediction task and the available training tasks. In the example of meta-learning, we demonstrate that the proposed task hardness metric is inversely correlated with performance. The metric will be useful in estimating the task specific gain in performance that can be achieved through meta-learning.
+
+<figure class="research-figure">
+  <a href="/assets/images/research/themap-hardness.png" title="Open full-size figure"><img src="/assets/images/research/themap-hardness.png" alt="Scatter plot of meta-learning performance gain (delta AUPRC) against task hardness, with a fitted regression line and Pearson r of -0.72."></a>
+  <figcaption>The gain from meta-learning (ΔAUPRC over a baseline) decreases with the proposed external-plus-internal task hardness (Pearson r = −0.72), so hardness estimated before training predicts how much a new bioactivity task will benefit from knowledge transfer.</figcaption>
+</figure>
