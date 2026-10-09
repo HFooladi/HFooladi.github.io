@@ -8,14 +8,14 @@ venue: "EUROPIN Summer School"
 date: 2025-09-15
 location: "Vienna, Austria"
 header:
-  teaser: /assets/images/research/alinemol-splits.png
+  teaser: /assets/images/research/alinemol-banner.png
 ---
 
 Oral presentation at the EUROPIN Summer School in Drug Design, summarizing our work on understanding and improving the generalization of machine learning models in chemical space — covering how out-of-distribution data should be defined for molecular property prediction, the limits of in-distribution-based model selection, and practical recommendations for bioactivity and ADMET tasks.
 
 <figure class="research-figure">
-  <a href="/assets/images/research/alinemol-splits.png" title="Open full-size figure"><img src="/assets/images/research/alinemol-splits.png" alt="Three ways of generating out-of-distribution test data: scaffold split, property split and cluster-based split, each shown with example molecules."></a>
-  <figcaption>Three families of splitting strategies used to generate out-of-distribution (OOD) data: scaffold-based, property-based and similarity-cluster-based splits. Which one is used strongly shapes both absolute performance and how well in-distribution performance predicts OOD performance.</figcaption>
+  <a href="/assets/images/research/alinemol-banner.png" title="Open full-size figure"><img src="/assets/images/research/alinemol-banner.png" alt="ALineMol overview: a training set with in-distribution and out-of-distribution test molecules; bar charts showing the performance drop from ID to OOD for two models; a scatter of OOD against ID performance; and the experimental setup of datasets, splitters and models."></a>
+  <figcaption>ALineMol in one picture: molecules are split into in-distribution (ID) and out-of-distribution (OOD) test sets, models are compared on their ID-to-OOD performance drop, and we ask how well ID performance predicts OOD performance. Evaluated on eight datasets (CYP isoforms, hERG, HIV, AMES), ten splitters (scaffold-, property- and cluster-based, Lo-Hi, DataSAIL) and classical ML, GNN and pretrained-GNN models.</figcaption>
 </figure>
 
 Authors: **Hosein Fooladi** and Johannes Kirchmair.
