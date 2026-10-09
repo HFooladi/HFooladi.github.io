@@ -21,7 +21,7 @@ My research centers on developing **robust machine learning models** that can ge
 - Molecular property prediction and ADMET modeling
 
 #### 🎯 Out-of-Distribution Generalization
-- Evaluation of ML model robustness on OOD data
+- Evaluation of ML model robustness on OOD data (the PhD project, see below)
 - Domain adaptation in chemical space
 - Transfer learning for molecular properties
 
@@ -65,9 +65,16 @@ What mattered most was evaluation. Dr.VAE's own sanity check asks whether predic
 ## Current Projects
 
 ### PhD Thesis: Domain Generalization in Chemical Space
-**University of Vienna | Comp3D Lab**
+**University of Vienna | Kirchmair lab (Comp3D) | CD-Laboratory for Molecular Informatics in the Biosciences, with Boehringer Ingelheim and BASF**
 
-Developing machine learning models that maintain performance when applied to molecules significantly different from training data. This work addresses a critical challenge in computational drug discovery.
+Drug-like chemical space is vast. Our data is not. ChEMBL holds bioactivities for roughly 2.9 million compounds, while the number of drug-like molecules is estimated at 10<sup>23</sup> to 10<sup>60</sup>. Even against the smallest estimate, the measured fraction is about 10<sup>-17</sup>. Any compound worth predicting, a new chemotype, a new target or a new assay, is therefore almost surely far from everything a model was trained on. A score on a random split only tells you how well the model interpolates among its neighbours; it says little about the leap that matters.
+
+<figure class="research-figure">
+  <a href="/assets/images/research/extrapolation-problem.png" title="Open full-size figure"><img src="/assets/images/research/extrapolation-problem.png" alt="Drug-like chemical space drawn as a wide field of faint dots. At the lower left, a small dense teal disc labelled training data (ChEMBL, 2.9 million compounds) sits inside a dashed in-distribution ring with a short arrow labelled interpolation. At the upper right, an amber target labelled the compound you need to predict. A long curved amber arrow from the ring to the target is labelled extrapolation, distribution shift. Below: ChEMBL about 2.9 times 10 to the 6 compounds, drug-like space 10 to the 23 to 10 to the 60, ratio about 10 to the minus 17 at best."></a>
+  <figcaption>Where the data is and where the predictions are needed. Models are fit on the small, dense region of measured compounds; the compounds that matter lie far outside it. ML in drug discovery is, by definition, an extrapolation problem.</figcaption>
+</figure>
+
+The thesis takes that gap as its subject. First, define and measure what "out of distribution" means for molecules, and test how models actually behave there: our [systematic OOD evaluation](/publications/2025-09-15-ood-evaluation/) (14 models, 8 datasets, 10 splitting strategies; code in [ALineMol](https://github.com/HFooladi/ALineMol)) shows that the choice of split decides both how hard the task is and whether in-distribution performance predicts out-of-distribution performance at all. Second, when a new assay has little data, quantify how far it is from the assays we already have, so that transfer and meta-learning can borrow from the right sources: the [task-hardness framework](/publications/2024-04-24-task-hardness/) ([THEMAP](https://github.com/HFooladi/THEMAP)). Third, adapt models at test time to the region they are asked about, which is the work currently in preparation.
 
 ### Key Collaborations
 - **University of Vienna**: Comp3D laboratory research
